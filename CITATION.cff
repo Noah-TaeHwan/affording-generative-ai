@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the working paper and the replication package."
+title: "Replication package for: Affording Generative AI: Uniform Prices, Unequal Burdens, and the Two Margins of AI Diffusion"
+type: software
+version: "1.8"
+date-released: 2026-09-28
+doi: 10.5281/zenodo.23006366
+url: "https://github.com/Noah-TaeHwan/affording-generative-ai"
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - family-names: Oh
+    given-names: TaeHwan
+    orcid: "https://orcid.org/0009-0004-4111-4802"
+preferred-citation:
+  type: report
+  title: "Affording Generative AI: Uniform Prices, Unequal Burdens, and the Two Margins of AI Diffusion"
+  authors:
+    - family-names: Oh
+      given-names: TaeHwan
+      orcid: "https://orcid.org/0009-0004-4111-4802"
+  year: 2026
+  month: 9
+  notes: "Working paper"
