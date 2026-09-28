@@ -1,0 +1,37 @@
+countries: 217 economies; 295 rows incl. aggregates
+WDI NY.GNP.PCAP.CD
+WDI NY.GNP.PCAP.PP.CD
+WDI NY.GDP.PCAP.CD
+WDI NY.GDP.PCAP.PP.CD
+WDI NE.CON.PRVT.CD
+WDI PA.NUS.PPPC.RF
+  no data for PA.NUS.PPPC.RF: [{'message': [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]}]
+WDI PA.NUS.FCRF
+WDI SP.POP.TOTL
+WDI SP.POP.1564.TO
+WDI IT.NET.USER.ZS
+WDI EG.ELC.ACCS.ZS
+WDI IT.NET.BBND.P2
+WDI SI.DST.FRST.10
+WDI SI.DST.FRST.20
+WDI SI.DST.02ND.20
+WDI SI.DST.03RD.20
+WDI SI.DST.04TH.20
+WDI SI.DST.05TH.20
+WDI SI.DST.10TH.10
+WDI SI.POV.GINI
+WDI SE.TER.ENRR
+WDI HD.HCI.OVRL
+  no data for HD.HCI.OVRL: [{'message': [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]}]
+WDI SP.URB.TOTL.IN.ZS
+WDI SP.POP.65UP.TO.ZS
+WDI SL.EMP.WORK.ZS
+WDI SL.SRV.EMPL.ZS
+Findex account.t.d
+Findex fin10
+Findex fin2.t.d
+Findex fin27a
+Findex g20.made
+Findex con9a
+Findex Internet
+done: 109068 rows

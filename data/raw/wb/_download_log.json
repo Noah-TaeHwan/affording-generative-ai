@@ -1,0 +1,203 @@
+{
+ "run_utc": "2026-09-27T06:35:06.788768Z",
+ "indicators": {
+  "NY.GNP.PCAP.CD": {
+   "label": "GNI per capita, Atlas method (current US$)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "NY.GNP.PCAP.PP.CD": {
+   "label": "GNI per capita, PPP (current international $)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "NY.GDP.PCAP.CD": {
+   "label": "GDP per capita (current US$)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "NY.GDP.PCAP.PP.CD": {
+   "label": "GDP per capita, PPP (current international $)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "NE.CON.PRVT.CD": {
+   "label": "Households and NPISHs final consumption expenditure (current US$)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "PA.NUS.PPPC.RF": {
+   "label": "Price level ratio of PPP conversion factor (GDP) to market exchange rate",
+   "source": 2,
+   "n": 0,
+   "lastupdated": null
+  },
+  "PA.NUS.FCRF": {
+   "label": "Official exchange rate (LCU per US$, period average)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SP.POP.TOTL": {
+   "label": "Population, total",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SP.POP.1564.TO": {
+   "label": "Population ages 15-64, total",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "IT.NET.USER.ZS": {
+   "label": "Individuals using the Internet (% of population)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "EG.ELC.ACCS.ZS": {
+   "label": "Access to electricity (% of population)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "IT.NET.BBND.P2": {
+   "label": "Fixed broadband subscriptions (per 100 people)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.FRST.10": {
+   "label": "Income share held by lowest 10%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.FRST.20": {
+   "label": "Income share held by lowest 20%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.02ND.20": {
+   "label": "Income share held by second 20%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.03RD.20": {
+   "label": "Income share held by third 20%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.04TH.20": {
+   "label": "Income share held by fourth 20%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.05TH.20": {
+   "label": "Income share held by highest 20%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.DST.10TH.10": {
+   "label": "Income share held by highest 10%",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SI.POV.GINI": {
+   "label": "Gini index",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SE.TER.ENRR": {
+   "label": "School enrollment, tertiary (% gross)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "HD.HCI.OVRL": {
+   "label": "Human Capital Index (HCI) (scale 0-1)",
+   "source": 2,
+   "n": 0,
+   "lastupdated": null
+  },
+  "SP.URB.TOTL.IN.ZS": {
+   "label": "Urban population (% of total population)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SP.POP.65UP.TO.ZS": {
+   "label": "Population ages 65 and above (% of total population)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SL.EMP.WORK.ZS": {
+   "label": "Wage and salaried workers, total (% of total employment)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "SL.SRV.EMPL.ZS": {
+   "label": "Employment in services (% of total employment)",
+   "source": 2,
+   "n": 4240,
+   "lastupdated": "2026-07-13"
+  },
+  "account.t.d": {
+   "label": "Account (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  },
+  "fin10": {
+   "label": "Owns a credit card (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  },
+  "fin2.t.d": {
+   "label": "Owns a debit card (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  },
+  "fin27a": {
+   "label": "Made a digital online merchant payment for an online purchase (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  },
+  "g20.made": {
+   "label": "Made a digital payment (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  },
+  "con9a": {
+   "label": "Main mobile phone is a smartphone (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  },
+  "Internet": {
+   "label": "Has access to the Internet (% age 15+)",
+   "source": 28,
+   "n": 1044,
+   "lastupdated": "2025-10-06"
+  }
+ }
+}

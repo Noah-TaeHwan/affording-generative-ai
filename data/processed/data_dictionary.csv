@@ -1,0 +1,117 @@
+variable,description,source,non_missing
+iso3,ISO 3166-1 alpha-3 code,World Bank,217
+iso2,ISO 3166-1 alpha-2 code,World Bank,217
+country_wb,Economy name (World Bank),World Bank,217
+region,World Bank region,World Bank,217
+income_group,"World Bank income group, FY2027 (effective 1 Jul 2026, based on 2025 GNI p.c.)",World Bank,217
+lending,World Bank lending category,World Bank,217
+gni_atlas,"GNI per capita, Atlas method, current US$ (2025; latest 2022-2024 if missing)","World Bank WDI (API, 27 Sep 2026)",201
+gni_atlas_year,Year of gni_atlas,derived,201
+gni_ppp,"GNI per capita, PPP, current international $ (2025; latest 2022-2024 if missing)","World Bank WDI (API, 27 Sep 2026)",197
+gni_ppp_year,Year of gni_ppp,derived,197
+plr_gdp,"GDP price-level ratio: GDP p.c. current US$ / GDP p.c. PPP, in the year of gni_atlas","World Bank WDI (API, 27 Sep 2026)",197
+plr_gdp_year,Year of plr_gdp,"World Bank WDI (API, 27 Sep 2026)",197
+gni_atlas_2022,"GNI per capita, Atlas method, 2022 (current WDI vintage)","World Bank WDI (API, 27 Sep 2026)",201
+gni_ppp_2022,"GNI per capita, PPP, 2022 (current WDI vintage)","World Bank WDI (API, 27 Sep 2026)",197
+pop,"Population, total (latest 2020-2025)","World Bank WDI (API, 27 Sep 2026)",217
+pop1564,Population ages 15-64 (latest 2020-2025),"World Bank WDI (API, 27 Sep 2026)",217
+hfce_pc,"Household final consumption expenditure per capita, current US$ (latest 2022-2025)","World Bank WDI (API, 27 Sep 2026)",177
+hfce_pc_year,Year of hfce_pc,derived,177
+q1_share,"Income/consumption share of poorest 20% (%), latest survey 2010-2025","World Bank WDI (API, 27 Sep 2026)",165
+dist_year,Survey year of quintile shares,"World Bank WDI (API, 27 Sep 2026)",165
+q2_share,"Income share, second quintile (%)","World Bank WDI (API, 27 Sep 2026)",165
+q3_share,"Income share, third quintile (%)","World Bank WDI (API, 27 Sep 2026)",165
+q4_share,"Income share, fourth quintile (%)","World Bank WDI (API, 27 Sep 2026)",165
+q5_share,"Income share, richest 20% (%)","World Bank WDI (API, 27 Sep 2026)",165
+gini,Gini index (latest),"World Bank WDI (API, 27 Sep 2026)",165
+internet_pct,"Individuals using the Internet (% of population), latest 2018-2025","World Bank WDI (API, 27 Sep 2026) / ITU",192
+internet_pct_year,Year of internet_pct,derived,192
+electricity_pct,Access to electricity (% of population),"World Bank WDI (API, 27 Sep 2026)",215
+electricity_pct_year,Year of electricity_pct,derived,215
+fixed_bb_per100,Fixed broadband subscriptions per 100 people,"World Bank WDI (API, 27 Sep 2026)",208
+fixed_bb_per100_year,Year of fixed_bb_per100,derived,208
+tertiary_enrol,"School enrolment, tertiary (% gross), latest 2012-2025","World Bank WDI (API, 27 Sep 2026)",181
+tertiary_enrol_year,Year of tertiary_enrol,derived,181
+urban_pct,Urban population (% of total),"World Bank WDI (API, 27 Sep 2026)",217
+urban_pct_year,Year of urban_pct,derived,217
+age65_pct,Population ages 65+ (% of total),"World Bank WDI (API, 27 Sep 2026)",217
+age65_pct_year,Year of age65_pct,derived,217
+wage_emp_pct,Wage and salaried workers (% of employment),"World Bank WDI (API, 27 Sep 2026)",187
+wage_emp_pct_year,Year of wage_emp_pct,derived,187
+services_emp_pct,Employment in services (% of employment),"World Bank WDI (API, 27 Sep 2026)",187
+services_emp_pct_year,Year of services_emp_pct,derived,187
+fx_account,Account ownership (% age 15+),Global Findex 2025 (WB API source 28),145
+fx_account_year,Year of fx_account,derived,145
+fx_credit_card,Owns a credit card (% age 15+),Global Findex 2025 (WB API source 28),145
+fx_credit_card_year,Year of fx_credit_card,derived,145
+fx_debit_card,Owns a debit card (% age 15+),Global Findex 2025 (WB API source 28),145
+fx_debit_card_year,Year of fx_debit_card,derived,145
+fx_online_merchant_pay,Made a digital online merchant payment for an online purchase (% age 15+),Global Findex 2025 (WB API source 28),142
+fx_online_merchant_pay_year,Year of fx_online_merchant_pay,derived,142
+fx_made_digital_pay,Made a digital payment (% age 15+),Global Findex 2025 (WB API source 28),140
+fx_made_digital_pay_year,Year of fx_made_digital_pay,derived,140
+fx_smartphone,Main mobile phone is a smartphone (% age 15+),Global Findex 2025 (WB API source 28),139
+fx_smartphone_year,Year of fx_smartphone,derived,139
+fx_internet_access,Has access to the Internet (% age 15+),Global Findex 2025 (WB API source 28),139
+fx_internet_access_year,Year of fx_internet_access,derived,139
+ms_economy_name,Economy name in the Microsoft dataset,"Microsoft AI Economy Institute, AI Diffusion Q2 2026 dataset",145
+ms_h1_2025,AI User Share H1 2025 (% of population 15-64),"Microsoft AI Economy Institute, AI Diffusion Q2 2026 dataset",145
+ms_h2_2025,AI User Share H2 2025 (%),"Microsoft AI Economy Institute, AI Diffusion Q2 2026 dataset",145
+ms_q1_2026,AI User Share Q1 2026 (%),"Microsoft AI Economy Institute, AI Diffusion Q2 2026 dataset",145
+ms_q2_2026,AI User Share Q2 2026 (%),"Microsoft AI Economy Institute, AI Diffusion Q2 2026 dataset",145
+ms_region_imputed,1 = value is a regional aggregate (economy shares an identical series with a pool),"Microsoft AI Economy Institute, AI Diffusion Q2 2026 dataset; Misra et al. (2025) App. Table 2",145
+ms_impute_cluster,Identifier of the regional pool (the pooled series),derived,35
+aui_apr26,"Anthropic AI Usage Index, harmonised (usage share / working-age population share), Apr 2026",Anthropic Economic Index (HF commit 2ea58ff),113
+aui_aug25,"Anthropic AI Usage Index, harmonised (usage share / working-age population share), 4-11 Aug 2025",Anthropic Economic Index (HF commit 2ea58ff),165
+aui_feb26,"Anthropic AI Usage Index, harmonised (usage share / working-age population share), 5-12 Feb 2026",Anthropic Economic Index (HF commit 2ea58ff),169
+aui_may26,"Anthropic AI Usage Index, harmonised (usage share / working-age population share), May 2026",Anthropic Economic Index (HF commit 2ea58ff),120
+aui_nov25,"Anthropic AI Usage Index, harmonised (usage share / working-age population share), 13-20 Nov 2025",Anthropic Economic Index (HF commit 2ea58ff),165
+an_n_aug25,"Number of sampled Claude.ai conversations, 4-11 Aug 2025",Anthropic Economic Index (HF commit 2ea58ff),193
+an_n_feb26,"Number of sampled Claude.ai conversations, 5-12 Feb 2026",Anthropic Economic Index (HF commit 2ea58ff),169
+an_n_nov25,"Number of sampled Claude.ai conversations, 13-20 Nov 2025",Anthropic Economic Index (HF commit 2ea58ff),166
+an_coursework_apr26,"Share of Claude.ai conversations: coursework (%), Apr 2026",Anthropic Economic Index (HF commit 2ea58ff),113
+an_coursework_feb26,"Share of Claude.ai conversations: coursework (%), 5-12 Feb 2026",Anthropic Economic Index (HF commit 2ea58ff),128
+an_coursework_may26,"Share of Claude.ai conversations: coursework (%), May 2026",Anthropic Economic Index (HF commit 2ea58ff),120
+an_coursework_nov25,"Share of Claude.ai conversations: coursework (%), 13-20 Nov 2025",Anthropic Economic Index (HF commit 2ea58ff),138
+an_work_apr26,"Share of Claude.ai conversations: work (%), Apr 2026",Anthropic Economic Index (HF commit 2ea58ff),113
+an_work_feb26,"Share of Claude.ai conversations: work (%), 5-12 Feb 2026",Anthropic Economic Index (HF commit 2ea58ff),156
+an_work_may26,"Share of Claude.ai conversations: work (%), May 2026",Anthropic Economic Index (HF commit 2ea58ff),120
+an_work_nov25,"Share of Claude.ai conversations: work (%), 13-20 Nov 2025",Anthropic Economic Index (HF commit 2ea58ff),154
+an_automation_apr26,"Share of Claude.ai conversations: automation (%), Apr 2026",Anthropic Economic Index (HF commit 2ea58ff),113
+an_automation_aug25,"Share of Claude.ai conversations: automation (%), 4-11 Aug 2025",Anthropic Economic Index (HF commit 2ea58ff),154
+an_automation_feb26,"Share of Claude.ai conversations: automation (%), 5-12 Feb 2026",Anthropic Economic Index (HF commit 2ea58ff),115
+an_automation_may26,"Share of Claude.ai conversations: automation (%), May 2026",Anthropic Economic Index (HF commit 2ea58ff),120
+an_automation_nov25,"Share of Claude.ai conversations: automation (%), 13-20 Nov 2025",Anthropic Economic Index (HF commit 2ea58ff),115
+an_ge200_aug25,"1 = at least 200 sampled conversations, 4-11 Aug 2025",derived from Anthropic Economic Index (HF commit 2ea58ff),193
+an_ge200_feb26,"1 = at least 200 sampled conversations, 5-12 Feb 2026",derived from Anthropic Economic Index (HF commit 2ea58ff),169
+an_ge200_nov25,"1 = at least 200 sampled conversations, 13-20 Nov 2025",derived from Anthropic Economic Index (HF commit 2ea58ff),165
+g_work_share,Share of Gemini conversation volume classified as work (%),Google ATLAS v1.0 (Apr 2026),206
+g_intensity_q,"Per-capita Gemini adoption quintile (1 = very low, 5 = very high)",Google ATLAS v1.0 (Apr 2026),206
+mbb_2gb_pct_gni_latest_official,"ITU data-only mobile broadband basket (>=2 GB) price, % of monthly GNI p.c., latest official year",ITU ICT Price Baskets (Dec 2025),206
+mbb_2gb_latest_year,Year of the preceding variable,ITU,206
+mbb_5gb_pct_gni_2025,"ITU data-only mobile broadband basket (>=5 GB), % of GNI p.c., 2025",ITU,204
+fbb_5gb_pct_gni_latest_official,"ITU fixed-broadband basket (5 GB), % of GNI p.c., latest official year",ITU,198
+fbb_5gb_latest_year,Year of the preceding variable,ITU,198
+mbb_2gb_usd_2024,"ITU mobile broadband 2 GB basket, US$ per month, 2024",ITU,209
+mbb_5gb_usd_2025,"ITU mobile broadband 5 GB basket, US$ per month, 2025",ITU,209
+storefront,Apple App Store storefront code,Apple App Store,217
+p_chatgpt_go,"Local monthly App Store price, US$ at market FX (27 Sep 2026): chatgpt_go",Apple App Store; open.er-api.com,166
+p_chatgpt_plus,"Local monthly App Store price, US$ at market FX (27 Sep 2026): chatgpt_plus",Apple App Store; open.er-api.com,166
+p_chatgpt_pro20x,"Local monthly App Store price, US$ at market FX (27 Sep 2026): chatgpt_pro20x",Apple App Store; open.er-api.com,166
+p_chatgpt_pro5x,"Local monthly App Store price, US$ at market FX (27 Sep 2026): chatgpt_pro5x",Apple App Store; open.er-api.com,166
+p_claude_max20x,"Local monthly App Store price, US$ at market FX (27 Sep 2026): claude_max20x",Apple App Store; open.er-api.com,163
+p_claude_max5x,"Local monthly App Store price, US$ at market FX (27 Sep 2026): claude_max5x",Apple App Store; open.er-api.com,163
+p_claude_pro,"Local monthly App Store price, US$ at market FX (27 Sep 2026): claude_pro",Apple App Store; open.er-api.com,163
+p_gemini_plus,"Local monthly App Store price, US$ at market FX (27 Sep 2026): gemini_plus",Apple App Store; open.er-api.com,162
+p_gemini_plus_other,"Local monthly App Store price, US$ at market FX (27 Sep 2026): gemini_plus_other",Apple App Store; open.er-api.com,82
+p_gemini_pro,"Local monthly App Store price, US$ at market FX (27 Sep 2026): gemini_pro",Apple App Store; open.er-api.com,167
+p_gemini_ultra,"Local monthly App Store price, US$ at market FX (27 Sep 2026): gemini_ultra",Apple App Store; open.er-api.com,96
+store_currency,Currency of the local App Store storefront,"Apple App Store, 27 Sep 2026",169
+store_chatgpt,Storefront status for chatgpt: local_storefront / no_local_storefront / app_not_offered,Apple App Store,217
+store_claude,Storefront status for claude: local_storefront / no_local_storefront / app_not_offered,Apple App Store,217
+store_gemini,Storefront status for gemini: local_storefront / no_local_storefront / app_not_offered,Apple App Store,217
+ln_gni,log of gni_atlas,derived,201
+ln_gni_ppp,log of gni_ppp,derived,197
+ppp_ratio,"gni_ppp / gni_atlas (inverse of the Atlas-to-PPP income ratio, a price-level proxy)",derived,197
+in_ms,1 = economy appears in the Microsoft dataset,derived,217
+ms_country_specific,1 = Microsoft value is a country-specific estimate,derived,217

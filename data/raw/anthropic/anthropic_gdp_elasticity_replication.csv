@@ -1,0 +1,6 @@
+release,date_start,n_countries,elasticity,se,r2,sample,gdp
+release_2025_09_15,2025-08-04,114,0.69,0.042,0.709,countries >=200 conv.,IMF WEO NGDPD 2024 / WB working-age pop 2024 (Anthropic Sept-2025 inputs)
+release_2026_01_15,2025-11-13,115,0.7,0.037,0.755,countries >=200 conv.,IMF WEO NGDPD 2024 / WB working-age pop 2024 (Anthropic Sept-2025 inputs)
+release_2026_03_24,2026-02-05,115,0.762,0.036,0.799,countries >=200 conv.,IMF WEO NGDPD 2024 / WB working-age pop 2024 (Anthropic Sept-2025 inputs)
+release_2026_06_26,2026-04-01,113,0.779,0.032,0.84,all published countries (sample floor applied by Anthropic),IMF WEO NGDPD 2024 / WB working-age pop 2024 (Anthropic Sept-2025 inputs)
+release_2026_06_26,2026-05-01,120,0.754,0.03,0.845,all published countries (sample floor applied by Anthropic),IMF WEO NGDPD 2024 / WB working-age pop 2024 (Anthropic Sept-2025 inputs)

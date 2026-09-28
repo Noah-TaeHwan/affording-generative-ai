@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+paper_*/main.aux
+paper_*/main.log
+paper_*/main.out
+paper_*/main.blg
+paper_*/main.toc
+output/docx_build_*/

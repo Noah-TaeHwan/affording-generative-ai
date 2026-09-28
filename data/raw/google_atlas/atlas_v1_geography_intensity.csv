@@ -1,0 +1,270 @@
+geo_id,geo_level,geo_name,work_share_pct,intensity_quintile,top_language_1,top_language_1_pct,top_language_2,top_language_2_pct,top_language_3,top_language_3_pct,top_occupation_1,top_occupation_1_pct,top_occupation_2,top_occupation_2_pct,top_occupation_3,top_occupation_3_pct
+AD,country,Andorra,9.76,1,,,,,,,,,,,,
+AE,country,United Arab Emirates,13.52,5,English,59.38,Arabic,25.68,Hindi,3.97,Business Operations Specialists,11.64,Computer Occupations,9.38,Information and Record Clerks,8.09
+AF,country,Afghanistan,7.07,1,,,,,,,,,,,,
+AL,country,Albania,12.36,3,,,,,,,Computer Occupations,30.87,Business Operations Specialists,20.82,Financial Specialists,16.97
+AM,country,Armenia,8.49,4,,,,,,,Computer Occupations,30.65,Business Operations Specialists,21.58,Other Office and Administrative Support Workers,13.52
+AO,country,Angola,17.89,1,,,,,,,Art and Design Workers,16.42,Computer Occupations,16.26,Business Operations Specialists,12.71
+AR,country,Argentina,13.55,4,Spanish,96.58,English,2.57,Portuguese,0.3,Business Operations Specialists,9.69,Art and Design Workers,9.63,Computer Occupations,8.56
+AT,country,Austria,12.82,5,German,73.38,English,11.19,Arabic,5.49,Computer Occupations,19.45,Business Operations Specialists,13.53,Financial Specialists,8.16
+AU,country,Australia,13.49,5,English,92.9,Chinese,2.48,Korean,1.59,Business Operations Specialists,17.66,Computer Occupations,15.55,Operations Specialties Managers,8.81
+AZ,country,Azerbaijan,6.51,4,Azerbaijani,42.5,Turkish,27.74,English,17.7,Computer Occupations,16.79,Art and Design Workers,9.93,Business Operations Specialists,8.22
+BA,country,Bosnia & Herzegovina,10.82,5,,,,,,,Business Operations Specialists,14.24,Healthcare Diagnosing or Treating Practitioners,9.66,Other Management Occupations,9.41
+BB,country,Barbados,12.22,1,,,,,,,,,,,,
+BD,country,Bangladesh,9.69,2,Bangla,60.23,English,38.54,Hindi,0.55,Computer Occupations,12.76,Art and Design Workers,12.0,Business Operations Specialists,11.21
+BE,country,Belgium,10.34,5,French,42.12,Dutch,33.56,English,13.89,Business Operations Specialists,16.61,Computer Occupations,15.94,Financial Specialists,8.67
+BF,country,Burkina Faso,15.59,1,,,,,,,,,,,,
+BG,country,Bulgaria,11.38,4,,,,,,,Business Operations Specialists,13.38,Computer Occupations,12.99,Other Office and Administrative Support Workers,10.34
+BH,country,Bahrain,9.44,4,,,,,,,Other Office and Administrative Support Workers,22.57,Business Operations Specialists,19.28,Computer Occupations,16.32
+BI,country,Burundi,15.05,1,,,,,,,,,,,,
+BJ,country,Benin,21.59,1,,,,,,,,,,,,
+BM,country,Bermuda,18.53,1,,,,,,,,,,,,
+BN,country,Brunei,11.26,1,,,,,,,,,,,,
+BO,country,Bolivia,15.97,3,Spanish,97.41,English,1.98,Portuguese,0.34,Computer Occupations,9.51,Business Operations Specialists,9.35,Healthcare Diagnosing or Treating Practitioners,9.29
+BR,country,Brazil,12.86,5,Portuguese,96.82,English,2.13,Spanish,0.78,Business Operations Specialists,11.02,Computer Occupations,9.49,Art and Design Workers,8.06
+BS,country,Bahamas,9.88,1,,,,,,,,,,,,
+BT,country,Bhutan,11.55,1,,,,,,,,,,,,
+BW,country,Botswana,16.6,2,,,,,,,,,,,,
+BY,country,Belarus,19.37,2,,,,,,,Computer Occupations,19.59,Business Operations Specialists,17.35,Engineers,6.47
+BZ,country,Belize,16.89,1,,,,,,,,,,,,
+CA,country,Canada,10.89,5,English,80.45,French,12.69,Spanish,1.5,Computer Occupations,14.91,Business Operations Specialists,14.4,Financial Specialists,7.66
+CD,country,Congo - Kinshasa,18.23,1,,,,,,,Art and Design Workers,13.79,Business Operations Specialists,12.44,Computer Occupations,11.54
+CF,country,Central African Republic,16.84,1,,,,,,,,,,,,
+CG,country,Congo - Brazzaville,17.83,2,,,,,,,,,,,,
+CH,country,Switzerland,12.85,5,German,47.28,French,17.64,English,14.98,Computer Occupations,19.57,Business Operations Specialists,12.15,Other Office and Administrative Support Workers,8.45
+CI,country,Côte d’Ivoire,15.38,1,,,,,,,Business Operations Specialists,14.0,Other Office and Administrative Support Workers,13.24,Art and Design Workers,12.49
+CL,country,Chile,13.13,4,Spanish,96.77,English,2.77,Portuguese,0.27,Computer Occupations,11.18,Business Operations Specialists,10.89,Other Management Occupations,6.44
+CM,country,Cameroon,18.12,1,,,,,,,Computer Occupations,17.13,Other Office and Administrative Support Workers,12.03,Art and Design Workers,10.01
+CO,country,Colombia,13.46,4,Spanish,96.78,English,2.89,Portuguese,0.11,Business Operations Specialists,9.89,Computer Occupations,8.61,Other Office and Administrative Support Workers,6.77
+CR,country,Costa Rica,11.78,5,,,,,,,Business Operations Specialists,15.15,Computer Occupations,14.24,Art and Design Workers,10.25
+CV,country,Cape Verde,17.74,1,,,,,,,,,,,,
+CW,country,Curaçao,14.56,1,,,,,,,,,,,,
+CY,country,Cyprus,11.9,4,,,,,,,Computer Occupations,29.02,Business Operations Specialists,23.62,Other Office and Administrative Support Workers,22.57
+CZ,country,Czechia,11.28,4,Czech,76.93,English,13.63,Russian,4.14,Computer Occupations,16.94,Business Operations Specialists,11.35,Financial Specialists,6.88
+DE,country,Germany,10.86,5,German,72.85,English,8.05,Russian,5.2,Computer Occupations,15.18,Business Operations Specialists,12.65,Other Office and Administrative Support Workers,6.44
+DJ,country,Djibouti,8.74,3,,,,,,,,,,,,
+DK,country,Denmark,10.56,5,,,,,,,Business Operations Specialists,17.99,Computer Occupations,16.89,Financial Specialists,7.61
+DO,country,Dominican Republic,12.24,3,,,,,,,Business Operations Specialists,12.72,Computer Occupations,10.72,Art and Design Workers,10.5
+DZ,country,Algeria,11.25,3,Arabic,79.99,French,12.54,English,7.2,Business Operations Specialists,8.57,Computer Occupations,8.45,Other Office and Administrative Support Workers,7.73
+EC,country,Ecuador,14.14,3,Spanish,97.16,English,2.57,Portuguese,0.17,Business Operations Specialists,10.73,Computer Occupations,9.39,Art and Design Workers,7.65
+EE,country,Estonia,8.56,5,,,,,,,Business Operations Specialists,35.54,Computer Occupations,32.15,Financial Specialists,16.22
+EG,country,Egypt,10.67,2,Arabic,91.71,English,7.62,Russian,0.18,Computer Occupations,11.86,Art and Design Workers,9.72,Healthcare Diagnosing or Treating Practitioners,8.84
+EH,country,Western Sahara,13.1,1,,,,,,,,,,,,
+ES,country,Spain,10.62,5,Spanish,87.04,English,6.52,Catalan,1.75,Computer Occupations,14.08,Business Operations Specialists,12.69,Financial Specialists,6.57
+ET,country,Ethiopia,15.14,1,,,,,,,Computer Occupations,10.96,Business Operations Specialists,10.13,Other Office and Administrative Support Workers,8.61
+FI,country,Finland,11.5,4,,,,,,,Computer Occupations,21.42,Business Operations Specialists,14.67,Engineers,8.81
+FJ,country,Fiji,15.11,1,,,,,,,,,,,,
+FR,country,France,10.44,4,French,84.58,English,6.79,Arabic,4.24,Computer Occupations,13.76,Business Operations Specialists,13.36,Other Office and Administrative Support Workers,7.33
+GA,country,Gabon,11.75,1,,,,,,,,,,,,
+GB,country,United Kingdom,10.63,4,English,87.48,Russian,2.85,Arabic,2.42,Computer Occupations,15.51,Business Operations Specialists,11.53,Other Office and Administrative Support Workers,6.87
+GD,country,Grenada,8.02,1,,,,,,,,,,,,
+GE,country,Georgia,8.55,4,,,,,,,Computer Occupations,24.1,Business Operations Specialists,14.63,Other Office and Administrative Support Workers,9.36
+GH,country,Ghana,13.6,2,,,,,,,Computer Occupations,13.53,Other Office and Administrative Support Workers,10.56,Business Operations Specialists,10.51
+GM,country,Gambia,9.47,1,,,,,,,,,,,,
+GN,country,Guinea,13.11,2,,,,,,,,,,,,
+GP,country,Guadeloupe,11.21,1,,,,,,,,,,,,
+GR,country,Greece,10.3,4,,,,,,,Business Operations Specialists,13.74,Computer Occupations,11.35,Other Office and Administrative Support Workers,8.7
+GT,country,Guatemala,11.76,3,Spanish,96.58,English,3.12,Guarani,0.13,Business Operations Specialists,11.46,Other Office and Administrative Support Workers,8.63,Computer Occupations,8.2
+GU,country,Guam,6.46,1,,,,,,,,,,,,
+GY,country,Guyana,9.72,1,,,,,,,,,,,,
+HK,country,Hong Kong,17.32,3,Chinese,78.86,English,17.42,Vietnamese,1.83,Computer Occupations,24.09,Financial Specialists,10.89,Business Operations Specialists,9.88
+HN,country,Honduras,11.1,3,,,,,,,Business Operations Specialists,11.62,Computer Occupations,11.13,Art and Design Workers,8.77
+HR,country,Croatia,13.03,5,,,,,,,Business Operations Specialists,15.75,Computer Occupations,12.29,Other Office and Administrative Support Workers,10.28
+HT,country,Haiti,14.92,2,,,,,,,,,,,,
+HU,country,Hungary,12.13,4,,,,,,,Computer Occupations,14.78,Business Operations Specialists,14.0,Other Office and Administrative Support Workers,12.72
+ID,country,Indonesia,13.69,4,Indonesian,85.6,English,10.88,Malay,2.09,Computer Occupations,10.42,Business Operations Specialists,10.2,Art and Design Workers,9.4
+IE,country,Ireland,10.19,4,,,,,,,Computer Occupations,23.45,Business Operations Specialists,17.09,Other Office and Administrative Support Workers,10.16
+IL,country,Israel,11.71,4,Hebrew,70.52,English,13.95,Arabic,7.45,Computer Occupations,18.66,Business Operations Specialists,10.28,Financial Specialists,8.74
+IM,country,Isle of Man,8.81,1,,,,,,,,,,,,
+IN,country,India,10.74,2,English,70.27,Hindi,19.82,Bangla,2.3,Business Operations Specialists,11.44,Computer Occupations,10.99,Art and Design Workers,10.15
+IQ,country,Iraq,7.23,3,Arabic,85.86,English,6.64,Kurdish,3.56,Computer Occupations,10.11,Art and Design Workers,9.03,Other Office and Administrative Support Workers,8.33
+IS,country,Iceland,14.39,1,,,,,,,,,,,,
+IT,country,Italy,10.55,5,Italian,90.05,English,5.51,Arabic,0.98,Business Operations Specialists,12.05,Computer Occupations,9.8,Other Management Occupations,6.9
+JM,country,Jamaica,10.54,3,,,,,,,Art and Design Workers,31.59,Business Operations Specialists,23.89,Other Office and Administrative Support Workers,16.24
+JO,country,Jordan,10.27,4,Arabic,91.48,English,8.34,Hebrew,0.18,Healthcare Diagnosing or Treating Practitioners,15.03,Computer Occupations,9.23,Art and Design Workers,8.7
+JP,country,Japan,14.87,3,Japanese,91.43,Chinese,3.13,English,2.38,Computer Occupations,16.3,Business Operations Specialists,11.63,Other Office and Administrative Support Workers,8.35
+KE,country,Kenya,13.39,2,,,,,,,Computer Occupations,16.67,Business Operations Specialists,9.41,Other Office and Administrative Support Workers,7.85
+KG,country,Kyrgyzstan,9.56,3,,,,,,,Business Operations Specialists,10.24,Art and Design Workers,8.21,Other Teachers and Instructors,8.19
+KH,country,Cambodia,10.9,1,,,,,,,Computer Occupations,13.84,Other Office and Administrative Support Workers,13.79,Art and Design Workers,11.51
+KR,country,South Korea,16.72,5,Korean,97.13,English,1.96,Chinese,0.3,Financial Specialists,12.24,Business Operations Specialists,10.9,Computer Occupations,10.04
+KW,country,Kuwait,10.23,3,,,,,,,Computer Occupations,16.64,Other Office and Administrative Support Workers,16.6,Business Operations Specialists,12.96
+KY,country,Cayman Islands,20.83,1,,,,,,,,,,,,
+KZ,country,Kazakhstan,10.46,3,Russian,81.05,Kazakh,13.75,English,3.72,Business Operations Specialists,10.96,Computer Occupations,8.63,Other Office and Administrative Support Workers,7.38
+LA,country,Laos,9.44,1,,,,,,,Media and Communication Workers,26.22,Other Office and Administrative Support Workers,25.28,Computer Occupations,15.32
+LB,country,Lebanon,10.11,4,,,,,,,Computer Occupations,16.15,Art and Design Workers,15.82,Other Office and Administrative Support Workers,10.98
+LC,country,St. Lucia,15.64,1,,,,,,,,,,,,
+LK,country,Sri Lanka,11.0,2,English,59.3,Sinhala,28.73,Tamil,7.11,Art and Design Workers,13.24,Computer Occupations,12.0,Business Operations Specialists,10.63
+LR,country,Liberia,20.02,1,,,,,,,,,,,,
+LS,country,Lesotho,16.49,1,,,,,,,,,,,,
+LT,country,Lithuania,11.09,5,,,,,,,Computer Occupations,19.82,Business Operations Specialists,13.95,Other Office and Administrative Support Workers,9.56
+LU,country,Luxembourg,15.96,1,,,,,,,,,,,,
+LV,country,Latvia,12.64,5,,,,,,,Computer Occupations,23.68,Business Operations Specialists,16.55,Engineers,13.8
+LY,country,Libya,10.07,3,,,,,,,Other Office and Administrative Support Workers,11.95,Computer Occupations,11.85,Business Operations Specialists,9.37
+MA,country,Morocco,11.51,3,Arabic,68.14,French,20.63,English,10.18,Business Operations Specialists,10.53,Computer Occupations,9.56,Art and Design Workers,9.39
+MD,country,Moldova,12.31,4,,,,,,,"Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",32.8,Computer Occupations,26.16,Business Operations Specialists,10.94
+ME,country,Montenegro,11.26,1,,,,,,,,,,,,
+MG,country,Madagascar,15.4,1,,,,,,,,,,,,
+MK,country,North Macedonia,8.78,4,,,,,,,,,,,,
+ML,country,Mali,17.44,1,,,,,,,,,,,,
+MM,country,Myanmar (Burma),9.78,1,English,61.01,Burmese,34.43,Chinese,2.94,Art and Design Workers,10.44,Business Operations Specialists,9.53,Computer Occupations,8.82
+MN,country,Mongolia,10.56,2,,,,,,,,,,,,
+MO,country,Macao,13.36,1,,,,,,,,,,,,
+MQ,country,Martinique,9.13,1,,,,,,,,,,,,
+MR,country,Mauritania,11.12,1,,,,,,,,,,,,
+MT,country,Malta,15.5,1,,,,,,,,,,,,
+MU,country,Mauritius,12.8,4,,,,,,,,,,,,
+MV,country,Maldives,12.62,1,,,,,,,,,,,,
+MW,country,Malawi,12.1,1,,,,,,,,,,,,
+MX,country,Mexico,11.74,3,Spanish,96.01,English,3.48,Guarani,0.11,Business Operations Specialists,10.41,Art and Design Workers,8.21,Computer Occupations,8.17
+MY,country,Malaysia,14.7,3,English,64.48,Malay,14.08,Chinese,12.85,Computer Occupations,12.11,Business Operations Specialists,11.47,Other Office and Administrative Support Workers,7.61
+MZ,country,Mozambique,16.5,1,,,,,,,Business Operations Specialists,15.94,Secretaries and Administrative Assistants,13.16,Media and Communication Workers,12.81
+NA,country,Namibia,13.67,3,,,,,,,,,,,,
+NE,country,Niger,18.85,1,,,,,,,,,,,,
+NG,country,Nigeria,15.7,1,English,98.24,Hausa,0.89,Arabic,0.5,Computer Occupations,12.68,Art and Design Workers,10.93,Other Office and Administrative Support Workers,9.11
+NI,country,Nicaragua,12.76,3,,,,,,,Business Operations Specialists,12.29,Computer Occupations,9.7,Other Office and Administrative Support Workers,8.68
+NL,country,Netherlands,11.73,5,Dutch,41.6,Russian,22.55,English,15.21,Computer Occupations,18.69,Business Operations Specialists,12.31,Other Office and Administrative Support Workers,5.96
+NO,country,Norway,8.95,5,,,,,,,Business Operations Specialists,17.72,Computer Occupations,13.58,Financial Specialists,7.58
+NP,country,Nepal,10.11,2,English,80.3,Nepali,8.93,Hindi,8.67,Computer Occupations,11.88,Other Office and Administrative Support Workers,10.03,Art and Design Workers,9.54
+NZ,country,New Zealand,10.98,4,,,,,,,Computer Occupations,16.99,Business Operations Specialists,13.75,Financial Specialists,7.39
+OM,country,Oman,12.52,3,,,,,,,Other Office and Administrative Support Workers,14.01,Business Operations Specialists,9.46,Computer Occupations,9.27
+PA,country,Panama,13.92,4,,,,,,,Business Operations Specialists,13.29,Art and Design Workers,9.95,Other Office and Administrative Support Workers,9.15
+PE,country,Peru,13.96,4,Spanish,97.03,English,2.42,Portuguese,0.13,Business Operations Specialists,9.21,Computer Occupations,7.6,Other Office and Administrative Support Workers,6.72
+PG,country,Papua New Guinea,22.77,2,,,,,,,,,,,,
+PH,country,Philippines,13.53,2,English,91.9,Filipino,6.89,Korean,0.33,Business Operations Specialists,9.9,Other Office and Administrative Support Workers,9.21,Computer Occupations,8.99
+PK,country,Pakistan,11.26,2,English,73.2,Hindi,15.01,Urdu,9.45,Art and Design Workers,13.06,Computer Occupations,11.01,Business Operations Specialists,10.64
+PL,country,Poland,11.95,5,Polish,87.19,English,5.27,Russian,4.67,Computer Occupations,13.99,Business Operations Specialists,12.73,Financial Specialists,6.08
+PR,country,Puerto Rico,11.44,5,,,,,,,Computer Occupations,16.15,Business Operations Specialists,13.19,Other Office and Administrative Support Workers,9.97
+PS,country,Palestine,8.82,4,,,,,,,Art and Design Workers,15.93,Business Operations Specialists,15.4,Other Office and Administrative Support Workers,14.81
+PT,country,Portugal,12.01,5,Portuguese,82.14,English,12.73,Spanish,2.43,Business Operations Specialists,14.44,Computer Occupations,12.13,Other Office and Administrative Support Workers,7.52
+PY,country,Paraguay,13.95,3,,,,,,,Computer Occupations,14.36,Business Operations Specialists,11.01,Art and Design Workers,10.79
+QA,country,Qatar,14.45,5,,,,,,,Computer Occupations,14.98,Business Operations Specialists,13.08,Other Office and Administrative Support Workers,11.56
+RE,country,Réunion,9.81,1,,,,,,,,,,,,
+RO,country,Romania,9.79,3,Romanian,56.28,English,32.94,Hungarian,3.02,Computer Occupations,12.11,Business Operations Specialists,11.55,Financial Specialists,6.98
+RS,country,Serbia,11.38,5,,,,,,,Computer Occupations,13.07,Business Operations Specialists,12.09,Other Management Occupations,6.88
+RU,country,Russia,18.57,2,Russian,98.62,English,0.95,Turkish,0.11,Computer Occupations,19.93,Business Operations Specialists,13.21,Engineers,6.65
+RW,country,Rwanda,12.31,1,,,,,,,,,,,,
+SA,country,Saudi Arabia,11.85,3,Arabic,69.42,English,18.45,Bangla,4.3,Business Operations Specialists,10.86,Computer Occupations,10.47,Other Office and Administrative Support Workers,9.53
+SB,country,Solomon Islands,20.37,1,,,,,,,,,,,,
+SD,country,Sudan,11.97,1,,,,,,,Healthcare Diagnosing or Treating Practitioners,18.53,Art and Design Workers,11.29,Computer Occupations,11.17
+SE,country,Sweden,10.76,5,Swedish,73.61,English,16.38,Russian,2.83,Computer Occupations,19.84,Business Operations Specialists,13.56,Financial Specialists,7.59
+SG,country,Singapore,19.42,5,English,65.51,Chinese,22.0,Indonesian,2.08,Computer Occupations,26.7,Business Operations Specialists,11.05,Financial Specialists,9.25
+SI,country,Slovenia,14.15,5,,,,,,,Computer Occupations,28.1,Business Operations Specialists,18.22,Financial Specialists,8.96
+SK,country,Slovakia,11.0,5,,,,,,,Computer Occupations,19.06,Business Operations Specialists,11.9,Financial Specialists,6.97
+SL,country,Sierra Leone,16.29,1,,,,,,,,,,,,
+SN,country,Senegal,12.98,2,,,,,,,Art and Design Workers,19.23,Business Operations Specialists,17.29,Computer Occupations,11.87
+SO,country,Somalia,10.82,2,,,,,,,Art and Design Workers,26.09,Computer Occupations,23.55,Other Office and Administrative Support Workers,15.9
+SR,country,Suriname,11.65,1,,,,,,,,,,,,
+SS,country,South Sudan,17.39,1,,,,,,,,,,,,
+SV,country,El Salvador,10.32,3,,,,,,,Business Operations Specialists,11.53,Computer Occupations,9.25,Healthcare Diagnosing or Treating Practitioners,8.17
+SZ,country,Eswatini,17.54,2,,,,,,,,,,,,
+TD,country,Chad,11.3,1,,,,,,,,,,,,
+TG,country,Togo,16.2,1,,,,,,,,,,,,
+TH,country,Thailand,11.97,2,Thai,89.46,English,7.08,Burmese,1.02,Computer Occupations,10.85,Business Operations Specialists,10.74,Art and Design Workers,8.63
+TJ,country,Tajikistan,10.38,3,,,,,,,Other Office and Administrative Support Workers,30.72,Healthcare Diagnosing or Treating Practitioners,19.13,Art and Design Workers,14.27
+TL,country,Timor-Leste,12.73,2,,,,,,,,,,,,
+TM,country,Turkmenistan,6.85,2,,,,,,,Business Operations Specialists,14.12,Computer Occupations,14.06,Art and Design Workers,10.5
+TN,country,Tunisia,12.45,2,,,,,,,Computer Occupations,14.75,Business Operations Specialists,11.43,Art and Design Workers,8.86
+TR,country,Türkiye,7.07,4,Turkish,92.4,Arabic,3.37,English,3.15,Business Operations Specialists,10.87,Computer Occupations,10.08,Other Office and Administrative Support Workers,6.29
+TT,country,Trinidad & Tobago,11.08,4,,,,,,,,,,,,
+TW,country,Taiwan,16.54,3,Chinese,95.55,English,2.73,Japanese,0.62,Computer Occupations,19.97,Financial Specialists,13.22,Business Operations Specialists,10.66
+TZ,country,Tanzania,19.07,1,,,,,,,Business Operations Specialists,15.64,Art and Design Workers,12.26,Computer Occupations,9.96
+UA,country,Ukraine,11.16,3,Russian,48.78,Ukrainian,47.81,English,2.86,Computer Occupations,12.0,Business Operations Specialists,10.88,Other Office and Administrative Support Workers,5.91
+UG,country,Uganda,15.7,1,,,,,,,Computer Occupations,16.22,Other Office and Administrative Support Workers,15.11,Art and Design Workers,12.66
+US,country,United States,11.05,4,English,89.16,Spanish,4.31,Chinese,3.33,Business Operations Specialists,17.05,Financial Specialists,14.43,Computer Occupations,13.79
+UY,country,Uruguay,9.92,5,,,,,,,Computer Occupations,17.74,Business Operations Specialists,13.97,Art and Design Workers,11.75
+UZ,country,Uzbekistan,9.54,2,English,34.4,Russian,30.7,Uzbek,30.55,Computer Occupations,8.67,Business Operations Specialists,8.5,Art and Design Workers,7.17
+VE,country,Venezuela,17.45,2,Spanish,97.79,English,1.83,Portuguese,0.13,Art and Design Workers,8.23,Business Operations Specialists,7.54,Healthcare Diagnosing or Treating Practitioners,6.06
+VN,country,Vietnam,11.58,2,Vietnamese,93.52,English,4.6,Korean,0.79,Computer Occupations,11.83,Business Operations Specialists,10.07,Other Office and Administrative Support Workers,8.25
+XK,country,Kosovo,8.34,1,,,,,,,,,,,,
+YE,country,Yemen,12.74,2,Arabic,96.19,English,3.68,Indonesian,0.13,Art and Design Workers,13.36,Computer Occupations,12.21,Other Office and Administrative Support Workers,7.49
+ZA,country,South Africa,12.22,2,English,97.96,Afrikaans,0.94,Portuguese,0.47,Computer Occupations,12.96,Business Operations Specialists,11.21,Financial Specialists,7.74
+ZM,country,Zambia,14.95,2,,,,,,,,,,,,
+ZW,country,Zimbabwe,18.57,1,,,,,,,Computer Occupations,17.86,Business Operations Specialists,16.19,Other Office and Administrative Support Workers,12.63
+US-AK,state,Alaska,7.1,2,,,,,,,,,,,,
+US-AL,state,Alabama,8.84,3,,,,,,,Business Operations Specialists,24.51,Other Management Occupations,19.08,Computer Occupations,18.47
+US-AR,state,Arkansas,5.61,2,,,,,,,,,,,,
+US-AZ,state,Arizona,8.82,4,,,,,,,Computer Occupations,20.92,Business Operations Specialists,13.91,Financial Specialists,7.45
+US-CA,state,California,10.63,4,,,,,,,Computer Occupations,21.73,Business Operations Specialists,9.24,Financial Specialists,8.16
+US-CO,state,Colorado,9.1,4,,,,,,,Computer Occupations,25.69,Business Operations Specialists,13.83,Other Office and Administrative Support Workers,7.88
+US-CT,state,Connecticut,7.39,2,,,,,,,Computer Occupations,100.0,,,,
+US-DC,state,District of Columbia,9.18,5,,,,,,,Computer Occupations,15.45,Business Operations Specialists,14.42,Other Office and Administrative Support Workers,9.39
+US-DE,state,Delaware,6.57,4,,,,,,,Computer Occupations,12.78,Other Office and Administrative Support Workers,8.4,Business Operations Specialists,7.96
+US-FL,state,Florida,9.98,4,,,,,,,Computer Occupations,12.99,Business Operations Specialists,11.52,Financial Specialists,9.44
+US-GA,state,Georgia,44.64,5,,,,,,,Financial Specialists,41.62,Business Operations Specialists,41.18,Information and Record Clerks,5.3
+US-HI,state,Hawaii,6.71,1,,,,,,,,,,,,
+US-IA,state,Iowa,8.49,2,,,,,,,Other Office and Administrative Support Workers,34.75,Business Operations Specialists,25.67,Financial Specialists,20.45
+US-ID,state,Idaho,7.9,2,,,,,,,,,,,,
+US-IL,state,Illinois,8.78,5,,,,,,,Computer Occupations,18.09,Business Operations Specialists,12.49,Other Office and Administrative Support Workers,7.85
+US-IN,state,Indiana,7.9,3,,,,,,,Computer Occupations,15.63,Business Operations Specialists,9.89,Other Office and Administrative Support Workers,6.49
+US-KS,state,Kansas,8.91,2,,,,,,,Computer Occupations,25.16,Other Office and Administrative Support Workers,17.33,Business Operations Specialists,13.24
+US-KY,state,Kentucky,4.86,2,,,,,,,Computer Occupations,32.15,Business Operations Specialists,30.42,Financial Specialists,19.08
+US-LA,state,Louisiana,7.18,1,,,,,,,Business Operations Specialists,47.22,Other Office and Administrative Support Workers,30.25,Computer Occupations,22.53
+US-MA,state,Massachusetts,9.56,5,,,,,,,Computer Occupations,18.57,Business Operations Specialists,10.21,Financial Specialists,9.03
+US-MD,state,Maryland,9.86,4,,,,,,,Computer Occupations,24.63,Business Operations Specialists,11.37,Other Office and Administrative Support Workers,7.3
+US-ME,state,Maine,8.72,1,,,,,,,,,,,,
+US-MI,state,Michigan,8.29,3,,,,,,,Computer Occupations,20.48,Business Operations Specialists,12.67,Financial Specialists,11.06
+US-MN,state,Minnesota,8.46,4,,,,,,,Computer Occupations,21.62,Business Operations Specialists,13.98,Financial Specialists,11.25
+US-MO,state,Missouri,8.68,3,,,,,,,Business Operations Specialists,18.01,Computer Occupations,16.28,Financial Specialists,9.36
+US-MS,state,Mississippi,10.95,1,,,,,,,,,,,,
+US-MT,state,Montana,5.75,1,,,,,,,,,,,,
+US-NC,state,North Carolina,9.42,3,,,,,,,Computer Occupations,26.27,Business Operations Specialists,10.59,Other Office and Administrative Support Workers,9.31
+US-NE,state,Nebraska,11.98,3,,,,,,,Computer Occupations,43.51,Business Operations Specialists,38.29,Other Management Occupations,16.59
+US-NH,state,New Hampshire,8.63,3,,,,,,,Computer Occupations,21.56,Business Operations Specialists,10.4,Financial Specialists,7.49
+US-NJ,state,New Jersey,9.02,5,,,,,,,Computer Occupations,15.29,Business Operations Specialists,11.31,Financial Specialists,10.29
+US-NM,state,New Mexico,6.15,2,,,,,,,,,,,,
+US-NV,state,Nevada,8.09,5,,,,,,,Computer Occupations,26.66,Business Operations Specialists,11.76,Financial Specialists,10.4
+US-NY,state,New York,8.89,5,,,,,,,Computer Occupations,16.0,Business Operations Specialists,13.14,Financial Specialists,10.46
+US-OH,state,Ohio,8.46,3,,,,,,,Computer Occupations,15.75,Financial Specialists,11.95,Business Operations Specialists,11.53
+US-OK,state,Oklahoma,8.58,3,,,,,,,Business Operations Specialists,23.32,Computer Occupations,21.74,Other Office and Administrative Support Workers,15.87
+US-OR,state,Oregon,8.73,4,,,,,,,Computer Occupations,24.46,Business Operations Specialists,15.31,Other Office and Administrative Support Workers,8.71
+US-PA,state,Pennsylvania,7.69,5,,,,,,,Computer Occupations,13.71,Business Operations Specialists,13.62,Financial Specialists,9.2
+US-RI,state,Rhode Island,6.13,1,,,,,,,,,,,,
+US-SC,state,South Carolina,9.94,1,,,,,,,Computer Occupations,24.09,Business Operations Specialists,14.33,Financial Specialists,10.54
+US-SD,state,South Dakota,6.38,2,,,,,,,,,,,,
+US-TN,state,Tennessee,9.18,3,,,,,,,Computer Occupations,25.86,Business Operations Specialists,12.65,Other Office and Administrative Support Workers,10.93
+US-TX,state,Texas,9.59,4,,,,,,,Computer Occupations,19.71,Business Operations Specialists,11.42,Other Office and Administrative Support Workers,6.7
+US-UT,state,Utah,10.23,4,,,,,,,Computer Occupations,32.91,Financial Specialists,15.06,Business Operations Specialists,11.96
+US-VA,state,Virginia,9.29,5,,,,,,,Computer Occupations,19.79,Business Operations Specialists,10.48,Financial Specialists,8.14
+US-WA,state,Washington,9.41,5,,,,,,,Computer Occupations,26.24,Business Operations Specialists,9.99,Financial Specialists,8.73
+US-WI,state,Wisconsin,6.63,2,,,,,,,Business Operations Specialists,18.17,Financial Specialists,14.33,Other Office and Administrative Support Workers,10.53
+US-WV,state,West Virginia,8.71,1,,,,,,,,,,,,
+AG,country,Antigua & Barbuda,0.0,1,,,,,,,,,,,,
+AS,country,American Samoa,0.0,1,,,,,,,,,,,,
+AW,country,Aruba,0.0,1,,,,,,,,,,,,
+AX,country,Åland Islands,0.0,1,,,,,,,,,,,,
+BQ,country,Caribbean Netherlands,0.0,1,,,,,,,,,,,,
+CK,country,Cook Islands,0.0,1,,,,,,,,,,,,
+DM,country,Dominica,0.0,1,,,,,,,,,,,,
+FM,country,Micronesia,0.0,1,,,,,,,,,,,,
+FO,country,Faroe Islands,0.0,1,,,,,,,,,,,,
+GF,country,French Guiana,0.0,1,,,,,,,,,,,,
+GG,country,Guernsey,0.0,1,,,,,,,,,,,,
+GI,country,Gibraltar,0.0,1,,,,,,,,,,,,
+GL,country,Greenland,0.0,1,,,,,,,,,,,,
+GQ,country,Equatorial Guinea,0.0,1,,,,,,,,,,,,
+GW,country,Guinea-Bissau,0.0,1,,,,,,,,,,,,
+JE,country,Jersey,0.0,1,,,,,,,,,,,,
+KM,country,Comoros,0.0,1,,,,,,,,,,,,
+KN,country,St. Kitts & Nevis,0.0,1,,,,,,,,,,,,
+LI,country,Liechtenstein,0.0,1,,,,,,,,,,,,
+MC,country,Monaco,0.0,1,,,,,,,,,,,,
+MH,country,Marshall Islands,0.0,1,,,,,,,,,,,,
+MP,country,Northern Mariana Islands,0.0,1,,,,,,,,,,,,
+NC,country,New Caledonia,0.0,1,,,,,,,,,,,,
+PF,country,French Polynesia,0.0,1,,,,,,,,,,,,
+PW,country,Palau,0.0,1,,,,,,,,,,,,
+SC,country,Seychelles,0.0,1,,,,,,,,,,,,
+SM,country,San Marino,0.0,1,,,,,,,,,,,,
+ST,country,São Tomé & Príncipe,0.0,1,,,,,,,,,,,,
+SX,country,Sint Maarten,0.0,1,,,,,,,,,,,,
+TC,country,Turks & Caicos Islands,0.0,1,,,,,,,,,,,,
+TO,country,Tonga,0.0,1,,,,,,,,,,,,
+VC,country,St. Vincent & Grenadines,0.0,1,,,,,,,,,,,,
+VG,country,British Virgin Islands,0.0,1,,,,,,,,,,,,
+VI,country,U.S. Virgin Islands,0.0,1,,,,,,,,,,,,
+VU,country,Vanuatu,0.0,1,,,,,,,,,,,,
+WS,country,Samoa,0.0,1,,,,,,,,,,,,
+YT,country,Mayotte,0.0,1,,,,,,,,,,,,
+US-ND,state,North Dakota,0.0,1,,,,,,,,,,,,
+US-VT,state,Vermont,0.0,1,,,,,,,,,,,,
+US-WY,state,Wyoming,0.0,1,,,,,,,,,,,,

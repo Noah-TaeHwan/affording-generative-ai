@@ -1,0 +1,10 @@
+# Versions used to produce the manuscripts (Python 3.11.15)
+pandas==3.0.2
+numpy==2.4.4
+statsmodels==0.15.0
+scipy==1.17.1
+matplotlib==3.10.9
+requests==2.33.1
+openpyxl==3.1.5
+# optional: Word version of the manuscript (code/50_make_docx.py; also needs pandoc 3.1)
+python-docx==1.2.0

@@ -1,0 +1,53 @@
+Code: MIT License
+=================
+
+Applies to the code in code/, run_all.sh, build_papers.sh and check_release.sh.
+
+Copyright (c) 2026 TaeHwan Oh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Data: Creative Commons Attribution 4.0 International (CC BY 4.0)
+===============================================================
+
+Data compiled by the author -- the App Store price extraction (data/raw/appstore/,
+data/processed/appstore_prices_*.csv) and the author's contributions to the other
+processed files -- are licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution: Oh, TaeHwan (2026), replication package for "Affording Generative AI:
+Uniform Prices, Unequal Burdens, and the Two Margins of AI Diffusion".
+
+Values taken from third-party sources (World Bank, Microsoft, Anthropic, Google,
+ITU, exchange-rate providers) remain subject to the licences and terms of their
+providers, listed in README.md.
+
+
+Manuscripts: All Rights Reserved
+================================
+
+Copyright (c) 2026 TaeHwan Oh. All rights reserved.
+
+This notice applies to the author's English and Korean manuscript PDFs and
+LaTeX prose in paper_en/ and paper_ko/. The MIT software licence and the CC BY 4.0
+data licence above do not grant a licence to the manuscripts themselves.
+The generated tables and figures do not change the licences applicable to the
+underlying code, author-compiled data contributions or third-party data.
+Nothing in this notice limits uses permitted by applicable law.
