@@ -1,0 +1,545 @@
+\begin{thebibliography}{72}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Acemoglu(2025)]{acemoglu2025simple}
+Daron Acemoglu.
+\newblock The simple macroeconomics of {AI}.
+\newblock \emph{Economic Policy}, 40\penalty0 (121):\penalty0 13--58, 2025.
+\newblock \doi{10.1093/epolic/eiae042}.
+
+\bibitem[Acemoglu and Restrepo(2019)]{acemoglu2019automation}
+Daron Acemoglu and Pascual Restrepo.
+\newblock Automation and new tasks: How technology displaces and reinstates
+  labor.
+\newblock \emph{Journal of Economic Perspectives}, 33\penalty0 (2):\penalty0
+  3--30, 2019.
+\newblock \doi{10.1257/jep.33.2.3}.
+
+\bibitem[Aguirre et~al.(2010)Aguirre, Cowan, and Vickers]{aguirre2010monopoly}
+I{\~n}aki Aguirre, Simon Cowan, and John Vickers.
+\newblock Monopoly price discrimination and demand curvature.
+\newblock \emph{American Economic Review}, 100\penalty0 (4):\penalty0
+  1601--1615, 2010.
+\newblock \doi{10.1257/aer.100.4.1601}.
+
+\bibitem[Aker and Mbiti(2010)]{aker2010mobile}
+Jenny~C. Aker and Isaac~M. Mbiti.
+\newblock Mobile phones and economic development in {Africa}.
+\newblock \emph{Journal of Economic Perspectives}, 24\penalty0 (3):\penalty0
+  207--232, 2010.
+\newblock \doi{10.1257/jep.24.3.207}.
+
+\bibitem[{Anthropic}(2026{\natexlab{a}})]{anthropic2026aei}
+{Anthropic}.
+\newblock Anthropic economic index: Country-level data, releases 2025-09-15 to
+  2026-06-26.
+\newblock \url{https://huggingface.co/datasets/Anthropic/EconomicIndex},
+  2026{\natexlab{a}}.
+\newblock Commit 2ea58ff (26 June 2026); data under CC-BY, code under MIT
+  licence; accessed 27 September 2026.
+
+\bibitem[{Anthropic}(2026{\natexlab{b}})]{anthropic2026pricing}
+{Anthropic}.
+\newblock Claude plans and pricing.
+\newblock \url{https://claude.com/pricing}, 2026{\natexlab{b}}.
+\newblock Accessed 27 September 2026.
+
+\bibitem[Appel et~al.(2025)Appel, McCrory, Tamkin, McCain, Neylon, and
+  Stern]{appel2025uneven}
+Ruth Appel, Peter McCrory, Alex Tamkin, Miles McCain, Tyler Neylon, and Michael
+  Stern.
+\newblock The {Anthropic} economic index report: Uneven geographic and
+  enterprise {AI} adoption.
+\newblock Anthropic, 15 September 2025,
+  \url{https://www.anthropic.com/research/anthropic-economic-index-september-2025-report},
+  2025.
+
+\bibitem[Appel et~al.(2026)Appel, Massenkoff, McCrory, McCain, Heller, Neylon,
+  and Tamkin]{appel2026primitives}
+Ruth Appel, Maxim Massenkoff, Peter McCrory, Miles McCain, Ryan Heller, Tyler
+  Neylon, and Alex Tamkin.
+\newblock The {Anthropic} economic index report: Economic primitives.
+\newblock Anthropic, 15 January 2026,
+  \url{https://www.anthropic.com/research/anthropic-economic-index-january-2026-report},
+  2026.
+
+\bibitem[Aubakirova et~al.(2026)Aubakirova, Atallah, Clark, Summerville, and
+  Midha]{aubakirova2026state}
+Malika Aubakirova, Alex Atallah, Chris Clark, Justin Summerville, and Anjney
+  Midha.
+\newblock State of {AI}: An empirical 100 trillion token study with
+  {OpenRouter}.
+\newblock arXiv:2601.10088, 2026.
+
+\bibitem[Balassa(1964)]{balassa1964purchasing}
+Bela Balassa.
+\newblock The purchasing-power parity doctrine: A reappraisal.
+\newblock \emph{Journal of Political Economy}, 72\penalty0 (6):\penalty0
+  584--596, 1964.
+\newblock \doi{10.1086/258965}.
+
+\bibitem[Bick et~al.(2024)Bick, Blandin, and Deming]{bick2024rapid}
+Alexander Bick, Adam Blandin, and David~J. Deming.
+\newblock The rapid adoption of generative {AI}.
+\newblock NBER Working Paper 32966, National Bureau of Economic Research, 2024.
+
+\bibitem[Bj{\"o}rkegren(2019)]{bjorkegren2019adoption}
+Daniel Bj{\"o}rkegren.
+\newblock The adoption of network goods: Evidence from the spread of mobile
+  phones in {Rwanda}.
+\newblock \emph{Review of Economic Studies}, 86\penalty0 (3):\penalty0
+  1033--1060, 2019.
+\newblock \doi{10.1093/restud/rdy024}.
+
+\bibitem[Bresnahan and Trajtenberg(1995)]{bresnahan1995general}
+Timothy~F. Bresnahan and Manuel Trajtenberg.
+\newblock General purpose technologies `engines of growth'?
+\newblock \emph{Journal of Econometrics}, 65\penalty0 (1):\penalty0 83--108,
+  1995.
+\newblock \doi{10.1016/0304-4076(94)01598-T}.
+
+\bibitem[Brynjolfsson et~al.(2019)Brynjolfsson, Collis, and
+  Eggers]{brynjolfsson2019using}
+Erik Brynjolfsson, Avinash Collis, and Felix Eggers.
+\newblock Using massive online choice experiments to measure changes in
+  well-being.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 116\penalty0
+  (15):\penalty0 7250--7255, 2019.
+\newblock \doi{10.1073/pnas.1815663116}.
+
+\bibitem[Brynjolfsson et~al.(2025)Brynjolfsson, Li, and
+  Raymond]{brynjolfsson2025generative}
+Erik Brynjolfsson, Danielle Li, and Lindsey Raymond.
+\newblock Generative {AI} at work.
+\newblock \emph{Quarterly Journal of Economics}, 140\penalty0 (2):\penalty0
+  889--942, 2025.
+\newblock \doi{10.1093/qje/qjae044}.
+
+\bibitem[Caselli and Coleman(2001)]{caselli2001cross}
+Francesco Caselli and Wilbur~John Coleman.
+\newblock Cross-country technology diffusion: The case of computers.
+\newblock \emph{American Economic Review}, 91\penalty0 (2):\penalty0 328--335,
+  2001.
+\newblock \doi{10.1257/aer.91.2.328}.
+
+\bibitem[Cavallo et~al.(2014)Cavallo, Neiman, and Rigobon]{cavallo2014currency}
+Alberto Cavallo, Brent Neiman, and Roberto Rigobon.
+\newblock Currency unions, product introductions, and the real exchange rate.
+\newblock \emph{Quarterly Journal of Economics}, 129\penalty0 (2):\penalty0
+  529--595, 2014.
+\newblock \doi{10.1093/qje/qju008}.
+
+\bibitem[Cazzaniga et~al.(2024)Cazzaniga, Jaumotte, Li, Melina, Panton,
+  Pizzinelli, Rockall, and Mendes~Tavares]{cazzaniga2024genai}
+Mauro Cazzaniga, Florence Jaumotte, Longji Li, Giovanni Melina, Augustus~J.
+  Panton, Carlo Pizzinelli, Emma Rockall, and Marina Mendes~Tavares.
+\newblock Gen-{AI}: Artificial intelligence and the future of work.
+\newblock IMF Staff Discussion Note SDN/2024/001, International Monetary Fund,
+  2024.
+
+\bibitem[Chatterji et~al.(2025)Chatterji, Cunningham, Deming, Hitzig, Ong,
+  Shan, and Wadman]{chatterji2025how}
+Aaron Chatterji, Thomas Cunningham, David~J. Deming, Zoe Hitzig, Christopher
+  Ong, Carl~Yan Shan, and Kevin Wadman.
+\newblock How people use {ChatGPT}.
+\newblock NBER Working Paper 34255, National Bureau of Economic Research, 2025.
+
+\bibitem[Chinn and Fairlie(2007)]{chinn2007determinants}
+Menzie~D. Chinn and Robert~W. Fairlie.
+\newblock The determinants of the global digital divide: A cross-country
+  analysis of computer and internet penetration.
+\newblock \emph{Oxford Economic Papers}, 59\penalty0 (1):\penalty0 16--44,
+  2007.
+\newblock \doi{10.1093/oep/gpl024}.
+
+\bibitem[Cohen and Dupas(2010)]{cohen2010free}
+Jessica Cohen and Pascaline Dupas.
+\newblock Free distribution or cost-sharing? {E}vidence from a randomized
+  malaria prevention experiment.
+\newblock \emph{Quarterly Journal of Economics}, 125\penalty0 (1):\penalty0
+  1--45, 2010.
+\newblock \doi{10.1162/qjec.2010.125.1.1}.
+
+\bibitem[Comin and Hobijn(2004)]{comin2004cross}
+Diego Comin and Bart Hobijn.
+\newblock Cross-country technology adoption: Making the theories face the
+  facts.
+\newblock \emph{Journal of Monetary Economics}, 51\penalty0 (1):\penalty0
+  39--83, 2004.
+\newblock \doi{10.1016/j.jmoneco.2003.07.003}.
+
+\bibitem[Comin and Hobijn(2010)]{comin2010exploration}
+Diego Comin and Bart Hobijn.
+\newblock An exploration of technology diffusion.
+\newblock \emph{American Economic Review}, 100\penalty0 (5):\penalty0
+  2031--2059, 2010.
+\newblock \doi{10.1257/aer.100.5.2031}.
+
+\bibitem[Comin and Mestieri(2018)]{comin2018technology}
+Diego Comin and Mart{\'i} Mestieri.
+\newblock If technology has arrived everywhere, why has income diverged?
+\newblock \emph{American Economic Journal: Macroeconomics}, 10\penalty0
+  (3):\penalty0 137--178, 2018.
+\newblock \doi{10.1257/mac.20150175}.
+
+\bibitem[Cottier et~al.(2025)Cottier, Snodin, Owen, and
+  Adamczewski]{cottier2025llm}
+Ben Cottier, Ben Snodin, David Owen, and Tom Adamczewski.
+\newblock {LLM} inference prices have fallen rapidly but unequally across
+  tasks.
+\newblock Epoch AI, 12 March 2025,
+  \url{https://epoch.ai/data-insights/llm-inference-price-trends}, 2025.
+
+\bibitem[Cui et~al.(2024)Cui, Demirer, Jaffe, Musolff, Peng, and
+  Salz]{cui2024effects}
+Zheyuan Cui, Mert Demirer, Sonia Jaffe, Leon Musolff, Sida Peng, and Tobias
+  Salz.
+\newblock The effects of generative {AI} on high-skilled work: Evidence from
+  three field experiments with software developers.
+\newblock SSRN Working Paper 4945566, 2024.
+
+\bibitem[Daepp and Slaughter(2026)]{daepp2026how}
+Madeleine I.~G. Daepp and Isaac Slaughter.
+\newblock How early adopters used generative {AI} worldwide: Variation by
+  country income and language.
+\newblock arXiv:2605.30685, 2026.
+
+\bibitem[De~Simone et~al.(2025)De~Simone, Tiberti, Barron~Rodriguez, Manolio,
+  Mosuro, and Dikoru]{desimone2025chalkboards}
+Martin De~Simone, Federico Tiberti, Maria Barron~Rodriguez, Federico Manolio,
+  Wuraola Mosuro, and Eliot~Jolomi Dikoru.
+\newblock From chalkboards to chatbots: Evaluating the impact of generative
+  {AI} on learning outcomes in {Nigeria}.
+\newblock Policy Research Working Paper 11125, World Bank, 2025.
+
+\bibitem[Deaton and Heston(2010)]{deaton2010understanding}
+Angus Deaton and Alan Heston.
+\newblock Understanding {PPPs} and {PPP}-based national accounts.
+\newblock \emph{American Economic Journal: Macroeconomics}, 2\penalty0
+  (4):\penalty0 1--35, 2010.
+\newblock \doi{10.1257/mac.2.4.1}.
+
+\bibitem[Dell'Acqua et~al.(2023)Dell'Acqua, McFowland~III, Mollick,
+  Lifshitz-Assaf, Kellogg, Rajendran, Krayer, Candelon, and
+  Lakhani]{dellacqua2023navigating}
+Fabrizio Dell'Acqua, Edward McFowland~III, Ethan~R. Mollick, Hila
+  Lifshitz-Assaf, Katherine Kellogg, Saran Rajendran, Lisa Krayer,
+  Fran{\c{c}}ois Candelon, and Karim~R. Lakhani.
+\newblock Navigating the jagged technological frontier: Field experimental
+  evidence of the effects of {AI} on knowledge worker productivity and quality.
+\newblock Working Paper 24-013, Harvard Business School, 2023.
+
+\bibitem[Dupas(2014)]{dupas2014short}
+Pascaline Dupas.
+\newblock Short-run subsidies and long-run adoption of new health products:
+  Evidence from a field experiment.
+\newblock \emph{Econometrica}, 82\penalty0 (1):\penalty0 197--228, 2014.
+\newblock \doi{10.3982/ECTA9508}.
+
+\bibitem[Eloundou et~al.(2024)Eloundou, Manning, Mishkin, and
+  Rock]{eloundou2024gpts}
+Tyna Eloundou, Sam Manning, Pamela Mishkin, and Daniel Rock.
+\newblock {GPTs} are {GPTs}: Labor market impact potential of {LLMs}.
+\newblock \emph{Science}, 384\penalty0 (6702):\penalty0 1306--1308, 2024.
+\newblock \doi{10.1126/science.adj0998}.
+
+\bibitem[Felten et~al.(2021)Felten, Raj, and Seamans]{felten2021occupational}
+Edward Felten, Manav Raj, and Robert Seamans.
+\newblock Occupational, industry, and geographic exposure to artificial
+  intelligence: A novel dataset and its potential uses.
+\newblock \emph{Strategic Management Journal}, 42\penalty0 (12):\penalty0
+  2195--2217, 2021.
+\newblock \doi{10.1002/smj.3286}.
+
+\bibitem[Filippucci et~al.(2024)Filippucci, Gal, Jona-Lasinio, Leandro, and
+  Nicoletti]{filippucci2024impact}
+Francesco Filippucci, Peter Gal, Cecilia Jona-Lasinio, Alvaro Leandro, and
+  Giuseppe Nicoletti.
+\newblock The impact of artificial intelligence on productivity, distribution
+  and growth: Key mechanisms, initial evidence and policy challenges.
+\newblock OECD Artificial Intelligence Papers~15, OECD Publishing, 2024.
+
+\bibitem[Foster and Rosenzweig(2010)]{foster2010microeconomics}
+Andrew~D. Foster and Mark~R. Rosenzweig.
+\newblock Microeconomics of technology adoption.
+\newblock \emph{Annual Review of Economics}, 2:\penalty0 395--424, 2010.
+\newblock \doi{10.1146/annurev.economics.102308.124433}.
+
+\bibitem[Gmyrek et~al.(2025)Gmyrek, Berg, Kami{\'n}ski, Konopczy{\'n}ski,
+  {\L}adna, Nafradi, Ros{\l}aniec, and Troszy{\'n}ski]{gmyrek2025generative}
+Pawe{\l} Gmyrek, Janine Berg, Karol Kami{\'n}ski, Filip Konopczy{\'n}ski,
+  Agnieszka {\L}adna, Balint Nafradi, Konrad Ros{\l}aniec, and Marek
+  Troszy{\'n}ski.
+\newblock Generative {AI} and jobs: A refined global index of occupational
+  exposure.
+\newblock ILO Working Paper 140, International Labour Organization, 2025.
+
+\bibitem[Goldberg and Knetter(1997)]{goldberg1997goods}
+Pinelopi~Koujianou Goldberg and Michael~M. Knetter.
+\newblock Goods prices and exchange rates: What have we learned?
+\newblock \emph{Journal of Economic Literature}, 35\penalty0 (3):\penalty0
+  1243--1272, 1997.
+
+\bibitem[Goldfarb and Tucker(2019)]{goldfarb2019digital}
+Avi Goldfarb and Catherine Tucker.
+\newblock Digital economics.
+\newblock \emph{Journal of Economic Literature}, 57\penalty0 (1):\penalty0
+  3--43, 2019.
+\newblock \doi{10.1257/jel.20171452}.
+
+\bibitem[{Google}(2026)]{google2026io}
+{Google}.
+\newblock Everything new in our {Google} {AI} subscriptions, fresh from {I/O}
+  2026.
+\newblock The Keyword, 19 May 2026,
+  \url{https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/},
+  2026.
+
+\bibitem[Handa et~al.(2025)Handa, Tamkin, McCain, Huang, Durmus, Heck, Mueller,
+  Hong, Ritchie, Belonax, Troy, Amodei, Kaplan, Clark, and
+  Ganguli]{handa2025which}
+Kunal Handa, Alex Tamkin, Miles McCain, Saffron Huang, Esin Durmus, Sarah Heck,
+  Jared Mueller, Jerry Hong, Stuart Ritchie, Tim Belonax, Kevin~K. Troy, Dario
+  Amodei, Jared Kaplan, Jack Clark, and Deep Ganguli.
+\newblock Which economic tasks are performed with {AI}? {E}vidence from
+  millions of {Claude} conversations.
+\newblock arXiv:2503.04761, 2025.
+
+\bibitem[Hjort and Poulsen(2019)]{hjort2019arrival}
+Jonas Hjort and Jonas Poulsen.
+\newblock The arrival of fast internet and employment in {Africa}.
+\newblock \emph{American Economic Review}, 109\penalty0 (3):\penalty0
+  1032--1079, 2019.
+\newblock \doi{10.1257/aer.20161385}.
+
+\bibitem[Hulten(1978)]{hulten1978growth}
+Charles~R. Hulten.
+\newblock Growth accounting with intermediate inputs.
+\newblock \emph{Review of Economic Studies}, 45\penalty0 (3):\penalty0
+  511--518, 1978.
+\newblock \doi{10.2307/2297252}.
+
+\bibitem[Humlum and Vestergaard(2025)]{humlum2025unequal}
+Anders Humlum and Emilie Vestergaard.
+\newblock The unequal adoption of {ChatGPT} exacerbates existing inequalities
+  among workers.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 122\penalty0
+  (1):\penalty0 e2414972121, 2025.
+\newblock \doi{10.1073/pnas.2414972121}.
+
+\bibitem[{International Telecommunication
+  Union}(2025{\natexlab{a}})]{itu2025baskets}
+{International Telecommunication Union}.
+\newblock {ICT} price baskets, historical data series 2008--2025.
+\newblock
+  \url{https://www.itu.int/en/ITU-D/Statistics/Pages/ICTprices/default.aspx},
+  2025{\natexlab{a}}.
+\newblock December 2025 release; accessed 27 September 2026.
+
+\bibitem[{International Telecommunication
+  Union}(2025{\natexlab{b}})]{itu2025ff}
+{International Telecommunication Union}.
+\newblock Facts and figures 2025: Affordability of {ICT} services.
+\newblock
+  \url{https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-affordability-of-ict-services/},
+  2025{\natexlab{b}}.
+\newblock Published 15 October 2025; accessed 27 September 2026.
+
+\bibitem[Iscenko et~al.(2026)Iscenko, Strand, Chen, Aimard, Codreanu,
+  Sampathkumar, et~al.]{iscenko2026atlas}
+Zanna Iscenko, Scott Strand, Yiyuan Chen, Guillaume Aimard, Mihai Codreanu,
+  Vivek Sampathkumar, et~al.
+\newblock {Google's} {AI} \& economy {ATLAS} v1.0: Mapping {Gemini} usage in
+  the economy.
+\newblock Google, 23 July 2026,
+  \url{https://ai.google/static/documents/GoogleATLASv1.pdf}, 2026.
+
+\bibitem[Klapper et~al.(2025)Klapper, Singer, Starita, and
+  Norris]{klapper2025findex}
+Leora Klapper, Dorothe Singer, Laura Starita, and Alexandra Norris.
+\newblock \emph{The Global Findex Database 2025: Connectivity and Financial
+  Inclusion in the Digital Economy}.
+\newblock World Bank, Washington, DC, 2025.
+\newblock \doi{10.1596/978-1-4648-2204-9}.
+
+\bibitem[Korinek and Stiglitz(2021)]{korinek2021artificial}
+Anton Korinek and Joseph~E. Stiglitz.
+\newblock Artificial intelligence, globalization, and strategies for economic
+  development.
+\newblock NBER Working Paper 28453, National Bureau of Economic Research, 2021.
+
+\bibitem[Lehdonvirta et~al.(2024)Lehdonvirta, W{\'u}, and
+  Hawkins]{lehdonvirta2024compute}
+Vili Lehdonvirta, B{\'o}x{\={\i}} W{\'u}, and Zoe Hawkins.
+\newblock Compute north vs. compute south: The uneven possibilities of
+  compute-based {AI} governance around the globe.
+\newblock In \emph{Proceedings of the AAAI/ACM Conference on AI, Ethics, and
+  Society}, volume~7, pages 828--838, 2024.
+\newblock \doi{10.1609/aies.v7i1.31683}.
+
+\bibitem[Liu and Wang(2024)]{liu2024who}
+Yan Liu and He~Wang.
+\newblock Who on earth is using generative {AI}?
+\newblock Policy Research Working Paper 10870, World Bank, 2024.
+
+\bibitem[Liu et~al.(2025)Liu, Huang, and Wang]{liu2025who}
+Yan Liu, Jingyun Huang, and He~Wang.
+\newblock Who on earth is using generative {AI}? global trends and shifts in
+  2025.
+\newblock Policy Research Working Paper 11231, World Bank, 2025.
+
+\bibitem[Massenkoff et~al.(2026)Massenkoff, Lyubich, McCrory, Appel, and
+  Heller]{massenkoff2026learning}
+Maxim Massenkoff, Eva Lyubich, Peter McCrory, Ruth Appel, and Ryan Heller.
+\newblock The {Anthropic} economic index report: Learning curves.
+\newblock Anthropic, 24 March 2026,
+  \url{https://www.anthropic.com/research/economic-index-march-2026-report},
+  2026.
+
+\bibitem[{Microsoft AI Economy Institute}(2026{\natexlab{a}})]{microsoft2026h2}
+{Microsoft AI Economy Institute}.
+\newblock Global {AI} adoption in 2025: A widening digital divide.
+\newblock
+  \url{https://github.com/microsoft/ai-diffusion-report/tree/main/reports},
+  2026{\natexlab{a}}.
+\newblock January 2026.
+
+\bibitem[{Microsoft AI Economy Institute}(2026{\natexlab{b}})]{microsoft2026q2}
+{Microsoft AI Economy Institute}.
+\newblock Global {AI} diffusion: {Q2} 2026 trends and insights.
+\newblock Report and dataset,
+  \url{https://github.com/microsoft/ai-diffusion-report}, 2026{\natexlab{b}}.
+\newblock September 2026; dataset AI\_Diffusion\_Q22026\_Update.csv, commit
+  507c316 (20 September 2026).
+
+\bibitem[Misra et~al.(2025)Misra, Wang, McCullers, White, and
+  Lavista~Ferres]{misra2025measuring}
+Amit Misra, Jane Wang, Scott McCullers, Kevin White, and Juan Lavista~Ferres.
+\newblock Measuring {AI} diffusion: A population-normalized metric for tracking
+  global {AI} usage.
+\newblock arXiv:2511.02781, 2025.
+
+\bibitem[Mussa and Rosen(1978)]{mussa1978monopoly}
+Michael Mussa and Sherwin Rosen.
+\newblock Monopoly and product quality.
+\newblock \emph{Journal of Economic Theory}, 18\penalty0 (2):\penalty0
+  301--317, 1978.
+\newblock \doi{10.1016/0022-0531(78)90085-6}.
+
+\bibitem[Nagle and Yue(2025)]{nagle2025latent}
+Frank Nagle and Daniel Yue.
+\newblock The latent role of open models in the {AI} economy.
+\newblock SSRN Working Paper 5767103, 2025.
+
+\bibitem[Noy and Zhang(2023)]{noy2023experimental}
+Shakked Noy and Whitney Zhang.
+\newblock Experimental evidence on the productivity effects of generative
+  artificial intelligence.
+\newblock \emph{Science}, 381\penalty0 (6654):\penalty0 187--192, 2023.
+\newblock \doi{10.1126/science.adh2586}.
+
+\bibitem[{OpenAI}(2026{\natexlab{a}})]{openai2026go}
+{OpenAI}.
+\newblock Introducing {ChatGPT} {Go}.
+\newblock 16 January 2026,
+  \url{https://openai.com/index/introducing-chatgpt-go/}, 2026{\natexlab{a}}.
+
+\bibitem[{OpenAI}(2026{\natexlab{b}})]{openai2026plus}
+{OpenAI}.
+\newblock What is {ChatGPT} {Plus}?
+\newblock OpenAI Help Center,
+  \url{https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus},
+  2026{\natexlab{b}}.
+\newblock Accessed 27 September 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{c}})]{openai2026pro}
+{OpenAI}.
+\newblock About {ChatGPT} {Pro} tiers.
+\newblock OpenAI Help Center,
+  \url{https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers},
+  2026{\natexlab{c}}.
+\newblock Accessed 27 September 2026.
+
+\bibitem[Otis et~al.(2025)Otis, Clarke, Delecourt, Holtz, and
+  Koning]{otis2025uneven}
+Nicholas~G. Otis, Rowan~Philip Clarke, Solene Delecourt, David Holtz, and
+  Rembrand Koning.
+\newblock The uneven impact of generative {AI} on entrepreneurial performance.
+\newblock OSF Preprints (version 2), 2025.
+
+\bibitem[Peng et~al.(2023)Peng, Kalliamvakou, Cihon, and
+  Demirer]{peng2023impact}
+Sida Peng, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer.
+\newblock The impact of {AI} on developer productivity: Evidence from {GitHub
+  Copilot}.
+\newblock arXiv:2302.06590, 2023.
+
+\bibitem[Pizzinelli et~al.(2023)Pizzinelli, Panton, Mendes~Tavares, Cazzaniga,
+  and Li]{pizzinelli2023labor}
+Carlo Pizzinelli, Augustus Panton, Marina Mendes~Tavares, Mauro Cazzaniga, and
+  Longji Li.
+\newblock Labor market exposure to {AI}: Cross-country differences and
+  distributional implications.
+\newblock IMF Working Paper 2023/216, International Monetary Fund, 2023.
+
+\bibitem[Samuelson(1964)]{samuelson1964theoretical}
+Paul~A. Samuelson.
+\newblock Theoretical notes on trade problems.
+\newblock \emph{Review of Economics and Statistics}, 46\penalty0 (2):\penalty0
+  145--154, 1964.
+\newblock \doi{10.2307/1928178}.
+
+\bibitem[Suri(2011)]{suri2011selection}
+Tavneet Suri.
+\newblock Selection and comparative advantage in technology adoption.
+\newblock \emph{Econometrica}, 79\penalty0 (1):\penalty0 159--209, 2011.
+\newblock \doi{10.3982/ECTA7749}.
+
+\bibitem[{UNCTAD}(2025)]{unctad2025tir}
+{UNCTAD}.
+\newblock \emph{Technology and Innovation Report 2025: Inclusive Artificial
+  Intelligence for Development}.
+\newblock United Nations, Geneva, 2025.
+\newblock \doi{10.18356/9789211068016}.
+
+\bibitem[{United Nations Development Programme}(2025)]{undp2025hdr}
+{United Nations Development Programme}.
+\newblock \emph{Human Development Report 2025: A Matter of Choice---People and
+  Possibilities in the Age of {AI}}.
+\newblock United Nations, New York, 2025.
+\newblock \doi{10.18356/9789211542639}.
+
+\bibitem[Varian(1985)]{varian1985price}
+Hal~R. Varian.
+\newblock Price discrimination and social welfare.
+\newblock \emph{American Economic Review}, 75\penalty0 (4):\penalty0 870--875,
+  1985.
+
+\bibitem[{World Bank}(2026{\natexlab{a}})]{worldbank2026class}
+{World Bank}.
+\newblock World bank country and lending groups, fiscal year 2027.
+\newblock
+  \url{https://datahelpdesk.worldbank.org/knowledgebase/articles/906519},
+  2026{\natexlab{a}}.
+\newblock Effective 1 July 2026; accessed 27 September 2026.
+
+\bibitem[{World Bank}(2026{\natexlab{b}})]{worldbank2026wdi}
+{World Bank}.
+\newblock World development indicators.
+\newblock
+  \url{https://databank.worldbank.org/source/world-development-indicators},
+  2026{\natexlab{b}}.
+\newblock API extraction 27 September 2026; last updated 13 July 2026.
+
+\bibitem[{World Bank}(2026{\natexlab{c}})]{worldbank2026wdr}
+{World Bank}.
+\newblock \emph{World Development Report 2026: The Promise of Artificial
+  Intelligence}.
+\newblock World Bank, Washington, DC, 2026{\natexlab{c}}.
+\newblock \doi{10.1596/978-1-4648-2331-2}.
+
+\end{thebibliography}
