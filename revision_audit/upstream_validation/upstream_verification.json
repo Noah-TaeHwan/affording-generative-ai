@@ -1,0 +1,124 @@
+{
+  "scope": "Anthropic country outputs for all five windows and ITU workbook reconstruction. App Store HTML and World Bank upstream extraction are outside this check.",
+  "regenerated_files": [
+    {
+      "file": "anthropic/anthropic_country_latest.csv",
+      "rows_original": 16236,
+      "rows_rebuilt": 16236,
+      "columns": 15,
+      "comparison": "match",
+      "max_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "anthropic/anthropic_country_latest_wide.csv",
+      "rows_original": 235,
+      "rows_rebuilt": 235,
+      "columns": 58,
+      "comparison": "match",
+      "max_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "anthropic/anthropic_country_panel.csv",
+      "rows_original": 6920,
+      "rows_rebuilt": 6920,
+      "columns": 10,
+      "comparison": "match",
+      "max_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "anthropic/anthropic_gdp_elasticity_replication.csv",
+      "rows_original": 5,
+      "rows_rebuilt": 5,
+      "columns": 8,
+      "comparison": "match",
+      "max_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "itu/itu_price_baskets_long.csv",
+      "rows_original": 41853,
+      "rows_rebuilt": 41853,
+      "columns": 14,
+      "comparison": "match",
+      "max_numeric_difference": 0.0,
+      "byte_identical": true
+    },
+    {
+      "file": "itu/itu_affordability_latest.csv",
+      "rows_original": 221,
+      "rows_rebuilt": 221,
+      "columns": 25,
+      "comparison": "match",
+      "max_numeric_difference": 0.0,
+      "byte_identical": true
+    }
+  ],
+  "independent_may_AUI": {
+    "published_country_rows": 121,
+    "matched_WB_country_rows": 120,
+    "processed_nonmissing": 120,
+    "max_absolute_difference": 0.0,
+    "raw_only_iso3": [
+      "TWN"
+    ]
+  },
+  "independent_primary_regression_from_upstream_AUI": {
+    "n": 96,
+    "slope": 0.711136928010916,
+    "HC3_SE": 0.0359232268403822
+  },
+  "source_hashes": [
+    {
+      "file": "aei_claude_ai_2026-06-26.csv",
+      "size": 219174671,
+      "sha256": "f974b358bce0e5a8417510c61da4342234cd0de9d9d0b62acf4c6dbcf8ec7b68",
+      "retrieved_from": "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/2ea58ff75e4247d26810c37f10c179edc2466cac/release_2026_06_26/data/aei_claude_ai_2026-06-26.csv"
+    },
+    {
+      "file": "ITU_ICTPriceBaskets_2008-2025.xlsx",
+      "size": 1322224,
+      "sha256": "bc09d24b171c5d5c8492de06ee5e73124a9c82c64ba166eb18d5cb39a0d32094",
+      "retrieved_from": "https://www.itu.int/en/ITU-D/Statistics/Documents/ICT_Prices/ITU_ICTPriceBaskets_2008-2025.xlsx"
+    },
+    {
+      "file": "release_2025_09_15/aei_enriched_claude_ai_2025-08-04_to_2025-08-11.csv",
+      "size": 26840881,
+      "sha256": "48a2c39f8a98ce7c2ba72767cbe3760fd55ba4a64a193abfecefc76d19852c09",
+      "source_commit": "2ea58ff75e4247d26810c37f10c179edc2466cac"
+    },
+    {
+      "file": "release_2025_09_15/gdp_2024_country.csv",
+      "size": 4115,
+      "sha256": "e0618d6ba634a612b97b1c82f521ab38a387216069818a86f50c9aaf8e2bda6c",
+      "source_commit": "2ea58ff75e4247d26810c37f10c179edc2466cac"
+    },
+    {
+      "file": "release_2025_09_15/iso_country_codes.csv",
+      "size": 4564,
+      "sha256": "eee318d4ab2c2c30f5a7da11f2bc7e0e36c246f6be5bb9b323fdb12b8e4809e0",
+      "source_commit": "2ea58ff75e4247d26810c37f10c179edc2466cac"
+    },
+    {
+      "file": "release_2025_09_15/working_age_pop_2024_country.csv",
+      "size": 6321,
+      "sha256": "3a9e0edc0453702e8efb63d7cab57e5b1a689bc09e070626bbf513e37edd5dd3",
+      "source_commit": "2ea58ff75e4247d26810c37f10c179edc2466cac"
+    },
+    {
+      "file": "release_2026_01_15/aei_raw_claude_ai_2025-11-13_to_2025-11-20.csv",
+      "size": 81502208,
+      "sha256": "201ea11b810d629f9011e34bf2684b1585c128ff0d447bd43552f09791bc8e4e",
+      "source_commit": "2ea58ff75e4247d26810c37f10c179edc2466cac"
+    },
+    {
+      "file": "release_2026_03_24/aei_raw_claude_ai_2026-02-05_to_2026-02-12.csv",
+      "size": 103287181,
+      "sha256": "69ebf6f9afc1e3be45caab172a84ae09e78bf41b97e1c310100d81c8a35a7433",
+      "source_commit": "2ea58ff75e4247d26810c37f10c179edc2466cac"
+    }
+  ],
+  "all_checks_pass": true
+}

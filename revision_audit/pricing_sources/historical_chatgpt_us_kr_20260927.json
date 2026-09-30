@@ -1,0 +1,89 @@
+{
+  "source_relative_path": "rerun/data/raw/appstore/appstore_iap_raw.jsonl",
+  "source_sha256": "c292a9be22a5dd5eb15109b814c406c8dccd6f3dfe3fcc324eb5892b1e9827f6",
+  "records": [
+    {
+      "storefront": "kr",
+      "app": "chatgpt",
+      "app_id": "6448311069",
+      "request_url": "https://apps.apple.com/kr/app/id6448311069",
+      "fetched_utc": "2026-09-27T12:26:53.062177Z",
+      "http_status": 200,
+      "final_url": "https://apps.apple.com/kr/app/chatgpt/id6448311069",
+      "iap_title": "앱 내 구입",
+      "iap": [
+        [
+          "ChatGPT Plus",
+          "￦29,000"
+        ],
+        [
+          "ChatGPT Go",
+          "￦13,000"
+        ],
+        [
+          "ChatGPT Pro 5x",
+          "￦159,000"
+        ],
+        [
+          "ChatGPT Pro 20x",
+          "￦299,000"
+        ],
+        [
+          "ChatGPT Plus",
+          "￦299,000"
+        ]
+      ],
+      "currency": "KRW",
+      "app_name": "ChatGPT",
+      "bytes": 645049
+    },
+    {
+      "storefront": "us",
+      "app": "chatgpt",
+      "app_id": "6448311069",
+      "request_url": "https://apps.apple.com/us/app/id6448311069",
+      "fetched_utc": "2026-09-27T12:27:43.900825Z",
+      "http_status": 200,
+      "final_url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+      "iap_title": "In-App Purchases",
+      "iap": [
+        [
+          "ChatGPT Plus",
+          "$19.99"
+        ],
+        [
+          "ChatGPT Go",
+          "$8.00"
+        ],
+        [
+          "100 Credits",
+          "$4.00"
+        ],
+        [
+          "ChatGPT Pro 5x",
+          "$100.00"
+        ],
+        [
+          "ChatGPT Pro 20x",
+          "$200.00"
+        ],
+        [
+          "ChatGPT Plus",
+          "$200.00"
+        ],
+        [
+          "500 Credits",
+          "$20.00"
+        ],
+        [
+          "1000 Credits",
+          "$40.00"
+        ]
+      ],
+      "currency": "USD",
+      "app_name": "ChatGPT",
+      "bytes": 805828
+    }
+  ],
+  "notice": "Structured historical price extraction from the author-supplied replication archive. Not raw HTML, not proof of completed purchases or web subscription entitlements."
+}

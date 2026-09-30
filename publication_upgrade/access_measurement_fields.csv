@@ -1,0 +1,44 @@
+field,record_type,data_type_or_unit,requirement,definition
+audit_id,tariff,string,required,Stable identifier for a prospective observation.
+economy_iso3,tariff,ISO 3166-1 alpha-3,required,Economy observed; distinguish residency eligibility from storefront code.
+storefront_code,tariff,string,conditional,"Channel storefront, if applicable; do not infer actual resident eligibility."
+observed_at_utc,tariff,ISO 8601 datetime,required,Capture time in UTC.
+effective_from,tariff,ISO 8601 date,if stated,Provider-stated effective date; unknown remains null.
+billing_channel,tariff,enum,required,web / app_store / play_store / api / institutional / local / other.
+provider,tariff,string,required,Provider or institution.
+plan_name,tariff,string,required,Verbatim plan name; preserve SKU separately.
+sku_id,tariff,string,if observed,Product identifier from source metadata.
+billing_period,tariff,enum,required or null,monthly / annual / prepaid / metered / other / unknown; retain evidence.
+fee_original_currency,tariff,decimal,required or null,Cash amount in original currency; do not replace a missing amount with zero.
+currency_iso4217,tariff,ISO 4217,conditional,Currency for the recorded amount.
+tax_convention,tariff,enum,required or null,included / excluded / partly_included / unknown.
+promotion_terms,tariff,string,if stated,"Introductory discount, duration and eligibility; distinguish from recurring fee."
+listing_status,tariff,enum,required,local_page / redirected / not_found / other; retrieval is not service availability.
+checkout_status,tariff,enum,required,not_observed / offered / rejected / completed; no fabricated checkout.
+checkout_evidence_id,tariff,string,conditional,"Archived evidence for observed checkout, with personal data removed."
+subscriber_cohort,tariff,string,required or null,New / existing / grandfathered / other; record cutoff and qualifying terms.
+eligibility_rules,tariff,JSON,required or null,"Geography, account, model, tool and service-mode eligibility."
+included_allowance,tariff,JSON,required or null,"Numerical amounts plus units, per-service rates and shared pools if disclosed."
+allowance_reset_windows,tariff,JSON,required or null,"Per-day, per-week, rolling-window or other stated resets."
+overage_schedule,tariff,JSON,required or null,"Purchased-credit prices, usage multipliers, expiration and service limits."
+source_url,tariff,URL,required,Original source locator.
+archive_path,tariff,relative path,required,"Full HTML/PDF or other capture, rather than parsed price string alone."
+source_sha256,tariff,hex string,required,Hash of exact captured source bytes.
+extraction_notes,tariff,string,required or null,"Candidate matching, annual/monthly ambiguity, exclusions and alternatives."
+workload_id,workload,string,required,Prespecified workload version and task-set identifier.
+task_id,workload,string,required,Task identifier linked to immutable task and reference files.
+language,workload,BCP 47 tag,required,Input/output language and translation rule.
+model_version,workload,string,required or null,Exact observed model/version; retain unknown if unavailable.
+service_configuration,workload,JSON,required,"Plan, tools, modes, credits and hardware used."
+quality_rule,workload,string,required,"Prespecified scoring rule, threshold and assessor protocol."
+deadline_seconds,workload,decimal,required,Prespecified deadline and its start/stop definition.
+wall_clock_seconds,workload,decimal,required,"Observed completion time, including retries and waiting."
+attempt_count,workload,integer,required,"All attempts, including failed attempts."
+quality_score,workload,decimal or categorical,required or null,Observed score under the prespecified rule.
+success_status,workload,enum,required,met_quality_and_deadline / quality_failed / deadline_failed / other_failure.
+billed_use,workload,JSON,required or null,"Observed billable units and included-allowance consumption, by unit."
+cash_expenditure,workload,decimal,required or null,Actual expenditure; retain failed-attempt costs.
+cost_currency,workload,ISO 4217,conditional,Currency of expenditure.
+fixed_cost_allocation,workload,string,required,Subscription/hardware allocation horizon and rule; report sensitivity.
+alternative_scope,workload,JSON,required,"Whether free, institutional, API and local-model alternatives are included."
+run_evidence_id,workload,string,required,"Archived inputs, outputs, timing and billing evidence subject to privacy rules."

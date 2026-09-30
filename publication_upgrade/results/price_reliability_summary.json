@@ -1,0 +1,63 @@
+{
+  "environment": {
+    "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  },
+  "frozen_input_hashes": {
+    "data/processed/country_panel.csv": "c60f899620424ced69aa22d7b5aed4f19a59d8a25795f548092e1f08a2add47d",
+    "data/processed/appstore_prices_long.csv": "07d3dea1d103d1e71add1af12bde2eee961fe0a80c7cb9b6b584506cd3fbec34",
+    "data/raw/appstore/appstore_iap_raw.jsonl": "c292a9be22a5dd5eb15109b814c406c8dccd6f3dfe3fcc324eb5892b1e9827f6"
+  },
+  "independently_recomputed_headline_checks": 14,
+  "all_headline_checks_pass": true,
+  "all_direct_HC3_and_CR1_checks_match_statsmodels": true,
+  "matched_ratio_contrast": {
+    "go_slope": 0.1434539695491221,
+    "plus_slope": 0.03938441693243676,
+    "n": 164,
+    "slope": 0.10406955261668602,
+    "se_HC3": 0.005750303115767387,
+    "hc3_ci_low": 0.09279916560959348,
+    "hc3_ci_high": 0.11533993962377856,
+    "currency_clusters": 39,
+    "se_currency_CR1": 0.007257895611164641,
+    "cluster_ci_low": 0.08937671109916202,
+    "cluster_ci_high": 0.11876239413421001,
+    "cluster_t_p": 6.501409811013819e-17
+  },
+  "leave_one_currency_out": {
+    "min": 0.10214076515819931,
+    "max": 0.11212313186850259
+  },
+  "currency_fixed_effect": {
+    "slope": 0.11085402845349827,
+    "identifying_currency_count": 2,
+    "identifying_country_n": 127,
+    "inference": "Not reported: only USD and EUR contribute within-currency slope identification; singleton currencies do not supply independent within-currency contrasts."
+  },
+  "currency_block_resampling": {
+    "draws": 19999,
+    "seed": 20260930,
+    "percentile_2_5": 0.08741595954113318,
+    "percentile_97_5": 0.14816137325380085,
+    "median": 0.10733469433586465,
+    "positive_fraction": 1.0,
+    "min_resampled_country_n": 39.0,
+    "max_resampled_country_n": 818.0,
+    "interpretation": "Percentile resampling range as a dependence diagnostic, not a calibrated confidence interval with 39 balanced informative clusters."
+  },
+  "candidate_audit": {
+    "go_cells": 164,
+    "plus_cells": 164,
+    "all_go_plus_have_single_surviving_candidate": true,
+    "annual_filter_cutoff_3_5_8_all_identical": true,
+    "explicit_monthly_labels_in_chatgpt_go_plus": 0,
+    "ambiguous_google_pro_iso3": [
+      "BEN",
+      "IND",
+      "TUR"
+    ],
+    "limitation": "Single surviving candidate does not authenticate billing period; historical HTML and SKU metadata are absent."
+  }
+}

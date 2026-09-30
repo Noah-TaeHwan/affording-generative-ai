@@ -42,6 +42,10 @@ H = {
   "tab:scen": r"Income group & Exposed $E$ (\%) & Adoption $a$ (\%) & Naive ($g$=20\%) & Hulten $g$=10\% & Hulten $g$=20\% & Hulten $g$=30\% & At HIC adoption ($g$=20\%) \\",
   "tab:auitime": r"Window & Elasticity (all) & (s.e.) & $N$ & $R^2$ & Elasticity (common) & (s.e.) \\",
  }}[LANG]
+if LANG == "en":
+    H["tab:burden"] = r"Income group & $N$ & \$8 & \$20 & \$100 & \$200 & HH cons. & PPP indexed \\\\"
+    H["tab:decomp"] = r"Income group & $N$ & AI users & Internet & AI / internet & Log gap & Internet & Ratio & Share \\\\"
+    H["tab:quintile"] = r"Income group & $N$ & Bottom resources & Middle resources & Top resources & Broadband burden & Price ratio \\\\"
 TABWORD, FIGWORD = ("표", "그림") if LANG == "ko" else ("Table", "Figure")
 
 
@@ -86,12 +90,29 @@ def fix_table(env):
 def fix_figure(env):
     lab = re.search(r"\\label\{(fig:[^}]+)\}", env)
     num = labels.get(lab.group(1), "") if lab else ""
-    env = re.sub(r"(figures/[A-Za-z0-9_]+)\.pdf", r"\1.png", env)
+    def png_figure(m):
+        # Render the exact manuscript PDF, avoiding stale or empty PNGs.
+        import fitz
+        pdf_path = P / (m.group(1) + ".pdf")
+        png_path = P / (m.group(1) + ".png")
+        with fitz.open(pdf_path) as figure:
+            figure[0].get_pixmap(matrix=fitz.Matrix(2.5, 2.5), alpha=False).save(png_path)
+        return str(png_path)
+    env = re.sub(r"(figures/[A-Za-z0-9_]+)\.pdf", png_figure, env)
     env = re.sub(r"\\caption\{", lambda m: "\\caption{" + f"{FIGWORD} {num}. ", env, count=1)
     return env
 
 
+# Materialise theorem numbering for Word; PDF labels remain authoritative.
+for kind,title in [("definition","Definition"),("remark","Remark"),("proposition","Proposition")]:
+    counter=[0]
+    def theorem(m):
+        counter[0]+=1
+        return "\\paragraph{"+title+" "+str(counter[0])+" "+(m.group(1) or "")+".}"
+    src=re.sub(r"\\begin\{"+kind+r"\}(?:\[([^]]+)\])?",theorem,src)
+    src=src.replace("\\end{"+kind+"}","")
 t = inline_tables(src)
+t = t.replace(r"$^\dagger$", "†")
 t = re.sub(r"\\begin\{table\}.*?\\end\{table\}", lambda m: fix_table(m.group(0)), t, flags=re.S)
 t = re.sub(r"\\begin\{figure\}.*?\\end\{figure\}", lambda m: fix_figure(m.group(0)), t, flags=re.S)
 # equations: show their numbers explicitly
@@ -157,7 +178,7 @@ lua = BUILD / "refs.lua"
 lua.write_text('function Para(el)\n  if #el.content == 1 and el.content[1].t == "Str" and el.content[1].text == "REFSPLACEHOLDER" then\n'
                '    return pandoc.Div({}, pandoc.Attr("refs"))\n  end\nend\n')
 out_docx = ROOT / "output" / f"Affording_Generative_AI_{LANG.upper()}.docx"
-cmd = ["pandoc", str(BUILD / "flat.tex"), "-f", "latex", "-t", "docx", "--resource-path", str(ROOT / "output"),
+cmd = ["pandoc", str(BUILD / "flat.tex"), "-f", "latex", "-t", "docx", "--resource-path", str(ROOT / "output") + ":" + str(P),
        "--reference-doc", str(ref), "--lua-filter", str(lua), "--citeproc",
        "-M", "abstract-title=" + ("국문 초록" if LANG == "ko" else "Abstract"),
        "--bibliography", str(P / "references.bib"), "-o", str(out_docx)]

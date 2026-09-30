@@ -55,7 +55,7 @@ L = {
         "f4_yb": "Change (percentage points)",
         "periods": ["H1 2025", "H2 2025", "Q1 2026", "Q2 2026"],
         "f5_x": "Log gap in AI user share relative to the high-income group (difference in mean logs)",
-        "connect": "Connectivity (internet use)", "cond": "Adoption among internet users",
+        "connect": "Connectivity (internet use)", "cond": "AI-use-to-internet-use ratio",
         "f6_x": "Illustrative gain in aggregate output (% of GDP)", "cur": "Current adoption",
         "hic_ad": "If adoption matched high-income level", "rng": "Task-level gain 10-30% (dot: 20%)",
         "n_note": "n = {n}",
