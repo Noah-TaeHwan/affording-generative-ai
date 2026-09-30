@@ -4,7 +4,7 @@
 #
 # paper_en: main.pdf (identified manuscript), main_anon.pdf (anonymised review copy, built from the same
 #           main.tex with the \ifanon switch set) and titlepage.pdf (separate title page for double-anonymised review).
-# paper_ko: main.pdf (Korean manuscript; archived version 1.8 text, see README).
+# paper_ko: main.pdf (Korean edition: translation of the English version 2.0 manuscript, same tables and figures).
 set -euo pipefail
 cd "$(dirname "$0")"
 # fixed timestamps make rebuilds byte-identical (override SOURCE_DATE_EPOCH for a new version)
@@ -44,7 +44,7 @@ compile() {  # $1 = engine, $2 = jobname, $3 = argument passed to the engine (fi
 (
   cd paper_ko
   compile xelatex main main.tex
-  shasum -a 256 main.tex references.bib tables/*.tex figures/*.pdf main.pdf > main.pdf.sources.sha256
+  shasum -a 256 main.tex references.bib apalike-doi.bst tables/*.tex figures/*.pdf main.pdf > main.pdf.sources.sha256
   rm -f main.aux main.log main.out main.blg main.toc
   echo "paper_ko: main.pdf built"
 )

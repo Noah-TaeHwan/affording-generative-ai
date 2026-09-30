@@ -1,56 +1,69 @@
 """
-50_make_docx.py -- Word version of a manuscript (for journals that require .docx/.hwp submission).
-Flattens the LaTeX source (inlines tables, resolves cross-references from the .aux file, simplifies multi-row
-table headers, switches figures to PNG) and converts it with pandoc (+citeproc, author-date references).
-Usage: python code/50_make_docx.py ko   (or en)
+50_make_docx.py -- Word version of a manuscript (for readers or journals that need .docx).
+Flattens the LaTeX source (inlines tables, resolves cross-references from a compiled .aux file, simplifies multi-row
+table headers, renders the figure PDFs as PNG images) and converts it with pandoc (+citeproc, author-date references).
+The PDF built by build_papers.sh remains the reference version; the Word file is a convenience copy.
+
+Usage: python code/50_make_docx.py ko [output.docx]      (or en; default output/Affording_Generative_AI_<LANG>.docx)
+Needs pandoc 3.1, python-docx, and TeX Live with poppler-utils (xelatex or pdflatex for the cross-references,
+pdftoppm for the figures). All intermediate files are written to a temporary directory; the manuscript folder is
+not modified.
 """
-import re, sys, pathlib, subprocess, shutil
+import pathlib
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+
 from docx import Document
-from docx.shared import Pt
 from docx.oxml.ns import qn
+from docx.shared import Pt
 
 LANG = sys.argv[1] if len(sys.argv) > 1 else "ko"
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 P = ROOT / f"paper_{LANG}"
-BUILD = ROOT / "output" / f"docx_build_{LANG}"
-BUILD.mkdir(parents=True, exist_ok=True)
-src = (P / "main.tex").read_text()
-aux = (P / "main.aux").read_text()
+OUT = pathlib.Path(sys.argv[2]).resolve() if len(sys.argv) > 2 else ROOT / "output" / f"Affording_Generative_AI_{LANG.upper()}.docx"
+TMP = tempfile.TemporaryDirectory()
+BUILD = pathlib.Path(TMP.name)
+src = (P / "main.tex").read_text(encoding="utf-8")
 
-# ---------------------------------------------------------------- cross-references from the compiled .aux
+# ---------------------------------------------------------------- cross-references from a compiled .aux (in a copy)
+work = BUILD / "tex"
+shutil.copytree(P, work)
+engine = "xelatex" if LANG == "ko" else "pdflatex"
+for _ in range(2):
+    subprocess.run([engine, "-interaction=nonstopmode", "-halt-on-error", "main.tex"], cwd=work,
+                   capture_output=True, check=True)
+aux = (work / "main.aux").read_text(encoding="utf-8")
 labels = dict(re.findall(r"\\newlabel\{([^}]+)\}\{\{([^}]*)\}", aux))
 
 # ---------------------------------------------------------------- simplified single-row table headers
 H = {
  "ko": {
-  "tab:burden": r"소득집단 & $N$ & 1인당 GNI 중위값 & \$8 & \$20 & \$60 & \$100 & \$200 & \$300 & \$20에서 2\% 충족(\%) & \$20, 가계소비 기준 & \$20, PPP 연동 \\",
   "tab:quintile": r"소득집단 & $N$ & 하위 20\% & 중위 20\% & 상위 20\% & 모바일 광대역 2GB (GNI 대비 \%) & AI 요금제/광대역 \\",
   "tab:local": r"요금제 & 미국 가격 & 고소득 & 상위중소득 & 하위중소득 & 저소득 & $\hat\beta$ & (표준오차) & $N$ \\",
   "tab:store": r"소득집단 & $N$ & 현지 스토어(\%) & 스토어 없음(\%) & 미제공(\%) & 달러 표시(\%) & 최저가 유료(달러) & 최저가 부담(\%) & Plus 부담(\%) \\",
   "tab:diffusion": r" & (1) 수준 & (2) 로그 & (3) 로그 & (4) 로그 & (5) 로그 & (6) 로그 & (7) 로그 \\",
-  "tab:decomp": r"소득집단 & $N$ & AI 이용자(\%) & 인터넷(\%) & 온라인 중 AI(\%) & 로그 격차 전체 & 연결성 & 채택 & 연결성 몫(\%) \\",
-  "tab:scen": r"소득집단 & 노출도 $E$(\%) & 채택률 $a$(\%) & 단순 곱($g$=20\%) & 헐튼 $g$=10\% & 헐튼 $g$=20\% & 헐튼 $g$=30\% & 고소득국 채택률 적용($g$=20\%) \\",
+  "tab:decomp": r"소득집단 & $N$ & AI 이용자(\%) & 인터넷(\%) & AI / 인터넷(\%) & 로그 격차 전체 & 연결성 & 비율 & 연결성 몫(\%) \\",
   "tab:auitime": r"시점 & 탄력성(전체) & (표준오차) & $N$ & $R^2$ & 탄력성(공통 표본) & (표준오차) \\",
  },
  "en": {
-  "tab:burden": r"Income group & $N$ & Median GNI p.c. & \$8 & \$20 & \$60 & \$100 & \$200 & \$300 & Meets 2\% at \$20 (\%) & \$20, HH cons. & \$20, PPP-idx. \\",
   "tab:quintile": r"Income group & $N$ & Poorest 20\% & Middle 20\% & Richest 20\% & Mobile broadband 2 GB (\% GNI p.c.) & AI plan / broadband \\",
   "tab:local": r"Plan & U.S. price & High & Upper-mid. & Lower-mid. & Low & $\hat\beta$ & (s.e.) & $N$ \\",
   "tab:store": r"Income group & $N$ & Local store (\%) & No store (\%) & Not offered (\%) & USD-priced (\%) & Cheapest tier (US\$) & Cheapest burden (\%) & Plus burden (\%) \\",
   "tab:diffusion": r" & (1) Level & (2) Log & (3) Log & (4) Log & (5) Log & (6) Log & (7) Log \\",
-  "tab:decomp": r"Income group & $N$ & AI users (\%) & Internet (\%) & AI among online (\%) & Log gap total & Connect. & Adoption & Connectivity share (\%) \\",
-  "tab:scen": r"Income group & Exposed $E$ (\%) & Adoption $a$ (\%) & Naive ($g$=20\%) & Hulten $g$=10\% & Hulten $g$=20\% & Hulten $g$=30\% & At HIC adoption ($g$=20\%) \\",
+  "tab:decomp": r"Income group & $N$ & AI users (\%) & Internet (\%) & AI / internet (\%) & Log gap, total & Connectivity & Ratio & Connectivity share (\%) \\",
   "tab:auitime": r"Window & Elasticity (all) & (s.e.) & $N$ & $R^2$ & Elasticity (common) & (s.e.) \\",
  }}[LANG]
-if LANG == "en":
-    H["tab:burden"] = r"Income group & $N$ & \$8 & \$20 & \$100 & \$200 & HH cons. & PPP indexed \\\\"
-    H["tab:decomp"] = r"Income group & $N$ & AI users & Internet & AI / internet & Log gap & Internet & Ratio & Share \\\\"
-    H["tab:quintile"] = r"Income group & $N$ & Bottom resources & Middle resources & Top resources & Broadband burden & Price ratio \\\\"
 TABWORD, FIGWORD = ("표", "그림") if LANG == "ko" else ("Table", "Figure")
+THEOREMS = ([("definition", "정의"), ("remark", "비고"), ("proposition", "명제")] if LANG == "ko"
+            else [("definition", "Definition"), ("remark", "Remark"), ("proposition", "Proposition")])
+PROOF = "증명." if LANG == "ko" else "Proof."
 
 
 def inline_tables(t):
-    return re.sub(r"\\tabinput\{(tables/[^}]+)\}", lambda m: (P / m.group(1)).read_text(), t)
+    return re.sub(r"\\tabinput\{(tables/[^}]+)\}", lambda m: (P / m.group(1)).read_text(encoding="utf-8"), t)
 
 
 def multicol(t):
@@ -87,34 +100,38 @@ def fix_table(env):
     return env + ("\n\n" + note_txt + "\n\n" if note_txt else "")
 
 
+def png_figure(m):
+    """Render the figure PDF used by the manuscript as a PNG in the build directory."""
+    pdf_path = P / (m.group(1) + ".pdf")
+    stem = BUILD / pathlib.Path(m.group(1)).name
+    subprocess.run(["pdftoppm", "-png", "-r", "180", "-singlefile", str(pdf_path), str(stem)], check=True)
+    return str(stem) + ".png"
+
+
 def fix_figure(env):
     lab = re.search(r"\\label\{(fig:[^}]+)\}", env)
     num = labels.get(lab.group(1), "") if lab else ""
-    def png_figure(m):
-        # Render the exact manuscript PDF, avoiding stale or empty PNGs.
-        import fitz
-        pdf_path = P / (m.group(1) + ".pdf")
-        png_path = P / (m.group(1) + ".png")
-        with fitz.open(pdf_path) as figure:
-            figure[0].get_pixmap(matrix=fitz.Matrix(2.5, 2.5), alpha=False).save(png_path)
-        return str(png_path)
     env = re.sub(r"(figures/[A-Za-z0-9_]+)\.pdf", png_figure, env)
     env = re.sub(r"\\caption\{", lambda m: "\\caption{" + f"{FIGWORD} {num}. ", env, count=1)
     return env
 
 
 # Materialise theorem numbering for Word; PDF labels remain authoritative.
-for kind,title in [("definition","Definition"),("remark","Remark"),("proposition","Proposition")]:
-    counter=[0]
-    def theorem(m):
-        counter[0]+=1
-        return "\\paragraph{"+title+" "+str(counter[0])+" "+(m.group(1) or "")+".}"
-    src=re.sub(r"\\begin\{"+kind+r"\}(?:\[([^]]+)\])?",theorem,src)
-    src=src.replace("\\end{"+kind+"}","")
+for kind, title in THEOREMS:
+    counter = [0]
+
+    def theorem(m, counter=counter, title=title):
+        counter[0] += 1
+        return "\\paragraph{" + title + " " + str(counter[0]) + (" (" + m.group(1) + ")" if m.group(1) else "") + ".}"
+    src = re.sub(r"\\begin\{" + kind + r"\}(?:\[([^]]+)\])?", theorem, src)
+    src = src.replace("\\end{" + kind + "}", "")
+src = src.replace("\\begin{proof}", "\\paragraph{" + PROOF + "}").replace("\\end{proof}", "")
 t = inline_tables(src)
 t = t.replace(r"$^\dagger$", "†")
 t = re.sub(r"\\begin\{table\}.*?\\end\{table\}", lambda m: fix_table(m.group(0)), t, flags=re.S)
 t = re.sub(r"\\begin\{figure\}.*?\\end\{figure\}", lambda m: fix_figure(m.group(0)), t, flags=re.S)
+
+
 # equations: show their numbers explicitly
 def eqnum(m):
     body = m.group(1)
@@ -122,6 +139,8 @@ def eqnum(m):
     n = labels.get(lab.group(1), "") if lab else ""
     body = re.sub(r"\\label\{[^}]+\}", "", body).strip()
     return "\\[\n" + body + (f" \\qquad ({n})" if n else "") + "\n\\]"
+
+
 t = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}", eqnum, t, flags=re.S)
 t = re.sub(r"\\eqref\{([^}]+)\}", lambda m: f"({labels.get(m.group(1), '?')})", t)
 t = re.sub(r"\\ref\{([^}]+)\}", lambda m: labels.get(m.group(1), "?"), t)
@@ -134,7 +153,8 @@ for line in t.split("\n"):
         continue
     m = re.match(r"\\section\{(.*?)\}(.*)", line)
     if m:
-        sec += 1; sub = 0
+        sec += 1
+        sub = 0
         n = chr(64 + sec) if app else str(sec)
         line = f"\\section*{{{n}~~{m.group(1)}}}{m.group(2)}"
     m = re.match(r"\\subsection\{(.*?)\}(.*)", line)
@@ -147,12 +167,14 @@ ref_title = "참고문헌" if LANG == "ko" else "References"
 t = re.sub(r"\\bibliographystyle\{[^}]*\}\s*\\bibliography\{[^}]*\}",
            "\\\\section*{" + ref_title + "}\n\nREFSPLACEHOLDER\n", t)
 t = t.replace("\\qed", "").replace("\\nolinkurl{", "\\texttt{").replace("\\clearpage", "").replace("\\newpage", "")
+t = re.sub(r"\\FloatBarrier\b", "", t)
 t = re.sub(r"\\makeatletter.*?\\makeatother[^\n]*", "", t)
-(BUILD / "flat.tex").write_text(t)
+(BUILD / "flat.tex").write_text(t, encoding="utf-8")
 
 # ---------------------------------------------------------------- reference document with suitable fonts
 ref = BUILD / "reference.docx"
-subprocess.run(["pandoc", "-o", str(ref), "--print-default-data-file", "reference.docx"], check=True)
+with open(ref, "wb") as fh:
+    subprocess.run(["pandoc", "--print-default-data-file", "reference.docx"], stdout=fh, check=True)
 doc = Document(ref)
 latin, east = ("Times New Roman", "Malgun Gothic") if LANG == "ko" else ("Times New Roman", "Times New Roman")
 for st in doc.styles:
@@ -162,7 +184,8 @@ for st in doc.styles:
         continue
     fonts = rpr.find(qn("w:rFonts"))
     if fonts is None:
-        fonts = rpr.makeelement(qn("w:rFonts"), {}); rpr.insert(0, fonts)
+        fonts = rpr.makeelement(qn("w:rFonts"), {})
+        rpr.insert(0, fonts)
     for a in ["w:ascii", "w:hAnsi", "w:cs"]:
         fonts.set(qn(a), latin)
     fonts.set(qn("w:eastAsia"), east)
@@ -177,21 +200,25 @@ doc.save(ref)
 lua = BUILD / "refs.lua"
 lua.write_text('function Para(el)\n  if #el.content == 1 and el.content[1].t == "Str" and el.content[1].text == "REFSPLACEHOLDER" then\n'
                '    return pandoc.Div({}, pandoc.Attr("refs"))\n  end\nend\n')
-out_docx = ROOT / "output" / f"Affording_Generative_AI_{LANG.upper()}.docx"
-cmd = ["pandoc", str(BUILD / "flat.tex"), "-f", "latex", "-t", "docx", "--resource-path", str(ROOT / "output") + ":" + str(P),
+OUT.parent.mkdir(parents=True, exist_ok=True)
+abstract_title = "초록" if LANG == "ko" else "Abstract"
+cmd = ["pandoc", str(BUILD / "flat.tex"), "-f", "latex", "-t", "docx", "--resource-path", str(BUILD) + ":" + str(P),
        "--reference-doc", str(ref), "--lua-filter", str(lua), "--citeproc",
-       "-M", "abstract-title=" + ("국문 초록" if LANG == "ko" else "Abstract"),
-       "--bibliography", str(P / "references.bib"), "-o", str(out_docx)]
+       "-M", "abstract-title=" + abstract_title,
+       "--bibliography", str(P / "references.bib"), "-o", str(OUT)]
 r = subprocess.run(cmd, capture_output=True, text=True)
-print(r.stderr[-2000:] if r.stderr else "", "->", out_docx)
+if r.returncode != 0:
+    raise SystemExit(r.stderr[-3000:])
+if r.stderr:
+    print(r.stderr[-2000:])
 
 # pandoc 3.1 ignores abstract-title for docx: relabel the abstract heading in place
-d = Document(out_docx)
+d = Document(OUT)
 for para in d.paragraphs[:12]:
     if para.text.strip() == "Abstract" and LANG == "ko":
         for run in para.runs:
             run.text = ""
-        para.runs[0].text = "국문 초록"
+        para.runs[0].text = abstract_title
         break
-d.save(out_docx)
-print("abstract heading set")
+d.save(OUT)
+print("written", OUT)

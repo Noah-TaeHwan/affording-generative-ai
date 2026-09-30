@@ -81,7 +81,7 @@ for lang in ["en", "ko"]:
            "ko": ["ln 1인당 GNI", "", "통제변수", "지역 고정효과", "표본", "관측치", "$R^2$"]}[lang]
     yes, no = ("Yes", "No") if lang == "en" else ("예", "아니오")
     smp = {"en": ["CS", "CS", "All", "Coll.", "CS$^\\dagger$", "CS$^\\dagger$", "CS$^\\dagger$"],
-           "ko": ["국가별", "국가별", "전체", "군집", "국가별$^\\dagger$", "국가별$^\\dagger$", "국가별$^\\dagger$"]}[lang]
+           "ko": ["국가별", "국가별", "전체", "합침", "국가별$^\\dagger$", "국가별$^\\dagger$", "국가별$^\\dagger$"]}[lang]
     body = (f"{lab[0]} & {b} \\\\\n & {s} \\\\\n\\addlinespace\n"
             f"{lab[2]} & {no} & {no} & {no} & {no} & {no} & {yes} & {yes} \\\\\n"
             f"{lab[3]} & {no} & {no} & {no} & {no} & {no} & {no} & {yes} \\\\\n"
