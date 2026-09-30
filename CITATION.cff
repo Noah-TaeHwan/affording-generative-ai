@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this work, please cite the working paper and the replication package."
 title: "Replication package for: Affording Generative AI Across Countries: Uniform Prices, Unequal Burdens"
 type: software
-version: "2.0"
-date-released: 2026-09-30
-doi: 10.5281/zenodo.23057976
+version: "2.0.1"
+date-released: 2026-10-01
+doi: 10.5281/zenodo.23071750
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23006365
