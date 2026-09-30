@@ -1,0 +1,44 @@
+{
+  "mode": "check",
+  "tables": [
+    {
+      "file": "paper_en/tables/tab_burden_compact.tex",
+      "matches_before_write": true,
+      "sha256_generated": "090eb6b66a034c6a4206282195bdfa03f6375fe299e183aa92d5f3a6877de06f"
+    },
+    {
+      "file": "paper_en/tables/tab_quintile.tex",
+      "matches_before_write": true,
+      "sha256_generated": "1398d2d24cecb2754b0bdd7b3ff061767712b5bb0cf30cf34a3c73569b5c423b"
+    },
+    {
+      "file": "paper_en/tables/tab_thresholds.tex",
+      "matches_before_write": true,
+      "sha256_generated": "a44349dc7945b5516a3a0527b0d072e13f3d4060be0175914c881d146abd1662"
+    },
+    {
+      "file": "paper_en/tables/tab_price_revision.tex",
+      "matches_before_write": true,
+      "sha256_generated": "bd1c820563d0a1aa1cc1c61f1320b137ccfbfa91db330e6c3d58f5e05e97a510"
+    },
+    {
+      "file": "paper_en/tables/tab_gap_revision.tex",
+      "matches_before_write": true,
+      "sha256_generated": "20631e0c7dc58f8c6c54cb685ad9b512b6236057ef7bbf58a1ab6d52886c0ec2"
+    },
+    {
+      "file": "paper_en/tables/tab_500_scenario.tex",
+      "matches_before_write": true,
+      "sha256_generated": "38adb7e2d1de60f438efb46133b877109abe5245b04f63b450be8b88345b8153"
+    }
+  ],
+  "all_tables_match_before_write": true,
+  "scenario_csv_matches_before_write": true,
+  "source_files": [
+    "data/processed/country_panel.csv",
+    "revision_audit/audit_output/burden_threshold_sensitivity.csv",
+    "revision_audit/audit_output/local_price_robustness.csv",
+    "revision_audit/audit_output/within_storefront_price_ratios.csv",
+    "revision_audit/audit_output/cross_provider_gradient_robustness.csv"
+  ]
+}

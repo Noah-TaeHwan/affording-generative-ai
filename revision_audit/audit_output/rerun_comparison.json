@@ -1,0 +1,26 @@
+{
+  "result_keys": 865,
+  "result_differences": [],
+  "table_files": 22,
+  "identical_table_files": 22,
+  "processed_data_comparison": [
+    {
+      "file": "data/processed/appstore_prices_long.csv",
+      "result": "equal to 1e-10"
+    },
+    {
+      "file": "data/processed/country_panel.csv",
+      "result": "equal to 1e-10"
+    },
+    {
+      "file": "data/processed/appstore_prices_wide.csv",
+      "result": "equal to 1e-10"
+    },
+    {
+      "file": "data/processed/data_dictionary.csv",
+      "result": "equal to 1e-10"
+    }
+  ],
+  "run_all_exit_code": 0,
+  "note": "Figures regenerated; Korean font glyph warnings are environment dependent. Manuscript build not rerun here."
+}

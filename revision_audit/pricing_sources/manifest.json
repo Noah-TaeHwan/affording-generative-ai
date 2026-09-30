@@ -1,0 +1,122 @@
+[
+  {
+    "name": "pro_tiers",
+    "requested_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+    "retrieved_utc": "2026-09-29T23:43:35.676494+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "plus",
+    "requested_url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "retrieved_utc": "2026-09-29T23:43:35.677075+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "go",
+    "requested_url": "https://help.openai.com/en/articles/11989085-what-is-chatgpt-go",
+    "retrieved_utc": "2026-09-29T23:43:35.677535+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "go_announcement",
+    "requested_url": "https://openai.com/index/introducing-chatgpt-go/",
+    "retrieved_utc": "2026-09-29T23:43:35.677939+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "release_notes",
+    "requested_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "retrieved_utc": "2026-09-29T23:43:35.678406+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "credits",
+    "requested_url": "https://help.openai.com/en/articles/12642688-using-credits-for-flexible-usage-in-chatgpt-personal-plans",
+    "retrieved_utc": "2026-09-29T23:43:46.173431+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "rate_card",
+    "requested_url": "https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu-credit-based-pricing",
+    "retrieved_utc": "2026-09-29T23:43:46.176497+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "learn_pricing",
+    "requested_url": "https://learn.chatgpt.com/docs/pricing",
+    "retrieved_utc": "2026-09-29T23:43:46.180993+00:00",
+    "http_status": 200,
+    "final_url": "https://learn.chatgpt.com/docs/pricing",
+    "bytes": 689718,
+    "sha256": "1c2b15b16a13f6caad1e0cd3001f3255f1baf18116df8f2362126dc555d64885",
+    "content_type": "text/html; charset=utf-8",
+    "raw_file": "learn_pricing.html",
+    "text_file": "learn_pricing.txt",
+    "looks_usable": true,
+    "archival_status": "raw_http_response_archived"
+  },
+  {
+    "name": "multicurrency",
+    "requested_url": "https://help.openai.com/en/articles/10421635-multicurrency-billing",
+    "retrieved_utc": "2026-09-29T23:43:46.184953+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "gpt_6_1",
+    "requested_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+    "retrieved_utc": "2026-09-29T23:43:47.023107+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "devday_recap",
+    "requested_url": "https://openai.com/index/devday-2026-recap/",
+    "retrieved_utc": "2026-09-29T23:43:52.031063+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "chatgpt_pricing",
+    "requested_url": "https://chatgpt.com/pricing/",
+    "retrieved_utc": "2026-09-29T23:43:53.226577+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "pro_plan",
+    "requested_url": "https://chatgpt.com/plans/pro/",
+    "retrieved_utc": "2026-09-29T23:43:53.290043+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "archival_status": "http_archive_failed_web_tool_inspection_only"
+  },
+  {
+    "name": "speed",
+    "requested_url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+    "retrieved_utc": "2026-09-29T23:44:32.151327+00:00",
+    "http_status": 200,
+    "final_url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+    "bytes": 348945,
+    "sha256": "f0fcbffea936668bb99f2722915a52f9ef8514c618851e4638dbcf210ef0114d",
+    "raw_file": "speed.html",
+    "archival_status": "raw_http_response_archived"
+  },
+  {
+    "name": "api_ultrafast",
+    "requested_url": "https://developers.openai.com/api/docs/guides/ultrafast-mode",
+    "retrieved_utc": "2026-09-29T23:44:39.231393+00:00",
+    "http_status": 200,
+    "final_url": "https://developers.openai.com/api/docs/guides/ultrafast-mode",
+    "bytes": 419996,
+    "sha256": "dc6115651ba94a2f7bbbf104e39a8579cddc92e2168243dd2ec0a4d8cc7b7f38",
+    "raw_file": "api_ultrafast.html",
+    "archival_status": "raw_http_response_archived"
+  }
+]

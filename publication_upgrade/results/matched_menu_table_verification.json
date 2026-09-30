@@ -1,0 +1,8 @@
+{
+  "mode": "check",
+  "source": "results/matched_menu_currency_sensitivity.csv",
+  "table": "paper_en/tables/tab_matched_menu_sensitivity.tex",
+  "byte_identical_before_write": true,
+  "sha256": "760fc98a4cb6f3073b05371e937acf42244ecc96b2dc984733c68d9884f2c37a",
+  "convention": "HC3 SE and normal 95% interval for all four rows"
+}

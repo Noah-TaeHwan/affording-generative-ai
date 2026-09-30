@@ -1,0 +1,24 @@
+{
+  "seed": 20260930,
+  "numpy_version": "2.4.4",
+  "scipy_version": "1.17.1",
+  "scope": "Numerical verification of maintained-model algebra, not empirical assumptions",
+  "utility_checks": {
+    "parameter_valuation_comparisons": 50000,
+    "adoption_threshold_mismatches": 0,
+    "paid_threshold_mismatches": 0
+  },
+  "gradient_checks": {
+    "parameter_sets": 2000,
+    "parameter_sets_per_regime": 1000,
+    "gradient_components": 4000,
+    "central_difference_step": 1e-05,
+    "maximum_absolute_error": 5.5629243433941156e-09,
+    "maximum_absolute_error_by_regime": {
+      "nested": 5.5629243433941156e-09,
+      "reversed": 1.773079461031557e-09
+    },
+    "absolute_error_tolerance": 1e-06
+  },
+  "passed": true
+}

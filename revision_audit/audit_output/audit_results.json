@@ -1,0 +1,33 @@
+{
+  "environment": {
+    "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "statsmodels": "0.15.0"
+  },
+  "headline_checks_all_pass": true,
+  "connectivity_ratio": {
+    "n": 109,
+    "n_above_one": 0,
+    "max_ratio": 0.7777323040883277,
+    "max_identity_error": 4.440892098500626e-16
+  },
+  "gradient_gap_leave_one_out": {
+    "min": 0.3291622336505295,
+    "max": 0.35075611220609476
+  },
+  "source_access": {
+    "zenodo_record": 23006366,
+    "package_size_bytes": 4449098,
+    "package_md5": "399295b8c6aefc9a4c2bea8790893872",
+    "checksum_scope": "Size and MD5 verified on archive retrieved for audit; constants record that retrieval, not a fresh download at script runtime.",
+    "full_upstream_anthropic_itu_reconstruction": true,
+    "note": "Anthropic/ITU upstream validation was performed separately; see upstream_validation/upstream_verification.json. This script itself uses the bundled extracts. App Store HTML and WDI upstream re-extraction were not verified."
+  },
+  "vintage": {
+    "n_gni": 201,
+    "n_gni_2025": 182,
+    "gni_atlas_ppp_year_mismatch": 0
+  }
+}

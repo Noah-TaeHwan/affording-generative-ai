@@ -245,7 +245,7 @@ pd.DataFrame(rows).to_csv(TAB / "C2_conditional_gradients.csv", index=False)
 mdc = mcs[mcs.internet_pct.notna()].copy()
 mdc["ln_I"] = np.log(mdc.internet_pct / 100)
 mdc["ln_DI"] = mdc.ln_ms - mdc.ln_I
-mdc["ai_among_online"] = (mdc.ms_q2_2026 / mdc.internet_pct).clip(upper=1)
+mdc["ai_among_online"] = (mdc.ms_q2_2026 / mdc.internet_pct)
 for nm, y in [("decomp_total", "ln_ms"), ("decomp_connect", "ln_I"), ("decomp_cond", "ln_DI")]:
     store(nm, ols(f"{y} ~ ln_gni", mdc), "ln_gni")
 R["decomp_share_connect"] = R["decomp_connect_b"] / R["decomp_total_b"]
