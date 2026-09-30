@@ -14,7 +14,7 @@ for d in paper_en paper_ko; do
   if [ "$d" = paper_en ]; then
     files=$(cd "$d" && ls main.tex titlepage.tex references.bib apalike-doi.bst tables/*.tex figures/*.pdf main_anon.pdf titlepage.pdf)
   else
-    files=$(cd "$d" && ls main.tex references.bib tables/*.tex figures/*.pdf)
+    files=$(cd "$d" && ls main.tex references.bib apalike-doi.bst tables/*.tex figures/*.pdf)
   fi
   for f in $files; do
     grep -q "  $f\$" "$m" || { echo "FAIL $d: $f is not covered by the build record; run build_papers.sh"; fail=1; }
@@ -31,7 +31,7 @@ fi
 for f in run_all.sh run_revision.sh build_papers.sh check_release.sh requirements.txt LICENSE.txt \
          paper_en/main.pdf paper_en/main_anon.pdf paper_en/titlepage.pdf paper_ko/main.pdf \
          revision_audit/requirements_revision.txt verification/README.md verification/prose_number_audit.py \
-         code/53_flatten_submission.py; do
+         verification/en_ko_number_check.py code/53_flatten_submission.py; do
   [ -e "$f" ] || { echo "FAIL README refers to missing $f"; fail=1; }
 done
 

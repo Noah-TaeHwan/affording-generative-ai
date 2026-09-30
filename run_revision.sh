@@ -17,11 +17,15 @@ REVISION_PYTHON="${REVISION_PYTHON:-python3}"
 "$REVISION_PYTHON" publication_upgrade/price_reliability.py    # plan-matching and currency-sample checks
 "$REVISION_PYTHON" publication_upgrade/build_matched_menu_table.py   # body of tab_matched_menu_sensitivity
 "$REVISION_PYTHON" publication_upgrade/build_matched_menu_table.py --check
+"$REVISION_PYTHON" revision_audit/build_revision_tables_ko.py  # Korean bodies of the seven tables above (row labels only)
+"$REVISION_PYTHON" revision_audit/build_revision_tables_ko.py --check
+"$REVISION_PYTHON" revision_audit/figure_price_ratio_ko.py     # Figure 3 with Korean labels
 "$REVISION_PYTHON" publication_upgrade/verify_tier_model.py    # numerical check of the Appendix A propositions
 "$REVISION_PYTHON" verification/prose_number_audit.py          # every number in the prose against the outputs
+"$REVISION_PYTHON" verification/en_ko_number_check.py          # the Korean edition prints the same numbers as the English text
 
 if [[ "${1:-}" == "--analysis-only" ]]; then
-  echo "Version 2.0 analyses, table bodies and Figure 3 regenerated; prose-number audit passed."
+  echo "Version 2.0 analyses, table bodies and Figure 3 regenerated; prose-number audit and English-Korean number check passed."
   exit 0
 fi
 
