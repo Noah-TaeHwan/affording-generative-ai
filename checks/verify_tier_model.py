@@ -2,7 +2,7 @@
 """Independent numerical checks of the manuscript's conditional tier model.
 
 Run with the bundled runtime:
-  "$CODEX_PRIMARY_RUNTIME_PYTHON" publication_upgrade/verify_tier_model.py
+  "$CODEX_PRIMARY_RUNTIME_PYTHON" checks/verify_tier_model.py
 
 This verifies the algebra for the maintained model, not its empirical validity.
 It writes a small JSON report alongside this script unless --output is supplied.

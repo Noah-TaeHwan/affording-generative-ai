@@ -1,10 +1,10 @@
-"""Audit of the numbers printed in the prose of paper_en/main.tex (version 2.0).
+"""Audit of the numbers printed in the prose of paper_en/main.tex (version 2.1).
 
 Every numerical statement in the abstract, main text and appendices B, C and E is compared with the value
-produced by the pipeline: output/results.json (analysis script), the CSV/JSON outputs of revision_audit/ and
-publication_upgrade/, or a direct recomputation from the processed data or the raw App Store records.
+produced by the pipeline: output/results.json (analysis script), the CSV/JSON outputs of extensions/ and
+checks/, or a direct recomputation from the processed data or the raw App Store records.
 Table bodies are not checked here because they are written by code (code/40_tables_tex.py,
-revision_audit/build_revision_tables.py, publication_upgrade/build_matched_menu_table.py) and verified with
+extensions/build_revision_tables.py, checks/build_matched_menu_table.py) and verified with
 the --check modes of those scripts.
 
 Usage:  python verification/prose_number_audit.py        (from the package root; exit code 1 on any mismatch)
@@ -14,6 +14,7 @@ decimals. Values printed as "about", "near" or as a range are checked against th
 ledger entry.
 """
 import json
+import math
 import re
 import sys
 from decimal import Decimal, ROUND_HALF_EVEN, ROUND_HALF_UP
@@ -24,8 +25,8 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 R = json.load(open(ROOT / "output" / "results.json"))
-AO = ROOT / "revision_audit" / "audit_output"
-PU = ROOT / "publication_upgrade" / "results"
+AO = ROOT / "extensions" / "audit_output"
+PU = ROOT / "checks" / "results"
 TEX = (ROOT / "paper_en" / "main.tex").read_text(encoding="utf-8")
 
 
@@ -74,7 +75,7 @@ def burden(iso3, p=20):
 
 
 # ------------------------------------------------------------------ Abstract
-check_in_text("nine plans of ChatGPT, Claude and Gemini in 170 national Apple App Store storefronts")
+check_in_text("for nine plans of ChatGPT, Claude and Gemini in 170 national Apple App Store storefronts")
 check("Abstract: 170 storefronts with local price lists", "170",
       prices[prices.price_local.notna()].storefront.nunique())
 check("Abstract: 201 economies", "201", R["n_econ_gni"])
@@ -444,6 +445,101 @@ check("S4: 36 region-imputed economies = 35 World Bank economies in the panel + 
 check("S4: 20 of 23 low-income economies pooled", "20", int(imp[imp.income_group == "Low income"].ms_region_imputed.sum()))
 check("S4: 23 low-income economies in the Microsoft data", "23", int((imp.income_group == "Low income").sum()))
 check("S4/App. B: 145 Microsoft economies matched to World Bank economies", "145", len(imp))
+
+# ------------------------------------------------------------------ Version 2.1: within-storefront Plus/Go multiples (Abstract, S1, S5.1, S6, S7)
+pg = panel.dropna(subset=["p_chatgpt_go", "p_chatgpt_plus", "gni_atlas"]).copy()
+pg["mult"] = pg.p_chatgpt_plus / pg.p_chatgpt_go
+check("S5.1: Plus/Go multiple, United States 2.5", "2.5", float(pg.loc[pg.iso3 == "USA", "mult"].iloc[0]))
+for g, v in [("High income", "2.9"), ("Upper-middle income", "3.3"), ("Lower-middle income", "3.8"), ("Low income", "4.0")]:
+    check(f"S5.1: Plus/Go multiple median {g} {v}", v, pg[pg.income_group == g].mult.median())
+check("Abstract/S7: Plus/Go multiple 4 in the median low-income storefront", "4", pg[pg.income_group == "Low income"].mult.median())
+
+# ------------------------------------------------------------------ Version 2.1: rollout comparison (S5.5, S1, Abstract)
+ro = json.load(open(AO / "audit_results_rollout.json"))
+W = {w["window"]: w for w in ro["windows"] if w["source"] == "ms"}
+A = {w["window"]: w for w in ro["windows"] if w["source"] == "aui"}
+h2 = W["H1 2025 to H2 2025"]
+check("S5.5: sixteen economies grew 2.5% faster (H2 2025; exp(0.024)-1)", "2.5", 100 * (math.exp(h2["C2_coef"]) - 1))
+check("S5.5: 0.024 log points", "0.024", h2["C2_coef"])
+check("S5.5: s.e. 0.010", "0.010", h2["C2_se"])
+check("S5.5: exceeded by one of 2,000 random groups", "1", 2000 * h2["C2_perm_p"])
+check("S5.5: India 4.9% faster (exp(0.048)-1)", "4.9", 100 * (math.exp(h2["IND_resid"]) - 1))
+check("S5.5: India 0.048 log points", "0.048", h2["IND_resid"])
+check("S5.5: India residual exceeded by 8% of economies", "8", 100 * h2["IND_perm_p"])
+check("S5.5: later windows 1.0%", "1.0", 100 * (math.exp(W["H2 2025 to Q1 2026"]["C2_coef"]) - 1))
+check("S5.5: later windows 0.8%", "0.8", 100 * (math.exp(W["Q1 2026 to Q2 2026"]["C2_coef"]) - 1))
+nf = A["Nov 2025 to Feb 2026"]
+check("S5.5: Claude fell 16.5% Nov-Feb (1-exp(-0.180))", "16.5", -100 * (math.exp(nf["C2_coef"]) - 1))
+check("S5.5: -0.180 log points", "0.180", -nf["C2_coef"])
+check("S5.5: s.e. 0.063", "0.063", nf["C2_se"])
+check("S5.5: India Claude fell 15.3% Aug-Nov (1-exp(-0.166))", "15.3", -100 * (math.exp(A["Aug 2025 to Nov 2025"]["IND_resid"]) - 1))
+check("S5.5: -0.166 log points", "0.166", -A["Aug 2025 to Nov 2025"]["IND_resid"])
+check("S5.5: India Claude residual exceeded by 39% of economies", "39", 100 * A["Aug 2025 to Nov 2025"]["IND_perm_p"])
+rb = pd.DataFrame(ro["robustness"])
+fe = rb[(rb.window == "H1 2025 to H2 2025") & (rb.variant == "region_fe")].iloc[0]
+check("S5.5: with region FE the contrast keeps its size 0.021", "0.021", fe["C2_coef"])
+LEDGER.append((fe["C2_se"] / h2["C2_se"] > 1.8, "S5.5: standard error roughly doubles with region FE", "x2", fe["C2_se"] / h2["C2_se"], ""))
+sg = ro["c2_signs"]
+check("S5.5: ten of the eleven economies positive (H2 2025)", "10", sg["ms|H1 2025 to H2 2025"]["positive"])
+check("S5.5: eleven economies (H2 2025)", "11", sg["ms|H1 2025 to H2 2025"]["n"])
+check("S5.5: eleven of fourteen Claude residuals negative", "11", sg["aui|Nov 2025 to Feb 2026"]["n"] - sg["aui|Nov 2025 to Feb 2026"]["positive"])
+check("S5.5: fourteen Claude economies", "14", sg["aui|Nov 2025 to Feb 2026"]["n"])
+check("Table note: Indonesia residual 0.017", "0.017", h2["IDN_resid"])
+check("Table note: Indonesia residual 0.006", "0.006", W["H2 2025 to Q1 2026"]["IDN_resid"])
+check("Table note: Indonesia residual 0.010", "0.010", W["Q1 2026 to Q2 2026"]["IDN_resid"])
+check("Table note: Indonesia Claude residual 0.307", "0.307", A["Aug 2025 to Nov 2025"]["IDN_resid"])
+check("Table note: Indonesia Claude residual -0.592", "0.592", -A["Nov 2025 to Feb 2026"]["IDN_resid"])
+check("Table note: Indonesia Claude residual 0.205", "0.205", A["Feb 2026 to May 2026"]["IDN_resid"])
+LEDGER.append((2 <= 100 * (math.exp(h2["C2_coef"]) - 1) <= 3 and 2 <= 100 * (math.exp(h2["IND_resid"]) - 1) <= 5.5, "Abstract/S1: 2-5% faster (sixteen 2-3%, India 5%)", "2-5", 100 * (math.exp(h2["IND_resid"]) - 1), ""))
+check("S1: India 5% faster", "5", 100 * (math.exp(h2["IND_resid"]) - 1))
+LEDGER.append((15 <= -100 * (math.exp(nf["C2_coef"]) - 1) <= 18, "S1: Claude activity fell by about a sixth (1-exp(-0.180) = 16.5%)", "1/6", -100 * (math.exp(nf["C2_coef"]) - 1), ""))
+# cohort sizes (Appendix B, Table note)
+det = csv("go_rollout_economy_detail.csv")
+check("App. B: eleven of the sixteen have country-specific Microsoft estimates", "11",
+      det[(det.source == "ms") & (det.window == "H1 2025 to H2 2025") & (det.cohort == "C2")].iso3.nunique())
+check("App. B: fourteen published by Anthropic in Aug and Nov 2025", "14",
+      det[(det.source == "aui") & (det.window == "Aug 2025 to Nov 2025") & (det.cohort == "C2")].iso3.nunique())
+check("Table note: 9 in the Feb-May Claude row", "9", det[(det.source == "aui") & (det.window == "Feb 2026 to May 2026") & (det.cohort == "C2")].iso3.nunique())
+check("S5.5: comparison economies 96 (any use)", "96", h2["n_comparison"])
+
+# ------------------------------------------------------------------ Version 2.1: policy counterfactuals (S5.6, S1, S7, Abstract)
+pc = json.load(open(AO / "audit_results_policy.json"))
+check("S5.6: entry-tier slope 0.143", "0.143", pc["beta_go"])
+check("S5.6: LIC burden uniform 28.9", "28.9", pc["uniform_LIC"]); check("S5.6: LIC entry 14.8", "14.8", pc["entry_LIC"])
+check("S5.6: LMIC uniform 8.7", "8.7", pc["uniform_LMIC"]); check("S5.6: LMIC entry 5.3", "5.3", pc["entry_LMIC"])
+check("S5.6: population share above 2%, uniform 60", "60", pc["pop_share_above2_b_uniform"])
+check("S5.6: population share above 2%, entry 57", "57", pc["pop_share_above2_b_entry"])
+check("S5.6: LIC price-level 10.7", "10.7", pc["plr_LIC"]); check("S5.6: LMIC price-level 3.4", "3.4", pc["plr_LMIC"])
+check("S5.6: population share above 2%, price level 41", "41", pc["pop_share_above2_b_plr"])
+check("S5.6: proportional burden 0.27", "0.27", pc["prop_LIC"])
+check("S5.6: 113 economies need a subsidy", "113", pc["n_econ_need_subsidy"])
+for g, v in [("UMIC", "35"), ("LMIC", "77"), ("LIC", "93")]:
+    check(f"S5.6: subsidy rate {g} {v}%", v, pc[f"sub_rate_{g}"])
+for g, v in [("UMIC", "84"), ("LMIC", "185"), ("LIC", "223")]:
+    check(f"S5.6: subsidy {g} ${v}", v, pc[f"sub_usd_{g}"])
+for g, v in [("UMIC", "0.08"), ("LMIC", "0.43"), ("LIC", "1.55")]:
+    check(f"S5.6: cost {g} {v}% of GNI", v, pc[f"sub_cost_{g}"])
+check("S1/S5.6/S7: cost 1.5% of GNI (LIC)", "1.5", pc["sub_cost_LIC"]); check("S1: cost 0.1% of GNI (UMIC)", "0.1", pc["sub_cost_UMIC"])
+check("S1: LIC burden to 15% under entry-tier localisation", "15", pc["entry_LIC"]); check("S1: 11% under price-level indexing", "11", pc["plr_LIC"])
+LEDGER.append((all((pc[f"above_entry_{g}"] == 100) for g in ["LMIC", "LIC"]), "S5.6: every low- and lower-middle-income economy above 2% under entry-tier localisation", "100", pc["above_entry_LIC"], ""))
+for g in ["LIC", "LMIC"]:
+    closed = (pc[f"uniform_{g}"] - pc[f"entry_{g}"]) / (pc[f"uniform_{g}"] - 2)
+    LEDGER.append((0.45 <= closed <= 0.55, f"S5.6/S6.4/S7: entry-tier localisation closes about half of the gap to the benchmark ({g})", "about 0.5", closed, ""))
+LEDGER.append((3 <= pc["sub_usd_LMIC"] / 52 <= 5 and 3 <= pc["sub_usd_LIC"] / 52 <= 5, "S5.6/S7: a few dollars per person per week", "3-5/week", pc["sub_usd_LIC"] / 52, ""))
+
+# ------------------------------------------------------------------ Version 2.1: Appendix A beta* illustration
+from scipy.stats import norm
+h = lambda z: norm.pdf(z) / norm.cdf(z)
+def bstar(Dk, f):
+    return 1 - h(norm.ppf(Dk)) / h(norm.ppf(Dk * f))
+check("App. A: beta* = 0.44 (23% use, 10% pay)", "0.44", bstar(0.23, 0.10))
+check("App. A: beta* = 0.34 (a quarter pay)", "0.34", bstar(0.23, 0.25))
+check("App. A: beta* = 0.58 (1% pay)", "0.58", bstar(0.23, 0.01))
+LEDGER.append((bstar(0.23, 0.90) > 0.04 and bstar(0.23, 0.92) < 0.04, "App. A: beta* < 0.04 only if more than about nine in ten users pay", "0.9", bstar(0.23, 0.90), ""))
+LEDGER.append((bstar(0.23, 0.25) > 0.3, "S5.4: beta* exceeds 0.3 whenever fewer than a quarter of users pay (at 23% use)", ">0.3", bstar(0.23, 0.25), ""))
+
+# ------------------------------------------------------------------ Version 2.1: convergence illustration (S6.2)
+check("S6.2: exposure gap implies gains more than three times (34/11)", "3", 34 / 11, "floor: 3.09 > 3")
 
 # ------------------------------------------------------------------ report
 bad = [l for l in LEDGER if not l[0]]

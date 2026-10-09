@@ -36,9 +36,9 @@
   "scenario_csv_matches_before_write": true,
   "source_files": [
     "data/processed/country_panel.csv",
-    "revision_audit/audit_output/burden_threshold_sensitivity.csv",
-    "revision_audit/audit_output/local_price_robustness.csv",
-    "revision_audit/audit_output/within_storefront_price_ratios.csv",
-    "revision_audit/audit_output/cross_provider_gradient_robustness.csv"
+    "extensions/audit_output/burden_threshold_sensitivity.csv",
+    "extensions/audit_output/local_price_robustness.csv",
+    "extensions/audit_output/within_storefront_price_ratios.csv",
+    "extensions/audit_output/cross_provider_gradient_robustness.csv"
   ]
 }
