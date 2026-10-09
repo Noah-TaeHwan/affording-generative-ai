@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the working paper and the replication package."
-title: "Replication package for: Affording Generative AI Across Countries: Uniform Prices, Unequal Burdens"
+title: "Replication package for: Localised Entry, Global Frontier: How Generative-AI Subscriptions Are Priced Across Countries"
 type: software
-version: "2.0.1"
-date-released: 2026-10-01
-doi: 10.5281/zenodo.23071750
+version: "2.1"
+date-released: 2026-10-08
+doi: 10.5281/zenodo.23240879
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23006365
@@ -19,13 +19,13 @@ authors:
     orcid: "https://orcid.org/0009-0004-4111-4802"
 preferred-citation:
   type: report
-  title: "Affording Generative AI Across Countries: Uniform Prices, Unequal Burdens"
+  title: "Localised Entry, Global Frontier: How Generative-AI Subscriptions Are Priced Across Countries"
   authors:
     - family-names: Oh
       given-names: TaeHwan
       orcid: "https://orcid.org/0009-0004-4111-4802"
   year: 2026
-  month: 9
+  month: 10
   doi: 10.2139/ssrn.7535900
   url: "https://ssrn.com/abstract=7535900"
-  notes: "Working paper, version 2.0 (30 September 2026)"
+  notes: "Working paper, version 2.1 (8 October 2026). Earlier versions circulated as SSRN working paper 7535900 under the title 'Affording Generative AI Across Countries: Uniform Prices, Unequal Burdens'."

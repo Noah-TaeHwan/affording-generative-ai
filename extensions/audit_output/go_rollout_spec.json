@@ -1,0 +1,74 @@
+{
+  "written": "2026-10-08",
+  "cohorts": {
+    "C1": [
+      "IND",
+      "IDN"
+    ],
+    "C2": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "LAO",
+      "MYS",
+      "MDV",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PHL",
+      "LKA",
+      "THA",
+      "TLS",
+      "VNM"
+    ]
+  },
+  "exposure_months_h2_2025": {
+    "IND": 4.4,
+    "IDN": 3.3,
+    "C2": 2.8,
+    "C3_C4": 2.3,
+    "later": "0-2",
+    "C6": 0
+  },
+  "windows": {
+    "ms": [
+      [
+        "ms_h1_2025",
+        "ms_h2_2025",
+        "H1 2025 to H2 2025"
+      ],
+      [
+        "ms_h2_2025",
+        "ms_q1_2026",
+        "H2 2025 to Q1 2026"
+      ],
+      [
+        "ms_q1_2026",
+        "ms_q2_2026",
+        "Q1 2026 to Q2 2026"
+      ]
+    ],
+    "aui": [
+      [
+        "aui_aug25",
+        "aui_nov25",
+        "Aug 2025 to Nov 2025"
+      ],
+      [
+        "aui_nov25",
+        "aui_feb26",
+        "Nov 2025 to Feb 2026"
+      ],
+      [
+        "aui_feb26",
+        "aui_may26",
+        "Feb 2026 to May 2026"
+      ]
+    ]
+  },
+  "comparison": "country-specific economies (Microsoft) or published economies (Anthropic) not in C1 or C2",
+  "adjustment": "OLS of the log change on log GNI per capita and the initial log level, fitted on the comparison group",
+  "inference": "rank of the absolute residual among all economies (permutation p-value); HC3 for the C2 indicator"
+}

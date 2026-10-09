@@ -1,8 +1,8 @@
 """Rebuild the six revised numerical LaTeX table bodies from frozen data.
 
 Run from any working directory:
-    python revision_audit/build_revision_tables.py
-    python revision_audit/build_revision_tables.py --check
+    python extensions/build_revision_tables.py
+    python extensions/build_revision_tables.py --check
 
 Run audit_extensions.py first to regenerate the audit CSVs. This script never
 edits manuscript prose, original analysis tables, Korean files or source data.
@@ -131,10 +131,10 @@ def main():
               'all_tables_match_before_write':all(r['matches_before_write'] for r in report),
               'scenario_csv_matches_before_write':scenario_match,
               'source_files':['data/processed/country_panel.csv',
-                  'revision_audit/audit_output/burden_threshold_sensitivity.csv',
-                  'revision_audit/audit_output/local_price_robustness.csv',
-                  'revision_audit/audit_output/within_storefront_price_ratios.csv',
-                  'revision_audit/audit_output/cross_provider_gradient_robustness.csv']}
+                  'extensions/audit_output/burden_threshold_sensitivity.csv',
+                  'extensions/audit_output/local_price_robustness.csv',
+                  'extensions/audit_output/within_storefront_price_ratios.csv',
+                  'extensions/audit_output/cross_provider_gradient_robustness.csv']}
     (AUDIT / 'revision_table_verification.json').write_text(json.dumps(record,indent=2))
     print(json.dumps(record,indent=2))
     if args.check and (not record['all_tables_match_before_write'] or not scenario_match):

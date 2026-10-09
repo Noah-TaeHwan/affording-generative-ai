@@ -1,0 +1,513 @@
+{
+  "spec": {
+    "written": "2026-10-08",
+    "cohorts": {
+      "C1": [
+        "IND",
+        "IDN"
+      ],
+      "C2": [
+        "AFG",
+        "BGD",
+        "BTN",
+        "BRN",
+        "KHM",
+        "LAO",
+        "MYS",
+        "MDV",
+        "MMR",
+        "NPL",
+        "PAK",
+        "PHL",
+        "LKA",
+        "THA",
+        "TLS",
+        "VNM"
+      ]
+    },
+    "exposure_months_h2_2025": {
+      "IND": 4.4,
+      "IDN": 3.3,
+      "C2": 2.8,
+      "C3_C4": 2.3,
+      "later": "0-2",
+      "C6": 0
+    },
+    "windows": {
+      "ms": [
+        [
+          "ms_h1_2025",
+          "ms_h2_2025",
+          "H1 2025 to H2 2025"
+        ],
+        [
+          "ms_h2_2025",
+          "ms_q1_2026",
+          "H2 2025 to Q1 2026"
+        ],
+        [
+          "ms_q1_2026",
+          "ms_q2_2026",
+          "Q1 2026 to Q2 2026"
+        ]
+      ],
+      "aui": [
+        [
+          "aui_aug25",
+          "aui_nov25",
+          "Aug 2025 to Nov 2025"
+        ],
+        [
+          "aui_nov25",
+          "aui_feb26",
+          "Nov 2025 to Feb 2026"
+        ],
+        [
+          "aui_feb26",
+          "aui_may26",
+          "Feb 2026 to May 2026"
+        ]
+      ]
+    },
+    "comparison": "country-specific economies (Microsoft) or published economies (Anthropic) not in C1 or C2",
+    "adjustment": "OLS of the log change on log GNI per capita and the initial log level, fitted on the comparison group",
+    "inference": "rank of the absolute residual among all economies (permutation p-value); HC3 for the C2 indicator"
+  },
+  "levels": {
+    "H1 2025": {
+      "India": 14.2,
+      "Indonesia": 11.7,
+      "C2 median": 9.1,
+      "LMIC median (country-specific, excl. C1-C2)": 10.65,
+      "All country-specific median (excl. C1-C2)": 17.7
+    },
+    "H2 2025": {
+      "India": 15.7,
+      "Indonesia": 12.7,
+      "C2 median": 10.3,
+      "LMIC median (country-specific, excl. C1-C2)": 11.25,
+      "All country-specific median (excl. C1-C2)": 19.1
+    },
+    "Q1 2026": {
+      "India": 17.6,
+      "Indonesia": 14.1,
+      "C2 median": 11.4,
+      "LMIC median (country-specific, excl. C1-C2)": 12.25,
+      "All country-specific median (excl. C1-C2)": 21.5
+    },
+    "Q2 2026": {
+      "India": 18.5,
+      "Indonesia": 14.8,
+      "C2 median": 11.9,
+      "LMIC median (country-specific, excl. C1-C2)": 12.9,
+      "All country-specific median (excl. C1-C2)": 22.9
+    },
+    "AUI Aug 2025": {
+      "India": 0.316853,
+      "Indonesia": 0.424702,
+      "C2 median": 0.5175905000000001,
+      "LMIC median (excl. C1-C2)": 0.236628,
+      "All published median (excl. C1-C2)": 0.909396
+    },
+    "AUI Nov 2025": {
+      "India": 0.265752,
+      "Indonesia": 0.588042,
+      "C2 median": 0.543562,
+      "LMIC median (excl. C1-C2)": 0.259241,
+      "All published median (excl. C1-C2)": 0.927546
+    },
+    "AUI Feb 2026": {
+      "India": 0.286967,
+      "Indonesia": 0.303001,
+      "C2 median": 0.4017385,
+      "LMIC median (excl. C1-C2)": 0.2500735,
+      "All published median (excl. C1-C2)": 0.867904
+    },
+    "AUI Apr 2026": {
+      "India": 0.31,
+      "Indonesia": 0.37,
+      "C2 median": 0.41,
+      "LMIC median (excl. C1-C2)": 0.31,
+      "All published median (excl. C1-C2)": 1.185
+    },
+    "AUI May 2026": {
+      "India": 0.3,
+      "Indonesia": 0.46,
+      "C2 median": 0.44,
+      "LMIC median (excl. C1-C2)": 0.345,
+      "All published median (excl. C1-C2)": 1.07
+    }
+  },
+  "windows": [
+    {
+      "source": "ms",
+      "window": "H1 2025 to H2 2025",
+      "n_comparison": 96,
+      "n_all": 109,
+      "sd_resid_comparison": 0.024443577089591675,
+      "IND_dlog": 0.10041874774704729,
+      "IND_resid": 0.04810223383739194,
+      "IND_perm_p": 0.08256880733944955,
+      "IND_pre": 14.2,
+      "IND_post": 15.7,
+      "IDN_dlog": 0.08201315166083534,
+      "IDN_resid": 0.017275318649086643,
+      "IDN_perm_p": 0.3944954128440367,
+      "IDN_pre": 11.7,
+      "IDN_post": 12.7,
+      "C2_n": 11,
+      "C2_mean_resid": 0.02413023094573641,
+      "C2_coef": 0.024464482296727784,
+      "C2_se": 0.010002658182731538,
+      "C2_p": 0.014453191520670646,
+      "C2_perm_p": 0.0005,
+      "comparison_mean_dlog": 0.06728648349528521
+    },
+    {
+      "source": "ms",
+      "window": "H2 2025 to Q1 2026",
+      "n_comparison": 96,
+      "n_all": 109,
+      "sd_resid_comparison": 0.02835618543714504,
+      "IND_dlog": 0.11423818968984412,
+      "IND_resid": 0.033204087976916805,
+      "IND_perm_p": 0.21100917431192662,
+      "IND_pre": 15.7,
+      "IND_post": 17.6,
+      "IDN_dlog": 0.1045728039195768,
+      "IDN_resid": 0.006445086621372914,
+      "IDN_perm_p": 0.7706422018348624,
+      "IDN_pre": 12.7,
+      "IDN_post": 14.1,
+      "C2_n": 11,
+      "C2_mean_resid": 0.009143483927504342,
+      "C2_coef": 0.00984968264228222,
+      "C2_se": 0.008948495321852582,
+      "C2_p": 0.27102365368552983,
+      "C2_perm_p": 0.256,
+      "comparison_mean_dlog": 0.09399496039207643
+    },
+    {
+      "source": "ms",
+      "window": "Q1 2026 to Q2 2026",
+      "n_comparison": 96,
+      "n_all": 109,
+      "sd_resid_comparison": 0.018586420641672572,
+      "IND_dlog": 0.04987183004017259,
+      "IND_resid": 0.017037546885138248,
+      "IND_perm_p": 0.30275229357798167,
+      "IND_pre": 17.6,
+      "IND_post": 18.5,
+      "IDN_dlog": 0.04845238338594671,
+      "IDN_resid": 0.00973396492381326,
+      "IDN_perm_p": 0.5412844036697247,
+      "IDN_pre": 14.1,
+      "IDN_post": 14.8,
+      "C2_n": 11,
+      "C2_mean_resid": 0.008427721715234943,
+      "C2_coef": 0.008385682360768164,
+      "C2_se": 0.006579700726193016,
+      "C2_p": 0.20249414326219806,
+      "C2_perm_p": 0.0955,
+      "comparison_mean_dlog": 0.040196142069470205
+    },
+    {
+      "source": "aui",
+      "window": "Aug 2025 to Nov 2025",
+      "n_comparison": 141,
+      "n_all": 157,
+      "sd_resid_comparison": 0.23997737898681595,
+      "IND_dlog": -0.17587440086340567,
+      "IND_resid": -0.1664841174706632,
+      "IND_perm_p": 0.39490445859872614,
+      "IND_pre": 0.316853,
+      "IND_post": 0.265752,
+      "IDN_dlog": 0.32541062740452054,
+      "IDN_resid": 0.3066334624412284,
+      "IDN_perm_p": 0.16560509554140126,
+      "IDN_pre": 0.424702,
+      "IDN_post": 0.588042,
+      "C2_n": 14,
+      "C2_mean_resid": -0.06028351055848454,
+      "C2_coef": -0.05711458999973926,
+      "C2_se": 0.058479783072541376,
+      "C2_p": 0.32873983246070115,
+      "C2_perm_p": 0.327,
+      "comparison_mean_dlog": 0.033415054259526386
+    },
+    {
+      "source": "aui",
+      "window": "Nov 2025 to Feb 2026",
+      "n_comparison": 145,
+      "n_all": 161,
+      "sd_resid_comparison": 0.2336291247382579,
+      "IND_dlog": 0.07680368350630395,
+      "IND_resid": 0.11305027236543591,
+      "IND_perm_p": 0.577639751552795,
+      "IND_pre": 0.265752,
+      "IND_post": 0.286967,
+      "IDN_dlog": -0.6630622680852003,
+      "IDN_resid": -0.5922544203224601,
+      "IDN_perm_p": 0.018633540372670808,
+      "IDN_pre": 0.588042,
+      "IDN_post": 0.303001,
+      "C2_n": 14,
+      "C2_mean_resid": -0.17581015454558827,
+      "C2_coef": -0.1803801971819595,
+      "C2_se": 0.06336258349267365,
+      "C2_p": 0.0044161985013579375,
+      "C2_perm_p": 0.0025,
+      "comparison_mean_dlog": 0.035015319789827686
+    },
+    {
+      "source": "aui",
+      "window": "Feb 2026 to May 2026",
+      "n_comparison": 109,
+      "n_all": 120,
+      "sd_resid_comparison": 0.23205211022626784,
+      "IND_dlog": 0.0444152480859803,
+      "IND_resid": -0.05156194453036039,
+      "IND_perm_p": 0.8416666666666667,
+      "IND_pre": 0.286967,
+      "IND_post": 0.3,
+      "IDN_dlog": 0.41749038364918456,
+      "IDN_resid": 0.20544756568314487,
+      "IDN_perm_p": 0.35,
+      "IDN_pre": 0.303001,
+      "IDN_post": 0.46,
+      "C2_n": 9,
+      "C2_mean_resid": -0.03243376397439574,
+      "C2_coef": -0.03241112209115524,
+      "C2_se": 0.07654903115134194,
+      "C2_p": 0.672000945264354,
+      "C2_perm_p": 0.6765,
+      "comparison_mean_dlog": 0.06275646026641
+    }
+  ],
+  "robustness": [
+    {
+      "source": "ms",
+      "window": "H1 2025 to H2 2025",
+      "variant": "region_fe",
+      "n": 107,
+      "C2_coef": 0.020903656656225903,
+      "C2_se": 0.020419429470318884,
+      "C2_p": 0.3059703614728294,
+      "IND_resid": 0.03973350574818168,
+      "IND_perm_p": 0.09174311926605505
+    },
+    {
+      "source": "ms",
+      "window": "H1 2025 to H2 2025",
+      "variant": "non_high_income",
+      "n": 64,
+      "C2_coef": 0.02542463723314304,
+      "C2_se": 0.010198313059705514,
+      "C2_p": 0.012666035400512449,
+      "IND_resid": 0.04996992153083815,
+      "IND_perm_p": 0.08256880733944955
+    },
+    {
+      "source": "ms",
+      "window": "H1 2025 to H2 2025",
+      "variant": "pp",
+      "n": 107,
+      "C2_coef": 0.2916948537462598,
+      "C2_se": 0.12968792431963017,
+      "C2_p": 0.02449939476503186,
+      "IND_resid": 0.7346509686074086,
+      "IND_perm_p": 0.11926605504587157
+    },
+    {
+      "source": "ms",
+      "window": "H2 2025 to Q1 2026",
+      "variant": "region_fe",
+      "n": 107,
+      "C2_coef": 0.015683895815982035,
+      "C2_se": 0.02381070842703729,
+      "C2_p": 0.510094308689821,
+      "IND_resid": 0.03145572008905054,
+      "IND_perm_p": 0.21100917431192662
+    },
+    {
+      "source": "ms",
+      "window": "H2 2025 to Q1 2026",
+      "variant": "non_high_income",
+      "n": 64,
+      "C2_coef": 0.013445143443808797,
+      "C2_se": 0.00838517969711802,
+      "C2_p": 0.108837258796201,
+      "IND_resid": 0.033309182106259244,
+      "IND_perm_p": 0.41284403669724773
+    },
+    {
+      "source": "ms",
+      "window": "H2 2025 to Q1 2026",
+      "variant": "pp",
+      "n": 107,
+      "C2_coef": 0.12620170083674914,
+      "C2_se": 0.1434054524097885,
+      "C2_p": 0.37884078934841847,
+      "IND_resid": 0.5387166806957695,
+      "IND_perm_p": 0.22935779816513763
+    },
+    {
+      "source": "ms",
+      "window": "Q1 2026 to Q2 2026",
+      "variant": "region_fe",
+      "n": 107,
+      "C2_coef": 0.010713791703105826,
+      "C2_se": 0.015114836722188834,
+      "C2_p": 0.478432360517589,
+      "IND_resid": 0.012491138706778017,
+      "IND_perm_p": 0.42201834862385323
+    },
+    {
+      "source": "ms",
+      "window": "Q1 2026 to Q2 2026",
+      "variant": "non_high_income",
+      "n": 64,
+      "C2_coef": 0.010816966933252509,
+      "C2_se": 0.007317200001341059,
+      "C2_p": 0.13932931961201855,
+      "IND_resid": 0.018107912490936982,
+      "IND_perm_p": 0.5596330275229358
+    },
+    {
+      "source": "ms",
+      "window": "Q1 2026 to Q2 2026",
+      "variant": "pp",
+      "n": 107,
+      "C2_coef": 0.048576082356808215,
+      "C2_se": 0.08964603973354668,
+      "C2_p": 0.5879112709452684,
+      "IND_resid": 0.2914604684126332,
+      "IND_perm_p": 0.3119266055045872
+    },
+    {
+      "source": "aui",
+      "window": "Aug 2025 to Nov 2025",
+      "variant": "region_fe",
+      "n": 155,
+      "C2_coef": 0.029566884738249838,
+      "C2_se": 0.10167026957149057,
+      "C2_p": 0.77119548100022,
+      "IND_resid": -0.038867141114733134,
+      "IND_perm_p": 0.8535031847133758
+    },
+    {
+      "source": "aui",
+      "window": "Aug 2025 to Nov 2025",
+      "variant": "non_high_income",
+      "n": 93,
+      "C2_coef": -0.09468862157727974,
+      "C2_se": 0.05963384392110614,
+      "C2_p": 0.1123239695398834,
+      "IND_resid": -0.16973784619469978,
+      "IND_perm_p": 0.37579617834394907
+    },
+    {
+      "source": "aui",
+      "window": "Aug 2025 to Nov 2025",
+      "variant": "pp",
+      "n": 155,
+      "C2_coef": -0.04946922505065558,
+      "C2_se": 0.04900681567596829,
+      "C2_p": 0.312765765891442,
+      "IND_resid": -0.08162996474508794,
+      "IND_perm_p": 0.6942675159235668
+    },
+    {
+      "source": "aui",
+      "window": "Nov 2025 to Feb 2026",
+      "variant": "region_fe",
+      "n": 159,
+      "C2_coef": -0.14009833563993718,
+      "C2_se": 0.12574999976627713,
+      "C2_p": 0.26523539867821244,
+      "IND_resid": 0.15144104439394007,
+      "IND_perm_p": 0.45962732919254656
+    },
+    {
+      "source": "aui",
+      "window": "Nov 2025 to Feb 2026",
+      "variant": "non_high_income",
+      "n": 95,
+      "C2_coef": -0.16084514434328473,
+      "C2_se": 0.07233085334452273,
+      "C2_p": 0.026165818982596723,
+      "IND_resid": 0.10850286519781016,
+      "IND_perm_p": 0.6335403726708074
+    },
+    {
+      "source": "aui",
+      "window": "Nov 2025 to Feb 2026",
+      "variant": "pp",
+      "n": 159,
+      "C2_coef": -0.13113359781716644,
+      "C2_se": 0.05613381666890954,
+      "C2_p": 0.019486597763215416,
+      "IND_resid": 0.07169571649386508,
+      "IND_perm_p": 0.7453416149068323
+    },
+    {
+      "source": "aui",
+      "window": "Feb 2026 to May 2026",
+      "variant": "region_fe",
+      "n": 118,
+      "C2_coef": -0.18137588772755323,
+      "C2_se": 0.20145232603897859,
+      "C2_p": 0.3679385468251979,
+      "IND_resid": -0.31048742990919864,
+      "IND_perm_p": 0.13333333333333333
+    },
+    {
+      "source": "aui",
+      "window": "Feb 2026 to May 2026",
+      "variant": "non_high_income",
+      "n": 67,
+      "C2_coef": -0.02643793461838042,
+      "C2_se": 0.07787426704288611,
+      "C2_p": 0.7342367631968318,
+      "IND_resid": -0.042142088412798706,
+      "IND_perm_p": 0.9
+    },
+    {
+      "source": "aui",
+      "window": "Feb 2026 to May 2026",
+      "variant": "pp",
+      "n": 118,
+      "C2_coef": -0.026936370886155678,
+      "C2_se": 0.050880219019565645,
+      "C2_p": 0.5965227783181017,
+      "IND_resid": -0.003502134363899144,
+      "IND_perm_p": 1.0
+    }
+  ],
+  "c2_signs": {
+    "aui|Aug 2025 to Nov 2025": {
+      "positive": 7,
+      "n": 14
+    },
+    "aui|Feb 2026 to May 2026": {
+      "positive": 5,
+      "n": 9
+    },
+    "aui|Nov 2025 to Feb 2026": {
+      "positive": 3,
+      "n": 14
+    },
+    "ms|H1 2025 to H2 2025": {
+      "positive": 10,
+      "n": 11
+    },
+    "ms|H2 2025 to Q1 2026": {
+      "positive": 7,
+      "n": 11
+    },
+    "ms|Q1 2026 to Q2 2026": {
+      "positive": 6,
+      "n": 11
+    }
+  }
+}

@@ -11,6 +11,10 @@ python code/11_data_dictionary.py
 python code/20_analysis.py
 python code/30_figures.py
 python code/40_tables_tex.py
-cp output/figures/*_en.pdf paper_en/figures/ && cp output/figures/*_ko.pdf paper_ko/figures/
+cp output/figures/*_en.pdf paper_en/figures/
+# the Korean edition is not part of the anonymised copy of the package (40_tables_tex.py still writes Korean table bodies)
+if [[ -f paper_ko/main.tex ]]; then
+  cp output/figures/*_ko.pdf paper_ko/figures/
+fi
 bash run_revision.sh --analysis-only
-echo "done: see output/, revision_audit/audit_output/, publication_upgrade/results/ and paper_*/tables"
+echo "done: see output/, extensions/audit_output/, checks/results/ and paper_*/tables"

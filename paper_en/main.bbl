@@ -321,6 +321,13 @@ Massenkoff, M., Lyubich, E., McCrory, P., Appel, R., and Heller, R. (2026).
 \newblock Anthropic, 24 March 2026,
   \url{https://www.anthropic.com/research/economic-index-march-2026-report}.
 
+\bibitem[Mehta, 2025]{techcrunch2025go}
+Mehta, I. (2025).
+\newblock {OpenAI}'s affordable {ChatGPT} {Go} plan expands to 16 new countries
+  in {Asia}.
+\newblock TechCrunch, 9 October 2025,
+  \url{https://techcrunch.com/2025/10/09/openais-affordable-chatgpt-go-plan-expands-to-16-new-countries-in-asia}.
+
 \bibitem[{Microsoft AI Economy Institute}, 2026a]{microsoft2026h2}
 {Microsoft AI Economy Institute} (2026a).
 \newblock Global {AI} adoption in 2025: A widening digital divide.
@@ -353,6 +360,14 @@ Noy, S. and Zhang, W. (2023).
 \newblock Experimental evidence on the productivity effects of generative
   artificial intelligence.
 \newblock {\em Science}, 381(6654):187--192. \doi{10.1126/science.adh2586}
+
+\bibitem[{OpenAI}, 2025]{openai2025gorollout}
+{OpenAI} (2025).
+\newblock {ChatGPT} release notes: {ChatGPT} {Go} availability.
+\newblock OpenAI Help Center,
+  \url{https://help.openai.com/en/articles/6825453-chatgpt-release-notes}.
+\newblock Entries dated 8, 14, 28 and 30 October and 3 November 2025; accessed
+  8 October 2026.
 
 \bibitem[{OpenAI}, 2026a]{openai2026pro}
 {OpenAI} (2026a).
@@ -412,6 +427,13 @@ Sathish, V., Lin, H., Kamath, A.~K., and Nyayachavadi, A. (2024).
 \newblock {LLeMpower}: Understanding disparities in the control and access of
   large language models.
 \newblock arXiv preprint arXiv:2404.09356. \doi{10.48550/arXiv.2404.09356}
+
+\bibitem[Singh, 2026]{techcrunch2026perplexity}
+Singh, J. (2026).
+\newblock {Perplexity}'s free {AI} offer left it with millions more users in
+  {India}.
+\newblock TechCrunch, 18 August 2026,
+  \url{https://techcrunch.com/2026/08/18/perplexitys-free-ai-offer-left-it-with-millions-more-users-in-india/}.
 
 \bibitem[{UNCTAD}, 2025]{unctad2025tir}
 {UNCTAD} (2025).

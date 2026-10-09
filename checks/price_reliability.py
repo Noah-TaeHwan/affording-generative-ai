@@ -62,7 +62,7 @@ def direct_ols(x, y, groups=None):
 
 
 checks = []
-baseline = json.loads((SRC / "revision_audit/baseline_results_v1.8.json").read_text())
+baseline = json.loads((SRC / "extensions/baseline_results_v1.8.json").read_text())
 for group, short in [("High income", "HIC"), ("Upper-middle income", "UMIC"),
                      ("Lower-middle income", "LMIC"), ("Low income", "LIC")]:
     key = f"aab_p20_{short}"
