@@ -6,11 +6,13 @@ Run from any working directory:
 
 Run audit_extensions.py first to regenerate the audit CSVs. This script never
 edits manuscript prose, original analysis tables, Korean files or source data.
+Typography: the negative numbers of tab_price_revision are written with the typographic minus ($-$).
 """
 from pathlib import Path
 import argparse
 import hashlib
 import json
+import re
 import sys
 
 import pandas as pd
@@ -25,6 +27,11 @@ END = r' \\'
 
 def read_csv(path):
     return pd.read_csv(path, keep_default_na=False, na_values=[''])
+
+
+def tex_minus(text):
+    """Typographic minus ($-$) for the negative numbers of a table cell (tab_price_revision)."""
+    return re.sub(r'-(?=\d)', '$-$', text)
 
 
 def table_rows(rows):
@@ -78,12 +85,12 @@ def construct_tables():
     for key, name in names:
         r = prices.loc[key]
         ci_digits = 4 if key == 'chatgpt_plus' else 3
-        rows.append([name, f'{r.beta:.3f}', f'{r.se_HC3:.3f}', f'{r.se_currency_cluster:.3f}',
-                     f'[{r.cluster_t_ci_low:.{ci_digits}f}, {r.cluster_t_ci_high:.{ci_digits}f}]', str(int(r.n))])
+        rows.append([name] + [tex_minus(x) for x in (f'{r.beta:.3f}', f'{r.se_HC3:.3f}', f'{r.se_currency_cluster:.3f}',
+                     f'[{r.cluster_t_ci_low:.{ci_digits}f}, {r.cluster_t_ci_high:.{ci_digits}f}]')] + [str(int(r.n))])
     ratios = read_csv(AUDIT / 'within_storefront_price_ratios.csv').set_index('comparison')
     r = ratios.loc['ChatGPT Go / Plus']
-    rows.append(['Go / Plus ratio', f'{r.slope:.3f}', f'{r.se_HC3:.3f}', f'{r.se_currency_cluster:.3f}',
-                 f'[{r.cluster_t_ci_low:.3f}, {r.cluster_t_ci_high:.3f}]', str(int(r.n))])
+    rows.append(['Go / Plus ratio'] + [tex_minus(x) for x in (f'{r.slope:.3f}', f'{r.se_HC3:.3f}', f'{r.se_currency_cluster:.3f}',
+                 f'[{r.cluster_t_ci_low:.3f}, {r.cluster_t_ci_high:.3f}]')] + [str(int(r.n))])
     tables['tab_price_revision.tex'] = table_rows(rows)
 
     gaps = read_csv(AUDIT / 'cross_provider_gradient_robustness.csv')

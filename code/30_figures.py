@@ -42,7 +42,7 @@ L = {
         "gni": "GNI per capita, Atlas method, 2025 (current US$, log scale)",
         "f1_ta": "(a) $20 tier: local App Store price", "f1_tb": "(b) Entry tier: local App Store price",
         "f1_y": "Monthly price (US$, log scale)",
-        "us_ref": "US list price", "ppp_ref": "PPP-indexed price (slope {b:.2f})",
+        "us_ref": "U.S. list price", "ppp_ref": "PPP-indexed price (slope {b:.2f})",
         "fit": "Fitted slope {b:.2f}", "plus": "ChatGPT Plus", "claude": "Claude Pro", "gpro": "Google AI Pro",
         "go": "ChatGPT Go", "gplus": "Google AI Plus",
         "f2_x": "Annual cost of a $20/month plan as % of mean income (log scale)",
@@ -130,8 +130,8 @@ def fig_prices(lang):
     t = L[lang]
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 3.1), sharey=True)
     xs = np.array([400, 150000])
-    for ax, plans, title, us in [(axes[0], [("chatgpt_plus", "plus")], t["f1_ta"], 19.99),
-                                 (axes[1], [("chatgpt_go", "go")], t["f1_tb"], 8.00)]:
+    for ax, plans, title, us, ux in [(axes[0], [("chatgpt_plus", "plus")], t["f1_ta"], 19.99, 2400),
+                                     (axes[1], [("chatgpt_go", "go")], t["f1_tb"], 8.00, 420)]:       # ux: x of the label
         for plan, key in plans:
             s = lp[lp.plan == plan]
             for g in GROUPS[::-1]:
@@ -141,14 +141,21 @@ def fig_prices(lang):
             b = R[f"loc_{plan}_b"]
             fit = smf.ols("np.log(price_usd) ~ np.log(gni_atlas)", s).fit()
             ax.plot(xs, np.exp(fit.params.iloc[0]) * xs ** fit.params.iloc[1], color=INK, lw=1.4, zorder=4)
-            pos = (0.97, 0.05, "right", "bottom") if plan == "chatgpt_plus" else (0.03, 0.95, "left", "top")
-            ax.text(pos[0], pos[1], t["fit"].format(b=b) + f" (SE {R[f'loc_{plan}_se']:.3f})", transform=ax.transAxes,
-                    ha=pos[2], va=pos[3], color=INK, fontsize=8)
-        ax.axhline(us, color=MUTED, lw=1.0, zorder=2)
+            # the slope label sits next to its line: below the left end of the $20-tier line (the points lie on and above it),
+            # above the right end of the entry-tier line (free space); halo as for the reference-line label
+            line = lambda x: np.exp(fit.params.iloc[0]) * x ** fit.params.iloc[1]
+            label = t["fit"].format(b=b) + f"\n(SE {R[f'loc_{plan}_se']:.3f})"
+            if plan == "chatgpt_plus":
+                ax.text(440, line(440) * 0.83, label, ha="left", va="top", color=INK, fontsize=8, linespacing=1.3, zorder=5,
+                        path_effects=[pe.withStroke(linewidth=2.5, foreground=SURF)])
+            else:
+                ax.text(150000, line(150000) * 1.12, label, ha="right", va="bottom", color=INK, fontsize=8, linespacing=1.3,
+                        zorder=5, path_effects=[pe.withStroke(linewidth=2.5, foreground=SURF)])
+        ax.axhline(us, color=MUTED, lw=0.8, ls=(0, (4, 2.5)), zorder=1.8)           # dashed and thin, behind the points
         # PPP-indexed benchmark anchored at the US: p_c = p_US * (GNI_c/GNI_US)^b_ppp
         bp = R["plr_b"]; gus = float(df.loc[df.iso3 == "USA", "gni_atlas"].iloc[0])
         ax.plot(xs, us * (xs / gus) ** bp, color=S2, lw=1.4, zorder=2)
-        ax.text(420, us * 0.955, t["us_ref"], color=INK2, fontsize=7.5, va="top", zorder=5,
+        ax.text(ux, us * 0.955, t["us_ref"], color=INK2, fontsize=7.5, va="top", zorder=5,
                 path_effects=[pe.withStroke(linewidth=2.5, foreground=SURF)])  # halo keeps the label legible over markers
         ax.text(560, us * (560 / gus) ** bp * 0.93, t["ppp_ref"].format(b=bp), color=INK2, fontsize=7.5, va="top")
         logx_money(ax); ax.set_yscale("log"); ax.set_title(title)

@@ -1,0 +1,158 @@
+storefront,app,name,type,currency,price_local,n_variants,us_price,guard_ref,ratio_us,gni,income_group,rule,in_regressions
+pg,calm,Calm Subscription,subscription,USD,59.99,1,14.99,14.99,4.002001334222816,2890.0,Lower-middle income,price above 3 x default-schedule price,True
+tc,calm,Calm Subscription,subscription,USD,59.99,1,14.99,14.99,4.002001334222816,36760.0,High income,price above 3 x default-schedule price,True
+bf,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,980.0,Low income,price above 3 x default-schedule price,True
+bt,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,4310.0,Lower-middle income,price above 3 x default-schedule price,True
+cm,characterai,Character.AI+,subscription,USD,99.99,1,9.99,11.656667408891447,10.009009009009008,1860.0,Lower-middle income,price above 3 x default-schedule price,True
+cv,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,5590.0,Upper-middle income,price above 3 x default-schedule price,True
+dm,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,10690.0,Upper-middle income,price above 3 x default-schedule price,True
+fm,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,4760.0,Upper-middle income,price above 3 x default-schedule price,True
+gd,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,11660.0,Upper-middle income,price above 3 x default-schedule price,True
+gm,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,930.0,Low income,price above 3 x default-schedule price,True
+gw,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,1090.0,Low income,price above 3 x default-schedule price,True
+lr,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,830.0,Low income,price above 3 x default-schedule price,True
+ly,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,7250.0,Upper-middle income,price above 3 x default-schedule price,True
+sb,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,2020.0,Lower-middle income,price above 3 x default-schedule price,True
+sr,characterai,Character.AI+,subscription,USD,99.99,1,9.99,9.99,10.009009009009008,6140.0,Upper-middle income,price above 3 x default-schedule price,True
+st,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,3800.0,Lower-middle income,price above 3 x default-schedule price,True
+tm,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,6340.0,Upper-middle income,price above 3 x default-schedule price,True
+vu,characterai,Character.AI+,subscription,USD,94.99,1,9.99,9.99,9.508508508508507,4410.0,Lower-middle income,price above 3 x default-schedule price,True
+dm,duolingo,Chest of Gems,consumable,USD,7.99,2,0.99,0.99,8.070707070707071,10690.0,Upper-middle income,price above 3 x default-schedule price,True
+mw,duolingo,Chest of Gems,consumable,USD,7.99,2,0.99,0.99,8.070707070707071,600.0,Low income,price above 3 x default-schedule price,True
+ag,duolingo,Super Duolingo,subscription,USD,53.99,8,12.99,12.99,4.156274056966898,23790.0,High income,price above 3 x default-schedule price,True
+ar,duolingo,Super Duolingo,subscription,USD,47.99,9,12.99,12.99,3.6943802925327174,14650.0,Upper-middle income,price above 3 x default-schedule price,True
+at,duolingo,Super Duolingo,subscription,EUR,125.99,7,12.99,14.885571560633489,10.877585633574899,60360.0,High income,price above 3 x default-schedule price,True
+be,duolingo,Super Duolingo,subscription,EUR,125.99,8,12.99,14.615782227784733,10.877585633574899,59500.0,High income,price above 3 x default-schedule price,True
+bo,duolingo,Super Duolingo,subscription,USD,65.99,10,12.99,12.99,5.080061585835257,4420.0,Lower-middle income,price above 3 x default-schedule price,True
+bs,duolingo,Super Duolingo,subscription,USD,65.99,6,12.99,12.99,5.080061585835257,37020.0,High income,price above 3 x default-schedule price,True
+de,duolingo,Super Duolingo,subscription,EUR,89.99,7,12.99,14.615782227784733,7.76945734713394,60200.0,High income,price above 3 x default-schedule price,True
+dz,duolingo,Super Duolingo,subscription,USD,59.99,10,12.99,12.99,4.6181678214010775,5850.0,Upper-middle income,price above 3 x default-schedule price,True
+ec,duolingo,Super Duolingo,subscription,USD,65.99,9,12.99,12.99,5.080061585835257,6890.0,Upper-middle income,price above 3 x default-schedule price,True
+fr,duolingo,Super Duolingo,subscription,EUR,137.99,8,12.99,13.802891113892368,11.913628395721886,48630.0,High income,price above 3 x default-schedule price,True
+gr,duolingo,Super Duolingo,subscription,EUR,80.99,8,12.99,14.615782227784733,6.9924252755237,25360.0,High income,price above 3 x default-schedule price,True
+gy,duolingo,Super Duolingo,subscription,USD,65.99,5,12.99,12.99,5.080061585835257,28470.0,High income,price above 3 x default-schedule price,True
+hn,duolingo,Super Duolingo,subscription,USD,65.99,9,12.99,12.99,5.080061585835257,3270.0,Lower-middle income,price above 3 x default-schedule price,True
+it,duolingo,Super Duolingo,subscription,EUR,125.99,8,12.99,14.614156039009753,10.877585633574899,42080.0,High income,price above 3 x default-schedule price,True
+jm,duolingo,Super Duolingo,subscription,USD,65.99,6,12.99,12.99,5.080061585835257,7790.0,Upper-middle income,price above 3 x default-schedule price,True
+jp,duolingo,Super Duolingo,subscription,JPY,14200.0,7,12.99,1950.6138294522887,6.914856338035077,38340.0,High income,price above 3 x default-schedule price,True
+kr,duolingo,Super Duolingo,subscription,KRW,125000.0,9,12.99,19000.0,7.166524269059502,37880.0,High income,price above 3 x default-schedule price,True
+lc,duolingo,Super Duolingo,subscription,USD,65.99,8,12.99,12.99,5.080061585835257,13410.0,Upper-middle income,price above 3 x default-schedule price,True
+ma,duolingo,Super Duolingo,subscription,USD,59.99,9,12.99,12.99,4.6181678214010775,4360.0,Lower-middle income,price above 3 x default-schedule price,True
+mk,duolingo,Super Duolingo,subscription,USD,65.99,9,12.99,12.99,5.080061585835257,9490.0,Upper-middle income,price above 3 x default-schedule price,True
+mn,duolingo,Super Duolingo,subscription,USD,59.99,9,12.99,12.99,4.6181678214010775,6210.0,Upper-middle income,price above 3 x default-schedule price,True
+my,duolingo,Super Duolingo,subscription,MYR,244.9,10,12.99,59.61342685370741,4.618006123302638,12380.0,Upper-middle income,price above 3 x default-schedule price,True
+pa,duolingo,Super Duolingo,subscription,USD,47.99,9,12.99,12.99,3.6943802925327174,19140.0,High income,price above 3 x default-schedule price,True
+ph,duolingo,Super Duolingo,subscription,PHP,2390.0,9,12.99,699.0,2.9165372221263204,4850.0,Upper-middle income,price above 3 x default-schedule price,True
+pt,duolingo,Super Duolingo,subscription,EUR,80.99,10,12.99,14.614156039009753,6.9924252755237,29930.0,High income,price above 3 x default-schedule price,True
+pw,duolingo,Super Duolingo,subscription,USD,116.99,9,12.99,12.99,9.006158583525789,19890.0,High income,price above 3 x default-schedule price,True
+sb,duolingo,Super Duolingo,subscription,USD,79.99,7,12.99,12.99,6.157813702848344,2020.0,Lower-middle income,price above 3 x default-schedule price,True
+sg,duolingo,Super Duolingo,subscription,SGD,122.98,8,12.99,18.17038076152305,7.382829273576269,81760.0,High income,price above 3 x default-schedule price,True
+si,duolingo,Super Duolingo,subscription,EUR,80.99,9,12.99,15.047417815425467,6.9924252755237,35520.0,High income,price above 3 x default-schedule price,True
+tc,duolingo,Super Duolingo,subscription,USD,92.99,6,12.99,12.99,7.158583525789068,36760.0,High income,price above 3 x default-schedule price,True
+th,duolingo,Super Duolingo,subscription,THB,1370.0,10,12.99,432.13274708709247,3.1457811775586655,7690.0,Upper-middle income,price above 3 x default-schedule price,True
+tj,duolingo,Super Duolingo,subscription,USD,59.99,8,12.99,12.99,4.6181678214010775,2080.0,Lower-middle income,price above 3 x default-schedule price,True
+tt,duolingo,Super Duolingo,subscription,USD,47.99,6,12.99,12.99,3.6943802925327174,18550.0,High income,price above 3 x default-schedule price,True
+tw,duolingo,Super Duolingo,subscription,TWD,3300.0,8,12.99,423.922597855199,7.850411538031139,,,price above 3 x default-schedule price,False
+ua,duolingo,Super Duolingo,subscription,USD,59.99,10,12.99,12.99,4.6181678214010775,5510.0,Upper-middle income,price above 3 x default-schedule price,True
+uz,duolingo,Super Duolingo,subscription,USD,59.99,9,12.99,12.99,4.6181678214010775,3670.0,Lower-middle income,price above 3 x default-schedule price,True
+vu,duolingo,Super Duolingo,subscription,USD,68.99,4,12.99,12.99,5.311008468052347,4410.0,Lower-middle income,price above 3 x default-schedule price,True
+ye,duolingo,Super Duolingo,subscription,USD,80.99,8,12.99,12.99,6.234795996920708,,Low income,price above 3 x default-schedule price,False
+cv,evernote,Evernote Personal,subscription,USD,155.99,1,17.49,17.49,8.91881074899943,5590.0,Upper-middle income,price above 3 x default-schedule price,True
+gd,evernote,Evernote Personal,subscription,USD,155.99,1,17.49,17.49,8.91881074899943,11660.0,Upper-middle income,price above 3 x default-schedule price,True
+mm,evernote,Evernote Personal,subscription,USD,155.99,2,17.49,17.49,8.91881074899943,1320.0,Lower-middle income,price above 3 x default-schedule price,True
+ye,evernote,Evernote Personal,subscription,USD,155.99,1,17.49,17.49,8.91881074899943,,Low income,price above 3 x default-schedule price,False
+bm,evernote,Evernote Plus,subscription,USD,134.99,1,15.0,15.0,8.999333333333334,139370.0,High income,price above 3 x default-schedule price,True
+bz,evernote,Evernote Plus,subscription,USD,149.99,2,15.0,15.0,9.999333333333334,7530.0,Upper-middle income,price above 3 x default-schedule price,True
+kn,evernote,Evernote Plus,subscription,USD,134.99,1,15.0,15.0,8.999333333333334,24530.0,High income,price above 3 x default-schedule price,True
+sc,evernote,Evernote Plus,subscription,USD,69.99,2,15.0,15.0,4.6659999999999995,19200.0,High income,price above 3 x default-schedule price,True
+tn,evernote,Evernote Plus,subscription,USD,149.99,1,15.0,15.0,9.999333333333334,4300.0,Lower-middle income,price above 3 x default-schedule price,True
+vc,evernote,Evernote Plus,subscription,USD,149.99,1,15.0,15.0,9.999333333333334,12000.0,Upper-middle income,price above 3 x default-schedule price,True
+al,evernote,Evernote Premium,subscription,USD,122.99,1,17.49,20.9903335557038,7.03201829616924,12060.0,Upper-middle income,price above 3 x default-schedule price,True
+bj,evernote,Evernote Premium,subscription,USD,183.99,1,17.49,20.405971990663556,10.519725557461408,1600.0,Lower-middle income,price above 3 x default-schedule price,True
+cg,evernote,Evernote Premium,subscription,USD,169.0,1,17.49,17.49,9.662664379645513,2280.0,Lower-middle income,price above 3 x default-schedule price,True
+tm,evernote,Evernote Premium,subscription,USD,169.0,1,17.49,17.49,9.662664379645513,6340.0,Upper-middle income,price above 3 x default-schedule price,True
+bb,gemini,100 GB,subscription,USD,19.99,1,1.99,2.3222203672787978,10.045226130653266,27080.0,High income,price above 3 x default-schedule price,True
+bm,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,139370.0,High income,price above 3 x default-schedule price,True
+bn,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,34790.0,High income,price above 3 x default-schedule price,True
+bt,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,4310.0,Lower-middle income,price above 3 x default-schedule price,True
+bz,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,7530.0,Upper-middle income,price above 3 x default-schedule price,True
+cd,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,720.0,Low income,price above 3 x default-schedule price,True
+cg,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,2280.0,Lower-middle income,price above 3 x default-schedule price,True
+dm,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,10690.0,Upper-middle income,price above 3 x default-schedule price,True
+fm,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,4760.0,Upper-middle income,price above 3 x default-schedule price,True
+gd,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,11660.0,Upper-middle income,price above 3 x default-schedule price,True
+gm,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,930.0,Low income,price above 3 x default-schedule price,True
+gw,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,1090.0,Low income,price above 3 x default-schedule price,True
+gy,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,28470.0,High income,price above 3 x default-schedule price,True
+kn,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,24530.0,High income,price above 3 x default-schedule price,True
+lc,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,13410.0,Upper-middle income,price above 3 x default-schedule price,True
+lr,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,830.0,Low income,price above 3 x default-schedule price,True
+ly,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,7250.0,Upper-middle income,price above 3 x default-schedule price,True
+me,gemini,100 GB,subscription,EUR,19.99,1,1.99,1.99,11.265884742503522,14150.0,Upper-middle income,price above 3 x default-schedule price,True
+mg,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,560.0,Low income,price above 3 x default-schedule price,True
+mn,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,6210.0,Upper-middle income,price above 3 x default-schedule price,True
+mo,gemini,100 GB,subscription,USD,19.99,1,1.99,,10.045226130653266,69920.0,High income,single price above 3 x US price,True
+mr,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,2210.0,Lower-middle income,price above 3 x default-schedule price,True
+mw,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,600.0,Low income,price above 3 x default-schedule price,True
+ne,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,750.0,Low income,price above 3 x default-schedule price,True
+nr,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,20690.0,High income,price above 3 x default-schedule price,True
+sb,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,2020.0,Lower-middle income,price above 3 x default-schedule price,True
+sl,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,830.0,Low income,price above 3 x default-schedule price,True
+sr,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,6140.0,Upper-middle income,price above 3 x default-schedule price,True
+st,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,3800.0,Lower-middle income,price above 3 x default-schedule price,True
+sz,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,3730.0,Lower-middle income,price above 3 x default-schedule price,True
+tc,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,36760.0,High income,price above 3 x default-schedule price,True
+td,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,970.0,Low income,price above 3 x default-schedule price,True
+to,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,6840.0,Upper-middle income,price above 3 x default-schedule price,True
+vc,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,12000.0,Upper-middle income,price above 3 x default-schedule price,True
+vg,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,,High income,price above 3 x default-schedule price,False
+vu,gemini,100 GB,subscription,USD,19.99,1,1.99,1.99,10.045226130653266,4410.0,Lower-middle income,price above 3 x default-schedule price,True
+xk,gemini,100 GB,subscription,EUR,19.99,1,1.99,2.3217496063726526,11.265884742503522,7760.0,Upper-middle income,price above 3 x default-schedule price,True
+gw,gemini,Google AI Plus (400 GB),subscription,USD,49.99,2,4.99,4.99,10.01803607214429,1090.0,Low income,price above 3 x default-schedule price,True
+me,gemini,Google AI Plus (400 GB),subscription,EUR,49.99,2,4.99,4.99,11.235390648958994,14150.0,Upper-middle income,price above 3 x default-schedule price,True
+pw,gemini,Google AI Plus (400 GB),subscription,USD,49.99,2,4.99,4.99,10.01803607214429,19890.0,High income,price above 3 x default-schedule price,True
+to,gemini,Google AI Plus (400 GB),subscription,USD,49.99,2,4.99,4.99,10.01803607214429,6840.0,Upper-middle income,price above 3 x default-schedule price,True
+af,googleone,Google AI Plus (2 TB),subscription,USD,99.99,1,9.99,9.99,10.009009009009008,390.0,Low income,price above 3 x default-schedule price,True
+ne,googleone,Google AI Plus (2 TB),subscription,USD,99.99,1,9.99,9.99,10.009009009009008,750.0,Low income,price above 3 x default-schedule price,True
+vg,googleone,Google AI Plus (2 TB),subscription,USD,99.99,1,9.99,9.99,10.009009009009008,,High income,price above 3 x default-schedule price,False
+ag,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,23790.0,High income,price above 3 x default-schedule price,True
+al,headspace,Headspace Plus,subscription,USD,113.99,2,12.99,15.589733155436958,8.775211701308699,12060.0,Upper-middle income,price above 3 x default-schedule price,True
+am,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,15.047417815425467,7.3125481139337944,9020.0,Upper-middle income,price above 3 x default-schedule price,True
+ao,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,2860.0,Lower-middle income,price above 3 x default-schedule price,True
+bm,headspace,Headspace Plus,subscription,USD,94.99,2,12.99,12.99,7.3125481139337944,139370.0,High income,price above 3 x default-schedule price,True
+bn,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,34790.0,High income,price above 3 x default-schedule price,True
+bs,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,37020.0,High income,price above 3 x default-schedule price,True
+bw,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,7390.0,Upper-middle income,price above 3 x default-schedule price,True
+bz,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,7530.0,Upper-middle income,price above 3 x default-schedule price,True
+cz,headspace,Headspace Plus,subscription,CZK,2250.0,1,12.99,335.813627254509,7.9764872138847185,32960.0,High income,price above 3 x default-schedule price,True
+de,headspace,Headspace Plus,subscription,EUR,57.99,3,12.99,14.615782227784733,5.00667664807531,60200.0,High income,price above 3 x default-schedule price,True
+dm,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,10690.0,Upper-middle income,price above 3 x default-schedule price,True
+dz,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,5850.0,Upper-middle income,price above 3 x default-schedule price,True
+fj,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,6230.0,Upper-middle income,price above 3 x default-schedule price,True
+fr,headspace,Headspace Plus,subscription,EUR,57.99,3,12.99,13.802891113892368,5.00667664807531,48630.0,High income,price above 3 x default-schedule price,True
+gh,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,15.047417815425467,7.3125481139337944,2630.0,Lower-middle income,price above 3 x default-schedule price,True
+jm,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,7790.0,Upper-middle income,price above 3 x default-schedule price,True
+jo,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,5260.0,Upper-middle income,price above 3 x default-schedule price,True
+ke,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,15.155360893482245,7.3125481139337944,2200.0,Lower-middle income,price above 3 x default-schedule price,True
+kg,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,2800.0,Lower-middle income,price above 3 x default-schedule price,True
+md,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,15.047417815425467,7.3125481139337944,8050.0,Upper-middle income,price above 3 x default-schedule price,True
+mk,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,9490.0,Upper-middle income,price above 3 x default-schedule price,True
+mt,headspace,Headspace Plus,subscription,EUR,94.99,1,12.99,14.885571560633489,8.201141831361852,41440.0,High income,price above 3 x default-schedule price,True
+mu,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,14040.0,Upper-middle income,price above 3 x default-schedule price,True
+my,headspace,Headspace Plus,subscription,MYR,399.9,1,12.99,59.61342685370741,7.5407948089372185,12380.0,Upper-middle income,price above 3 x default-schedule price,True
+mz,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,570.0,Low income,price above 3 x default-schedule price,True
+pw,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,19890.0,High income,price above 3 x default-schedule price,True
+sc,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,19200.0,High income,price above 3 x default-schedule price,True
+sn,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,15.047417815425467,7.3125481139337944,1780.0,Lower-middle income,price above 3 x default-schedule price,True
+sr,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,6140.0,Upper-middle income,price above 3 x default-schedule price,True
+sv,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,5410.0,Upper-middle income,price above 3 x default-schedule price,True
+th,headspace,Headspace Plus,subscription,THB,3300.0,1,12.99,432.13274708709247,7.577429113827441,7690.0,Upper-middle income,price above 3 x default-schedule price,True
+tt,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,12.99,7.3125481139337944,18550.0,High income,price above 3 x default-schedule price,True
+tz,headspace,Headspace Plus,subscription,TZS,204900.0,1,12.99,38901.745617553526,5.991170994354753,1270.0,Lower-middle income,price above 3 x default-schedule price,True
+ug,headspace,Headspace Plus,subscription,USD,94.99,1,12.99,15.3725470244596,7.3125481139337944,1120.0,Low income,price above 3 x default-schedule price,True
+vg,headspace,Headspace Plus,subscription,USD,94.99,2,12.99,12.99,7.3125481139337944,,High income,price above 3 x default-schedule price,False
+by,snapchat,Snapstreak Restore,subscription,USD,7.99,1,0.99,,8.070707070707071,9160.0,Upper-middle income,single price above 3 x US price,True
+st,snapchat,Snapstreak Restore,subscription,USD,7.99,6,0.99,0.99,8.070707070707071,3800.0,Lower-middle income,price above 3 x default-schedule price,True
+jp,strava,Runna Standalone Subscription,subscription,JPY,11900.0,1,19.99,3001.7529215358927,3.765634252301504,38340.0,High income,price above 3 x default-schedule price,True
+sg,strava,Runna Standalone Subscription,subscription,SGD,109.98,1,19.99,27.96196392785571,4.29040617640413,81760.0,High income,price above 3 x default-schedule price,True
+md,youtube,Super Chat,consumable,USD,23.99,2,4.99,5.780339869051045,4.807615230460922,8050.0,Upper-middle income,price above 3 x default-schedule price,True

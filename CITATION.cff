@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this work, please cite the working paper and the replication package."
 title: "Replication package for: Localised Entry, Global Frontier: How Generative-AI Subscriptions Are Priced Across Countries"
 type: software
-version: "2.1"
-date-released: 2026-10-08
-doi: 10.5281/zenodo.23240879
+version: "3.1"
+date-released: 2026-10-17
+doi: 10.5281/zenodo.23428432
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23006365
@@ -28,4 +28,4 @@ preferred-citation:
   month: 10
   doi: 10.2139/ssrn.7535900
   url: "https://ssrn.com/abstract=7535900"
-  notes: "Working paper, version 2.1 (8 October 2026). Earlier versions circulated as SSRN working paper 7535900 under the title 'Affording Generative AI Across Countries: Uniform Prices, Unequal Burdens'."
+  notes: "Working paper, version 3.1 (October 2026). Earlier versions circulated as SSRN working paper 7535900; versions 1.8 and 2.0 under the title 'Affording Generative AI Across Countries: Uniform Prices, Unequal Burdens'."

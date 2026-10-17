@@ -80,6 +80,49 @@ CANDS = [
     ("lehdonvirta2024compute", None, "Compute North vs. Compute South: The Uneven Possibilities of Compute-based AI Governance Around the Globe"),
     ("maslej2025aiindex", None, "Artificial Intelligence Index Report 2025 Maslej"),
     ("peng2023impact", None, "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot"),
+    # version 3.0 additions (October 2026)
+    ("dellavigna2019uniform", "10.1093/qje/qjz019", None),
+    ("simonovska2015income", "10.1093/restud/rdv015", None),
+    ("krugman1986pricing", "10.3386/w1926", None),
+    ("atkeson2008pricing", "10.1257/aer.98.5.1998", None),
+    ("deneckere1996damaged", "10.1111/j.1430-9134.1996.00149.x", None),
+    ("bhargava2001information", "10.1080/07421222.2001.11045681", None),
+    ("bhargava2008versioning", "10.1287/mnsc.1070.0773", None),
+    ("sundararajan2004nonlinear", "10.1287/mnsc.1040.0291", None),
+    ("shiller2011music", "10.1111/j.1467-6451.2011.00470.x", None),
+    ("waldfogel2020spotify", "10.1007/s11151-020-09748-0", None),
+    ("danzon2000crossnational", "10.1016/S0167-6296(99)00039-9", None),
+    ("wang2017advalorem", "10.1111/1756-2171.12183", None),
+    ("callaway2021did", "10.1016/j.jeconom.2020.12.001", None),
+    ("cui2024effects", "10.2139/ssrn.4945566", None),
+    ("kanzamanova2026digital", "10.3390/systems14080889", None),
+    ("andre2025markets", "10.1787/9302bf46-en", None),
+    ("otis2025uneven", "10.31219/osf.io/hdjpk_v2", None),
+    ("varian1985price", None, "Price discrimination and social welfare Varian American Economic Review 1985"),
+    ("goldberg1997goods", None, "Goods prices and exchange rates: what have we learned? Goldberg Knetter Journal of Economic Literature 1997"),
+    # version 3.1 additions (October 2026): literature audit (lit/add_refs.bib), mathematical audit (math/new_refs.bib) and
+    # references verified by the author on Crossref
+    ("enache2023demand", "10.1016/j.ijindorg.2023.102945", None),
+    ("colbjornsen2022what", "10.1080/16522354.2021.1949568", None),
+    ("cabolis2007textbook", "10.1016/j.econlet.2006.09.019", None),
+    ("chellappa2018cost", "10.1287/mnsc.2016.2698", None),
+    ("jones2011information", "10.1287/mnsc.1100.1262", None),
+    ("essegaier2002pricing", "10.1287/mksc.21.2.139.149", None),
+    ("johnson2003multiproduct", "10.1257/000282803322157070", None),
+    ("demirer2025emerging", "10.3386/w34608", None),
+    ("demirer2026emerging", "10.1257/jep.20261506", None),
+    ("korinek2025concentrating", "10.1093/epolic/eiae057", None),
+    ("gans2026market", "10.1146/annurev-economics-051624-061832", None),
+    ("sampford1953some", "10.1214/aoms/1177729093", None),
+    ("bagnoli2005logconcave", "10.1007/s00199-004-0514-4", None),
+    ("weyl2013passthrough", "10.1086/670401", None),
+    ("goldberg2001evolution", "10.1111/1467-937X.00191", None),
+    ("gopinath2011international", "10.1257/aer.101.6.2450", None),
+    ("malueg1994parallel", "10.1016/0022-1996(94)90044-2", None),
+    ("valletti2006differential", "10.1016/j.jinteco.2005.07.010", None),
+    ("levy1997magnitude", "10.1162/003355397555352", None),
+    ("zbaracki2004managerial", "10.1162/003465304323031085", None),
+    ("anderson2010price", "10.1162/qjec.2010.125.2.729", None),
 ]
 
 ARXIV = {
@@ -90,6 +133,8 @@ ARXIV = {
     "peng2023impact_arxiv": "2302.06590",
     "merali2024scaling": "2409.02391",
     "maslej2025aiindex_arxiv": "2504.07139",
+    "sathish2024llempower": "2404.09356",
+    "bergemann2025menu": "2502.07736",
 }
 
 
@@ -126,14 +171,30 @@ def summarize(m):
 
 
 def arxiv(aid):
-    r = S.get("http://export.arxiv.org/api/query", params={"id_list": aid}, timeout=40)
-    t = r.text
-    title = re.search(r"<entry>.*?<title>(.*?)</title>", t, re.S)
-    auths = re.findall(r"<author>\s*<name>(.*?)</name>", t)
-    pub = re.search(r"<published>(\d{4})-(\d\d)-(\d\d)", t)
-    return {"doi": f"10.48550/arXiv.{aid}", "type": "preprint-arXiv",
-            "title": re.sub(r"\s+", " ", title.group(1)).strip() if title else None,
-            "authors": "; ".join(auths), "year": pub.group(1) if pub else None,
+    """Metadata of an arXiv preprint: the export API (HTTPS), or, when it is rate-limited or unreachable, the Highwire
+    meta tags of the abstract page."""
+    title, auths, year = None, [], None
+    try:
+        r = S.get("https://export.arxiv.org/api/query", params={"id_list": aid}, timeout=40)
+        t = r.text if r.status_code == 200 else ""
+    except requests.RequestException:
+        t = ""
+    m = re.search(r"<entry>.*?<title>(.*?)</title>", t, re.S)
+    if m:
+        title = re.sub(r"\s+", " ", m.group(1)).strip()
+        auths = re.findall(r"<author>\s*<name>(.*?)</name>", t)
+        pub = re.search(r"<published>(\d{4})-(\d\d)-(\d\d)", t)
+        year = pub.group(1) if pub else None
+    if not title:
+        time.sleep(3)
+        r = S.get(f"https://arxiv.org/abs/{aid}", timeout=40)
+        t = r.text if r.status_code == 200 else ""
+        m = re.search(r'<meta name="citation_title" content="(.*?)"', t)
+        title = re.sub(r"\s+", " ", m.group(1)).strip() if m else None
+        auths = re.findall(r'<meta name="citation_author" content="(.*?)"', t)
+        pub = re.search(r'<meta name="citation_date" content="(\d{4})', t)
+        year = pub.group(1) if pub else None
+    return {"doi": f"10.48550/arXiv.{aid}", "type": "preprint-arXiv", "title": title, "authors": "; ".join(auths), "year": year,
             "container": f"arXiv:{aid}", "volume": None, "issue": None, "page": None, "publisher": "arXiv"}
 
 

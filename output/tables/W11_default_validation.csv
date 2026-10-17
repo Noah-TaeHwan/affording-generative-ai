@@ -1,0 +1,35 @@
+statistic,description,value,se,n,numerator,denominator,note,keys
+rebuild,Multipliers rebuilt from the panel items against wave2_default_multiplier.csv: storefronts; largest |ln(rebuilt / file)|,0.0,,164.0,,,,value=val_rebuild_max_logdiff;n=val_rebuild_n
+rebuild_ladder,Ladder entries rebuilt from the panel items against wave2_default_ladder.csv: entries; entries that differ,0.0,,2414.0,,,,value=val_rebuild_ladder_diff;n=val_rebuild_ladder_n
+slope_main,"Income slope of ln(tax factor), main rule (unique mode, share >= 1/2)",0.0326511801,0.0060187552,161.0,,,,value=val_slope_main;se=val_slope_main_se;n=val_slope_main_n
+slope_strict,"Income slope, strict majority (share > 1/2)",0.0272111241,0.0051742286,147.0,,,,value=val_slope_strict;se=val_slope_strict_se;n=val_slope_strict_n
+multipliers_strict,Storefronts with a multiplier under the strict-majority rule,,,150.0,,,,n=val_strict_multipliers
+slope_sub,"Income slope, schedule from the items of type subscription only",0.0331303582,0.0060594645,160.0,,,,value=val_slope_sub;se=val_slope_sub_se;n=val_slope_sub_n
+multipliers_sub,Storefronts with a multiplier from subscription items only,,,163.0,,,,n=val_sub_multipliers
+multipliers_cons,Storefronts with a multiplier from consumable items only (the slope needs >= 20),,,0.0,,,,n=val_cons_multipliers
+sub_vs_cons,Storefronts with a multiplier from both: median |ln(subscription / consumable)|,,,0.0,,,,n=val_subcons_n
+loo_slope_min,Leave one app out (29 refits): smallest income slope,0.0291212867,,,,,without indie_1048454034,value=val_loo_slope_min
+loo_slope_max,Leave one app out: largest income slope,0.0346013921,,,,,without indie_649264704,value=val_loo_slope_max
+loo_n_min,Leave one app out: smallest N of the slope,159.0,,,,,,value=val_loo_n_min
+loo_max_shift,Leave one app out: largest |ln(multiplier without the app / multiplier with all apps)| of a storefront,0.700677272,,,,,"storefront eg, without indie_1498018285",value=val_loo_max_shift
+loo_median_storefront_max,Leave one app out: median over storefronts of the largest change of the multiplier over the apps,0.0,,164.0,,,,value=val_loo_median_storefront_max;n=val_loo_storefronts
+loo_p90_storefront_max,Leave one app out: 90th percentile over storefronts of the largest change of the multiplier over the apps,0.0682363769,,,,,,value=val_loo_p90_storefront_max
+loo_share_within3,Leave one app out: share of storefronts whose multiplier never changes by more than 3%,0.762195122,,,125.0,164.0,,value=val_loo_share_within3;numerator=val_loo_within3;denominator=val_loo_storefronts
+loo_apps,Apps left out one at a time (apps with priced items),,,29.0,,,,n=val_loo_apps
+split_reps,Split half: random splits of the apps kept (>= 20 storefronts with a multiplier in both halves),,,300.0,,,,n=val_split_reps
+split_n_common_median,Split half: median number of storefronts with a multiplier in both halves,110.0,,,,,,value=val_split_n_common_median
+split_med_abs_logdiff,Split half: median over splits of the median |ln(multiplier A / multiplier B)|,1.20183e-05,,,,,,value=val_split_med_abs_logdiff
+split_within3,Split half: median over splits of the share of common storefronts within 3%,0.6722206858,,,,,,value=val_split_within3
+split_within10,Split half: median over splits of the share of common storefronts within 10%,0.8793714845,,,,,,value=val_split_within10
+split_slope_p05,Split half: 5th percentile of the 600 half-sample income slopes,0.0208906194,,,,,,value=val_split_slope_p05
+split_slope_p95,Split half: 95th percentile of the 600 half-sample income slopes,0.041363172,,,,,,value=val_split_slope_p95
+coinc,Frontier plan x storefront rows with an exact ladder point: rows listed at the modal price to the cent,0.6853333333,,,257.0,375.0,,value=val_coinc_share;numerator=val_coinc_exact;denominator=val_coinc_rows
+coinc_chatgpt_plus,The same for chatgpt_plus,0.9285714286,,,117.0,126.0,,value=val_coinc_chatgpt_plus_share;numerator=val_coinc_chatgpt_plus_exact;denominator=val_coinc_chatgpt_plus_rows
+coinc_gemini_pro,The same for gemini_pro,0.5887096774,,,73.0,124.0,,value=val_coinc_gemini_pro_share;numerator=val_coinc_gemini_pro_exact;denominator=val_coinc_gemini_pro_rows
+coinc_m365_premium,The same for m365_premium,0.536,,,67.0,125.0,,value=val_coinc_m365_premium_share;numerator=val_coinc_m365_premium_exact;denominator=val_coinc_m365_premium_rows
+coinc_anom,The same in the storefronts where the schedule departs from FX parity by more than 20%,0.347826087,,,24.0,69.0,al at ba be bg ch ci co de dk ee eg fi gb gr hr hu ie it kz lt mt nl no pe pl pt rs se si sk xk za,value=val_coinc_anom_share;numerator=val_coinc_anom_exact;denominator=val_coinc_anom_rows
+coinc_anom_storefronts,Storefronts where the schedule departs from FX parity by more than 20%,,,33.0,,,,n=val_coinc_anom_storefronts
+ladder_entries,Ladder entries (storefront x US price point with >= 3 panel items),,,2414.0,,,,n=val_ladder_entries
+ladder_with_mode,Ladder entries with a unique mode of share >= 1/2,0.6425020713,,,1551.0,2414.0,,value=val_ladder_with_mode_share;numerator=val_ladder_with_mode;denominator=val_ladder_entries
+ladder_median_modal_share,Median modal share over all ladder entries,0.5454545455,,,,,,value=val_ladder_median_modal_share
+ladder_share_ge075,Share of ladder entries with a modal share >= 0.75,0.2705053853,,,653.0,2414.0,,value=val_ladder_share_ge075;numerator=val_ladder_ge075;denominator=val_ladder_entries

@@ -5,7 +5,10 @@
 # figure files under their ordered names, the anonymised replication package (code/54_anonymised_package.py), the
 # hand-written files, and identifying strings in the anonymised PDF, LaTeX source and package.
 # The strings are listed in verification/identifying_strings.txt (one per line, case-insensitive). When submission/ is present,
-# the deposited package must also be free of the journal names and submission history listed in submission/journal_strings.txt.
+# the deposited package must also be free of the journal names and submission history listed in submission/journal_strings.txt,
+# of review-history wording (the words in hist_pattern below, and item codes of the form DRnn) and of the publisher's name
+# (publisher_pattern), and the anonymised files of author-location phrases including the collection time zone and the
+# author's surname in citation form (anon_pattern below).
 set -uo pipefail
 cd "$(dirname "$0")"
 fail=0
@@ -22,7 +25,11 @@ if [ -z "$pattern" ]; then
   echo "FAIL $ID_FILE is missing or empty"; fail=1
 fi
 
-for d in paper_en paper_ko; do
+# the Korean edition is checked only when it is part of the package (version 3.0 and version 3.1 ship the English manuscript; the
+# Korean edition of this version follows separately)
+editions="paper_en"
+if [ -f paper_ko/main.tex ]; then editions="paper_en paper_ko"; fi
+for d in $editions; do
   m="$d/main.pdf.sources.sha256"
   if [ ! -f "$m" ]; then echo "FAIL $d: no build record; run build_papers.sh"; fail=1; continue; fi
   (cd "$d" && shasum -a 256 -c --quiet main.pdf.sources.sha256) \
@@ -47,12 +54,15 @@ fi
 
 # files the README tells readers to open or run
 for f in run_all.sh run_revision.sh build_papers.sh check_release.sh requirements.txt LICENSE.txt \
-         paper_en/main.pdf paper_en/main_anon.pdf paper_en/titlepage.pdf paper_ko/main.pdf \
+         paper_en/main.pdf paper_en/main_anon.pdf paper_en/titlepage.pdf \
          extensions/requirements_revision.txt verification/README.md verification/prose_number_audit.py \
          verification/en_ko_number_check.py verification/identifying_strings.txt \
          code/53_flatten_submission.py code/54_anonymised_package.py; do
   [ -e "$f" ] || { echo "FAIL README refers to missing $f"; fail=1; }
 done
+if [ -f paper_ko/main.tex ]; then
+  [ -e paper_ko/main.pdf ] || { echo "FAIL paper_ko/main.pdf missing; run build_papers.sh"; fail=1; }
+fi
 
 # the submission folder is distributed separately from the deposited package; when present it must be complete
 # and its PDFs must be the ones in paper_en
@@ -86,8 +96,30 @@ if [ -d submission ]; then
     fi
   fi
   if [ -f submission/Highlights.txt ]; then
-    awk 'length($0) > 87 { bad=1 } END { exit bad }' submission/Highlights.txt \
+    awk 'length($0) > 85 { bad=1 } END { exit bad }' submission/Highlights.txt \
       || { echo "FAIL submission/Highlights.txt: a bullet exceeds 85 characters"; fail=1; }
+  fi
+  # review-history wording must not appear in any text file of the deposited package (code docstrings, READMEs and
+  # verification notes included); the anonymised manuscript, source and package must also be free of author-location phrases
+  # and of the author's surname in citation form (the patterns are extended regular expressions, matched case-insensitively)
+  # (the words are written with a bracketed letter so that this script does not itself match the patterns)
+  hist_pattern='ref[e]ree|revision req[u]est|revision mat[r]ix|\bDR[0-9]{2}\b|Second r[o]und|independent r[e]adings'
+  publisher_pattern='Elsev[i]er'
+  anon_pattern='\bOh \(20|\bKST\b|Korea t[i]me|Korea Standard T[i]me|Korean I[P]|UTC\+9|ref[e]ree|revision req[u]est|revision mat[r]ix|\bDR[0-9]{2}\b|Second r[o]und|independent r[e]adings|Elsev[i]er'
+  hleaks=$(grep -rIl -i -E --exclude-dir=submission --exclude-dir=__pycache__ -- "$hist_pattern" . 2>/dev/null | sed 's#^\./##' || true)
+  [ -z "$hleaks" ] || { echo "FAIL review-history wording in the deposited package: $(echo $hleaks)"; fail=1; }
+  # the publisher's name must not appear outside the author-only submission/ folder (research/refs_verified.csv is exempt:
+  # it records the Crossref publisher field of the cited journals)
+  pleaks=$(grep -rIl -i -E --exclude-dir=submission --exclude-dir=__pycache__ --exclude=refs_verified.csv -- "$publisher_pattern" . 2>/dev/null | sed 's#^\./##' || true)
+  [ -z "$pleaks" ] || { echo "FAIL publisher name in the deposited package: $(echo $pleaks)"; fail=1; }
+  if command -v pdftotext >/dev/null 2>&1 && [ -f submission/Manuscript_anonymised.pdf ]; then
+    if pdftotext submission/Manuscript_anonymised.pdf - 2>/dev/null | grep -q -i -E -- "$anon_pattern"; then
+      echo "FAIL submission/Manuscript_anonymised.pdf: author-location or review-history wording found"; fail=1
+    fi
+  fi
+  if [ -f submission/latex_source_anonymised/manuscript_anonymised.tex ] \
+     && grep -q -i -E -- "$anon_pattern" submission/latex_source_anonymised/manuscript_anonymised.tex; then
+    echo "FAIL submission/latex_source_anonymised/manuscript_anonymised.tex: author-location or review-history wording found"; fail=1
   fi
   # the deposited package (everything outside submission/) names no journal and carries no submission history: the
   # journal names, special-issue labels and manuscript-number prefixes are listed in submission/journal_strings.txt

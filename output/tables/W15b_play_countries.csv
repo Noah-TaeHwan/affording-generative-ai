@@ -1,0 +1,61 @@
+app,country,country_name,income_group,gni_atlas,currency,play_min,play_max,usd_at_fx,usd_ratio_to_us,app_store_plan,app_store_price,app_store_currency,same_currency,compared,log_diff,app_store_storefront,lmic,lmic_in_median
+ChatGPT,us,United States,High income,88810.0,USD,8.0,500.0,8.0,1.0,chatgpt_go,8.0,USD,True,False,,True,False,False
+ChatGPT,au,Australia,High income,64120.0,AUD,13.0,769.99,9.037183666,1.1296479582,chatgpt_go,13.0,AUD,True,True,0.0,True,False,False
+ChatGPT,de,Germany,High income,60200.0,EUR,7.99,509.99,8.9688550055,1.1211068757,chatgpt_go,7.99,EUR,True,True,0.0,True,False,False
+ChatGPT,ca,Canada,High income,56420.0,CAD,11.0,679.99,7.7460939687,0.9682617461,chatgpt_go,12.99,CAD,True,True,-0.1662845579,True,False,False
+ChatGPT,gb,United Kingdom,High income,54550.0,GBP,6.99,444.99,9.2605082723,1.157563534,chatgpt_go,6.99,GBP,True,True,0.0,True,False,False
+ChatGPT,ae,United Arab Emirates,High income,51550.0,AED,29.99,1919.99,8.1660993873,1.0207624234,chatgpt_go,29.99,AED,True,True,0.0,True,False,False
+ChatGPT,jp,Japan,High income,38340.0,JPY,1400.0,84000.0,8.8767215261,1.1095901908,chatgpt_go,1400.0,JPY,True,True,0.0,True,False,False
+ChatGPT,kr,"Korea, Rep.",High income,37880.0,KRW,13000.0,310000.0,9.642118476,1.2052648095,chatgpt_go,13000.0,KRW,True,True,0.0,True,False,False
+ChatGPT,sa,Saudi Arabia,High income,36070.0,SAR,35.0,2149.99,9.3333333333,1.1666666667,chatgpt_go,35.0,SAR,True,True,0.0,True,False,False
+ChatGPT,pl,Poland,High income,25520.0,PLN,34.99,2199.0,8.9897250397,1.12371563,chatgpt_go,34.99,PLN,True,True,0.0,True,False,False
+ChatGPT,cl,Chile,High income,16960.0,CLP,7990.0,509990.0,8.1072930711,1.0134116339,chatgpt_go,7990.0,CLP,True,True,0.0,True,False,False
+ChatGPT,tr,Turkiye,Upper-middle income,16300.0,TRY,249.99,26499.0,5.0559245248,0.6319905656,chatgpt_go,249.99,TRY,True,True,0.0,True,False,False
+ChatGPT,ar,Argentina,Upper-middle income,14650.0,ARS,8955.05,747500.0,5.9185054566,0.7398131821,chatgpt_go,5.99,USD,False,False,,True,False,False
+ChatGPT,mx,Mexico,Upper-middle income,13730.0,MXN,129.0,9899.0,6.9786414556,0.8723301819,chatgpt_go,129.0,MXN,True,True,0.0,True,False,False
+ChatGPT,my,Malaysia,Upper-middle income,12380.0,MYR,23.99,2099.9,5.8776252742,0.7347031593,chatgpt_go,23.99,MYR,True,True,0.0,True,False,False
+ChatGPT,br,Brazil,Upper-middle income,10550.0,BRL,39.99,2599.9,7.9221415651,0.9902676956,chatgpt_go,39.9,BRL,True,True,0.002253099,True,False,False
+ChatGPT,pe,Peru,Upper-middle income,8430.0,PEN,19.9,1969.9,5.7845120828,0.7230640104,chatgpt_go,19.9,PEN,True,True,0.0,True,False,False
+ChatGPT,co,Colombia,Upper-middle income,7900.0,COP,24900.0,1819900.0,7.801188321,0.9751485401,chatgpt_go,24900.0,COP,True,True,0.0,True,False,False
+ChatGPT,th,Thailand,Upper-middle income,7690.0,THB,259.0,16490.0,7.720046528,0.965005816,chatgpt_go,259.0,THB,True,True,0.0,True,False,False
+ChatGPT,za,South Africa,Upper-middle income,6270.0,ZAR,149.0,9199.0,8.9943784091,1.1242973011,chatgpt_go,149.99,ZAR,True,True,-0.0066223193,True,False,False
+ChatGPT,ua,Ukraine,Upper-middle income,5510.0,UAH,299.99,25995.0,6.662937212,0.8328671515,chatgpt_go,6.99,USD,False,False,,True,False,False
+ChatGPT,id,Indonesia,Upper-middle income,5120.0,IDR,75000.0,8445000.0,4.1800385208,0.5225048151,chatgpt_go,75000.0,IDR,True,True,0.0,True,False,False
+ChatGPT,vn,Viet Nam,Upper-middle income,4970.0,VND,120000.0,12995000.0,4.6345474006,0.5793184251,chatgpt_go,132000.0,VND,True,True,-0.0953101798,True,False,False
+ChatGPT,ph,Philippines,Upper-middle income,4850.0,PHP,300.0,32490.0,4.7558240822,0.5944780103,chatgpt_go,300.0,PHP,True,True,0.0,True,False,False
+ChatGPT,eg,"Egypt, Arab Rep.",Lower-middle income,3260.0,EGP,220.0,26999.99,4.142987621,0.5178734526,chatgpt_go,249.99,EGP,True,True,-0.1277933707,True,True,True
+ChatGPT,bd,Bangladesh,Lower-middle income,2840.0,BDT,699.0,70000.0,5.6620558575,0.7077569822,chatgpt_go,,,False,False,,False,True,False
+ChatGPT,in,India,Lower-middle income,2760.0,INR,399.0,52900.0,4.2017231682,0.525215396,chatgpt_go,399.0,INR,True,True,0.0,True,True,True
+ChatGPT,ke,Kenya,Lower-middle income,2200.0,KES,745.0,74695.0,5.7397702404,0.7174712801,chatgpt_go,5.99,USD,False,False,,True,True,True
+ChatGPT,pk,Pakistan,Lower-middle income,1500.0,PKR,1400.0,139999.0,5.0538035983,0.6317254498,chatgpt_go,1400.0,PKR,True,True,0.0,True,True,True
+ChatGPT,ng,Nigeria,Lower-middle income,1360.0,NGN,7000.0,699900.0,5.2610088809,0.6576261101,chatgpt_go,6900.0,NGN,True,True,0.0143887375,True,True,True
+Claude,us,United States,High income,88810.0,USD,20.0,700.0,20.0,1.0,claude_pro,20.0,USD,True,False,,True,False,False
+Claude,au,Australia,High income,64120.0,AUD,33.99,424.88,23.6287594467,1.1814379723,claude_pro,30.0,AUD,True,True,0.124868982,True,False,False
+Claude,de,Germany,High income,60200.0,EUR,22.0,275.0,24.6952202906,1.2347610145,claude_pro,22.0,EUR,True,True,0.0,True,False,False
+Claude,ca,Canada,High income,56420.0,CAD,28.0,350.0,19.7173301022,0.9858665051,claude_pro,28.0,CAD,True,True,0.0,True,False,False
+Claude,gb,United Kingdom,High income,54550.0,GBP,18.0,225.0,23.846802418,1.1923401209,claude_pro,20.0,GBP,True,True,-0.1053605157,True,False,False
+Claude,ae,United Arab Emirates,High income,51550.0,AED,79.99,999.88,21.7808032675,1.0890401634,claude_pro,79.99,AED,True,True,0.0,True,False,False
+Claude,jp,Japan,High income,38340.0,JPY,3400.0,42500.0,21.5577522777,1.0778876139,claude_pro,3000.0,JPY,True,True,0.125163143,True,False,False
+Claude,kr,"Korea, Rep.",High income,37880.0,KRW,30000.0,375000.0,22.2510426368,1.1125521318,claude_pro,33000.0,KRW,True,True,-0.0953101798,True,False,False
+Claude,sa,Saudi Arabia,High income,36070.0,SAR,89.99,1124.88,23.9973333333,1.1998666667,claude_pro,89.99,SAR,True,True,0.0,True,False,False
+Claude,pl,Poland,High income,25520.0,PLN,89.99,1140.0,23.1204731731,1.1560236587,claude_pro,99.99,PLN,True,True,-0.1053716279,True,False,False
+Claude,cl,Chile,High income,16960.0,CLP,19990.0,249875.0,20.2834528776,1.0141726439,claude_pro,22990.0,CLP,True,True,-0.1398271903,True,False,False
+Claude,tr,Turkiye,Upper-middle income,16300.0,TRY,999.99,12999.99,20.2243048346,1.0112152417,claude_pro,999.99,TRY,True,True,0.0,True,False,False
+Claude,ar,Argentina,Upper-middle income,14650.0,ARS,29900.0,373750.0,19.7612870004,0.98806435,claude_pro,20.0,USD,False,False,,True,False,False
+Claude,mx,Mexico,Upper-middle income,13730.0,MXN,399.0,4987.5,21.5851003162,1.0792550158,claude_pro,399.0,MXN,True,True,0.0,True,False,False
+Claude,my,Malaysia,Upper-middle income,12380.0,MYR,99.9,1248.75,24.4758134593,1.223790673,claude_pro,99.9,MYR,True,True,0.0,True,False,False
+Claude,br,Brazil,Upper-middle income,10550.0,BRL,110.0,1375.0,21.7913371384,1.0895668569,claude_pro,129.9,BRL,True,True,-0.1662845579,True,False,False
+Claude,pe,Peru,Upper-middle income,8430.0,PEN,79.9,998.75,23.2252520311,1.1612626016,claude_pro,89.9,PEN,True,True,-0.1179220887,True,False,False
+Claude,co,Colombia,Upper-middle income,7900.0,COP,63490.0,789900.0,19.891463715,0.9945731857,claude_pro,99900.0,COP,True,True,-0.4532872725,True,False,False
+Claude,th,Thailand,Upper-middle income,7690.0,THB,799.0,9987.5,23.8158964319,1.1907948216,claude_pro,699.0,THB,True,True,0.1337102035,True,False,False
+Claude,za,South Africa,Upper-middle income,6270.0,ZAR,399.99,4999.88,24.1453786567,1.2072689328,claude_pro,399.99,ZAR,True,True,0.0,True,False,False
+Claude,ua,Ukraine,Upper-middle income,5510.0,UAH,979.99,12249.88,21.7660983312,1.0883049166,claude_pro,25.0,USD,False,False,,True,False,False
+Claude,id,Indonesia,Upper-middle income,5120.0,IDR,349000.0,4362500.0,19.4511125834,0.9725556292,claude_pro,349000.0,IDR,True,True,0.0,True,False,False
+Claude,vn,Viet Nam,Upper-middle income,4970.0,VND,499000.0,6237500.0,19.271992941,0.9635996471,claude_pro,599000.0,VND,True,True,-0.1826555024,True,False,False
+Claude,ph,Philippines,Upper-middle income,4850.0,PHP,1300.0,16250.0,20.608571023,1.0304285512,claude_pro,1290.0,PHP,True,True,0.0077220461,True,False,False
+Claude,eg,"Egypt, Arab Rep.",Lower-middle income,3260.0,EGP,1099.99,13749.88,20.7147497874,1.0357374894,claude_pro,999.99,EGP,True,True,0.0953110889,True,True,True
+Claude,bd,Bangladesh,Lower-middle income,2840.0,BDT,2700.0,33750.0,21.8706020247,1.0935301012,claude_pro,,,False,False,,False,True,False
+Claude,in,India,Lower-middle income,2760.0,INR,1999.0,24987.5,21.0507383793,1.052536919,claude_pro,1999.0,INR,True,True,0.0,True,True,True
+Claude,ke,Kenya,Lower-middle income,2200.0,KES,3000.0,37500.0,23.1131687535,1.1556584377,claude_pro,25.0,USD,False,False,,True,True,True
+Claude,pk,Pakistan,Lower-middle income,1500.0,PKR,4900.0,61250.0,17.688312594,0.8844156297,claude_pro,4900.0,PKR,True,True,0.0,True,True,True
+Claude,ng,Nigeria,Lower-middle income,1360.0,NGN,33500.0,418750.0,25.1776853585,1.2588842679,claude_pro,29900.0,NGN,True,True,0.1136869584,True,True,True

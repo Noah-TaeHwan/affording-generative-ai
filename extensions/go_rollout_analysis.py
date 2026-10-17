@@ -41,6 +41,7 @@ Run: python extensions/go_rollout_analysis.py
 """
 from pathlib import Path
 import json
+import re
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
@@ -195,15 +196,24 @@ print(pd.DataFrame(rob).round(3).to_string())
 # written by figure_rollout_ko.py from the same CSVs).
 robdf = pd.DataFrame(rob)
 lines = []
+
+
+def tm(text):
+    """Typographic minus ($-$) for the negative numbers of a table cell."""
+    return re.sub(r"-(?=\d)", "$-$", text)
+
+
 for r in rows:
     fe = robdf[(robdf.window == r["window"]) & (robdf.variant == "region_fe")].iloc[0]
     src = "Any use" if r["source"] == "ms" else "Claude activity"
     win = r["window"].replace(" to ", "--")
-    lines.append(" & ".join([
-        f"{src}, {win}", str(r["n_comparison"]), f"{r['comparison_mean_dlog']:.3f}",
+    # the permutation p-value of the C2 contrast (2000 draws, so a multiple of 0.0005) is printed with four decimals: [0.0005], not [0.00];
+    # the region-fixed-effects contrast is the lead specification (v3.1) and precedes the contrast without region effects
+    lines.append(" & ".join([f"{src}, {win}", str(r["n_comparison"])] + [tm(x) for x in (
+        f"{r['comparison_mean_dlog']:.3f}",
         f"{r['IND_dlog']:.3f}", f"{r['IND_resid']:.3f} ({r['IND_perm_p']:.2f})",
-        f"{r['C2_coef']:.3f} ({r['C2_se']:.3f}) [{r['C2_perm_p']:.2f}]",
-        f"{fe['C2_coef']:.3f} ({fe['C2_se']:.3f})"]) + r" \\")
+        f"{fe['C2_coef']:.3f} ({fe['C2_se']:.3f})",
+        f"{r['C2_coef']:.3f} ({r['C2_se']:.3f}) [{r['C2_perm_p']:.4f}]")]) + r" \\")
 (ROOT / "paper_en/tables/tab_rollout.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 # signs of the C2 residuals in each window (reported in the text)
 signs = {}

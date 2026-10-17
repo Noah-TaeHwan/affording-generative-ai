@@ -1,0 +1,138 @@
+{
+ "chatgpt": {
+  "id": 6448311069,
+  "class": "ai_core"
+ },
+ "claude": {
+  "id": 6473753684,
+  "class": "ai_core"
+ },
+ "gemini": {
+  "id": 6477489729,
+  "class": "ai_core"
+ },
+ "perplexity": {
+  "id": 1668000334,
+  "class": "ai"
+ },
+ "grok": {
+  "id": 6670324846,
+  "class": "ai"
+ },
+ "mistral": {
+  "id": 6740410176,
+  "class": "ai"
+ },
+ "poe": {
+  "id": 1640745955,
+  "class": "ai"
+ },
+ "characterai": {
+  "id": 1671705818,
+  "class": "ai"
+ },
+ "copilot_m365": {
+  "id": 541164041,
+  "class": "ai_bundle"
+ },
+ "youtube": {
+  "id": 544007664,
+  "class": "nonai"
+ },
+ "youtubemusic": {
+  "id": 1017492454,
+  "class": "nonai"
+ },
+ "googleone": {
+  "id": 1451784328,
+  "class": "nonai"
+ },
+ "duolingo": {
+  "id": 570060128,
+  "class": "nonai"
+ },
+ "telegram": {
+  "id": 686449807,
+  "class": "nonai"
+ },
+ "discord": {
+  "id": 985746746,
+  "class": "nonai"
+ },
+ "snapchat": {
+  "id": 447188370,
+  "class": "nonai"
+ },
+ "linkedin": {
+  "id": 288429040,
+  "class": "nonai"
+ },
+ "dropbox": {
+  "id": 327630330,
+  "class": "nonai"
+ },
+ "headspace": {
+  "id": 493145008,
+  "class": "nonai"
+ },
+ "calm": {
+  "id": 571800810,
+  "class": "nonai"
+ },
+ "strava": {
+  "id": 426826309,
+  "class": "nonai"
+ },
+ "tinder": {
+  "id": 547702041,
+  "class": "nonai"
+ },
+ "bumble": {
+  "id": 930441707,
+  "class": "nonai"
+ },
+ "truecaller": {
+  "id": 448142450,
+  "class": "nonai"
+ },
+ "babbel": {
+  "id": 829587759,
+  "class": "nonai"
+ },
+ "x": {
+  "id": 333903271,
+  "class": "nonai"
+ },
+ "lightroom": {
+  "id": 878783582,
+  "class": "nonai"
+ },
+ "nordvpn": {
+  "id": 905953485,
+  "class": "nonai"
+ },
+ "picsart": {
+  "id": 587366035,
+  "class": "nonai"
+ },
+ "evernote": {
+  "id": 281796108,
+  "class": "nonai"
+ },
+ "canva": {
+  "id": 897446215,
+  "class": "ai_feature"
+ },
+ "capcut": {
+  "id": 1500855883,
+  "class": "ai_feature"
+ },
+ "notion": {
+  "id": 1232780281,
+  "class": "ai_feature"
+ },
+ "grammarly": {
+  "id": 1158877342,
+  "class": "ai_feature"
+ }
+}

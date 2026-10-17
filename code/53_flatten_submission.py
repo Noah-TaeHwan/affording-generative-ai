@@ -296,7 +296,7 @@ def compile_titlepage(tex, pdf_out=None):
 
     Fails unless the result is one page without overfull boxes. Returns the text of the PDF (pdftotext -layout)."""
     env = dict(os.environ)
-    env.setdefault("SOURCE_DATE_EPOCH", "1790726400")
+    env.setdefault("SOURCE_DATE_EPOCH", "1792108800")
     env.setdefault("FORCE_SOURCE_DATE", "1")
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)

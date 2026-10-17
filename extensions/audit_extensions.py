@@ -1,4 +1,4 @@
-"""Independent audit and descriptive robustness extensions for Oh (2026), v1.8.
+"""Independent audit and descriptive robustness extensions for the working-paper version 1.8 of this manuscript.
 
 Run: python audit_extensions.py
 Uses frozen files from the downloaded Zenodo package. Does not modify originals.

@@ -1,0 +1,13 @@
+storefront,country,income_group,block,points,with_mode,median_modal_share,multiplier,spread,frontier_exact_points,frontier_exact_plans,frontier_exact
+in,India,Lower-middle income,1,17,8,0.4285714286,100.0,0.871553079,0,,no
+br,Brazil,Upper-middle income,1,17,8,0.4444444444,5.8150623106,0.7998694237,0,,no
+eg,"Egypt, Arab Rep.",Lower-middle income,1,16,6,0.3666666667,24.8205628202,1.701285122,0,,no
+ug,Uganda,Low income,1,14,7,0.5,1.1834139357,1.1853887883,0,,no
+ng,Nigeria,Lower-middle income,1,17,3,0.4,,,0,,no
+tr,Turkiye,Upper-middle income,1,17,1,0.3333333333,,,0,,no
+id,Indonesia,Upper-middle income,2,17,4,0.4,16916.9169169169,0.0733576622,0,,no
+pk,Pakistan,Lower-middle income,2,16,6,0.4142857143,267.7588145956,0.1342686076,0,,no
+ph,Philippines,Upper-middle income,2,17,7,0.4,53.8106235566,0.5756980865,0,,no
+vn,Viet Nam,Upper-middle income,2,17,4,0.375,24906.1326658323,0.3966717886,0,,no
+mx,Mexico,Upper-middle income,2,17,11,0.5,19.9733244415,0.1591135506,3,chatgpt_plus;gemini_pro;m365_premium,yes
+za,South Africa,Upper-middle income,2,17,8,0.4615384615,20.0079200988,0.0645409355,3,chatgpt_plus;gemini_pro;m365_premium,yes

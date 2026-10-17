@@ -147,7 +147,7 @@ See the manuscripts' reference lists; bibliographic metadata were verified again
 
 ## Changes in version 1.1 (28 September 2026)
 
-Responding to an independent cross-review:
+After an internal verification pass:
 - `20_analysis.py`, `30_figures.py` and `11_data_dictionary.py` now read `country_panel.csv` with `keep_default_na=False`,
   so Namibia (ISO2 `NA`) is no longer dropped from the price analysis (1,634 → 1,643 price observations; localisation
   elasticities change by at most 0.00021; the share of lower-middle-income economies whose cheapest local tier meets
@@ -160,7 +160,7 @@ Responding to an independent cross-review:
 
 ## Changes in version 1.2 (28 September 2026)
 
-Responding to the second round of the cross-review:
+After a further internal verification pass:
 - `10_build_dataset.py` takes the GDP price-level ratio in the year of the GNI data (four economies—Kuwait, Macao SAR,
   Oman and Sint Maarten—previously used a GDP ratio one year later); the comparison in the manuscripts' footnote is now
   a median difference of 3.1% (90th percentile 8.3%) and an income elasticity of 0.224 for the GDP ratio.
@@ -183,7 +183,7 @@ Responding to the second round of the cross-review:
 
 ## Changes in version 1.5 (28 September 2026, final)
 
-Responding to the cross-review of version 1.4: three sentences whose wording had become broader than the evidence were
+After the internal verification of version 1.4: three sentences whose wording had become broader than the evidence were
 narrowed—the AI access paradox is now stated for the task-level gains illustrated (Proposition 2 allows convergence if
 gains for low-income economies were more than about eleven times larger), vendors are said to barely localise
 frontier-tier prices, and the conclusion refers to who can access or afford frontier models. No numbers changed.

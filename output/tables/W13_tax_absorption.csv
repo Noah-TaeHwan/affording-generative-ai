@@ -1,0 +1,8 @@
+plan,label,us_price,n,at_us,at_default,n_lmic,at_us_lmic
+chatgpt_plus,ChatGPT Plus,19.99,16,5,11,10,5
+gemini_pro,Google AI Pro,19.99,16,15,1,10,10
+gemini_ultra,Google AI Ultra,199.99,8,8,0,3,3
+m365_premium,Microsoft 365 Premium,19.99,16,10,3,10,8
+claude_pro,Claude Pro,20.0,16,0,0,10,0
+perplexity_pro,Perplexity Pro,20.0,16,0,0,10,0
+supergrok,SuperGrok,30.0,15,0,0,9,0

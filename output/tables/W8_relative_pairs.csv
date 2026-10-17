@@ -1,0 +1,22 @@
+pair,firm,label,plan_a,plan_b,group_a,group_b,n,n_currencies,slope,se_hc1,se_cr1,ri_p,lmic_n,lmic_med,share_below09,mass_at1
+go_plus,OpenAI,ChatGPT Go vs Plus,chatgpt_go,chatgpt_plus,capped,frontier,163,39,0.1039261296,0.005785422,0.0073963985,0.0,51,0.6246687592,0.7975460123,0.1226993865
+pro100_plus,OpenAI,ChatGPT Pro 100 vs Plus,chatgpt_pro100,chatgpt_plus,frontier,frontier,163,39,-0.0210634207,0.0043823653,0.0113047237,0.0,51,1.0,0.2024539877,0.4785276074
+pro200_plus,OpenAI,ChatGPT Pro 200 vs Plus,chatgpt_pro200,chatgpt_plus,frontier,frontier,163,39,-0.0067568708,0.0029807558,0.0013883746,0.0035,51,1.0,0.0061349693,0.8650306748
+pro500_plus,OpenAI,ChatGPT Pro 500 vs Plus,chatgpt_pro500,chatgpt_plus,frontier,frontier,163,39,-0.0219096377,0.0044548299,0.0117996936,0.0,51,1.0,0.2147239264,0.4539877301
+ytprem_aipro,Google,YouTube Premium vs Google AI Pro,youtube_premium,gemini_pro,noai,frontier,119,40,0.2035549159,0.042474344,0.085837882,0.0,31,0.4282991901,0.9159663866,0.0084033613
+ytlite_aipro,Google,YouTube Premium Lite vs Google AI Pro,youtube_premium_lite,gemini_pro,noai,frontier,73,35,0.3404246548,0.0390454122,0.0784428551,0.0,18,0.2660550459,0.8904109589,0.0
+ytmusic_aipro,Google,YouTube Music vs Google AI Pro,youtubemusic_music,gemini_pro,noai,frontier,103,40,0.3271972315,0.0336864962,0.0709352572,0.0,21,0.2682926829,0.8834951456,0.0097087379
+aiplus_aipro,Google,Google AI Plus vs AI Pro,gemini_plus,gemini_pro,capped,frontier,159,39,-0.0122600195,0.0030298752,0.0068426188,0.0,49,1.0,0.0566037736,0.6163522013
+ultra_aipro,Google,Google AI Ultra vs AI Pro,gemini_ultra,gemini_pro,frontier,frontier,97,18,7.84141e-05,0.0012267357,0.0010459459,0.977,23,1.0,0.0103092784,0.8865979381
+xbasic_supergrok,X Corp/xAI,X Premium Basic vs SuperGrok,x_premium_basic,supergrok,noai,frontier,151,39,0.1514536217,0.010622308,0.0243624872,0.0,44,0.5,0.940397351,0.0198675497
+xprem_supergrok,X Corp/xAI,X Premium vs SuperGrok,x_premium,supergrok,smallai,frontier,153,39,0.1584173213,0.01053519,0.0242057949,0.0,44,0.4545454545,0.9607843137,0.0196078431
+sglite_supergrok,X Corp/xAI,SuperGrok Lite vs SuperGrok,supergrok_lite,supergrok,capped,frontier,153,39,-0.008860674,0.0047051191,0.0136110758,0.0675,43,1.0,0.1895424837,0.5424836601
+xplus_supergrok,X Corp/xAI,X Premium Plus vs SuperGrok,x_premium_plus,supergrok,frontier,frontier,140,39,0.0106518991,0.0045637616,0.0024792463,0.013,41,1.0,0.1142857143,0.4714285714
+sgplus_supergrok,X Corp/xAI,SuperGrok Plus vs SuperGrok,supergrok_plus,supergrok,frontier,frontier,154,40,-0.0080023306,0.004566403,0.0133702672,0.1115,44,1.0,0.2922077922,0.538961039
+heavy_supergrok,X Corp/xAI,SuperGrok Heavy vs SuperGrok,supergrok_heavy,supergrok,frontier,frontier,128,40,0.0002052698,0.0007636485,0.0010320792,0.9285,32,1.0,0.0078125,0.953125
+xprem_xplus,X Corp/xAI,X Premium vs X Premium Plus,x_premium,x_premium_plus,smallai,frontier,150,40,0.1495027173,0.0089333911,0.0230754774,0.0,46,0.4545454545,0.9533333333,0.02
+xbasic_sglite,X Corp/xAI,X Premium Basic vs SuperGrok Lite,x_premium_basic,supergrok_lite,noai,capped,150,38,0.159495824,0.0111780179,0.0357487712,0.0,43,0.5,0.8333333333,0.1466666667
+m365pers_prem,Microsoft,Microsoft 365 Personal vs Premium,m365_personal,m365_premium,smallai,frontier,160,40,0.0107466294,0.0062358246,0.0088330383,0.078,48,0.8498498498,0.6125,0.10625
+cai_lite_plus,Character.AI,Character.AI Lite vs Character.AI+,characterai_lite,characterai_plus,capped,frontier,151,41,0.0812256227,0.0162955574,0.0325999167,0.0,42,0.5991983968,0.7682119205,0.0529801325
+max5_claudepro,Anthropic,Claude Max 5$\times$ vs Pro,claude_max5x,claude_pro,frontier,frontier,161,39,0.0093455861,0.0032810217,0.0074737007,0.0015,49,1.0,0.0186335404,0.4658385093
+max20_claudepro,Anthropic,Claude Max 20$\times$ vs Pro,claude_max20x,claude_pro,frontier,frontier,161,39,0.0072612731,0.0033763472,0.0075748266,0.0275,49,1.0,0.0372670807,0.4968944099

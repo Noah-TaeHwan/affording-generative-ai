@@ -1,6 +1,10 @@
 """
 40_tables_tex.py -- LaTeX table bodies (English / Korean) generated from output/tables and output/results.json,
 so that every number in the manuscripts is produced by code. Writes paper_en/tables/*.tex, paper_ko/tables/*.tex.
+
+Typography of the English bodies: a negative number is written with the typographic minus ($-$) in tab_decomp and tab_controls, and
+the multiplication sign of the plan names in tab_local is $\\times$ (ChatGPT Pro 5$\\times$ ...). The Korean bodies keep the ASCII hyphen
+and "5x": paper_ko is not changed by this script's typography fixes.
 """
 import json, pathlib
 import numpy as np
@@ -34,6 +38,14 @@ def se(x):
     return f"({x:.3f})"
 
 
+def tm(s):
+    """English bodies: typographic minus for a negative number written as a string; a value that rounds to zero carries no sign.
+    The Korean bodies keep the ASCII hyphen."""
+    if lang != "en" or not s.startswith("-"):
+        return s
+    return s[1:] if float(s[1:].replace(",", "")) == 0 else "$-$" + s[1:]
+
+
 for lang in ["en", "ko"]:
     L = LAB[lang]
     # ---------------------------------------------------------------- Table: burden by income group
@@ -52,9 +64,10 @@ for lang in ["en", "ko"]:
     write(lang, "tab_quintile", "\n".join(rows))
     # ---------------------------------------------------------------- Table: local prices
     B = pd.read_csv(TAB / "B1_localization.csv").set_index("plan")
+    tx = "$\\times$" if lang == "en" else "x"                      # multiplication sign of the plan names
     names = {"chatgpt_go": "ChatGPT Go", "gemini_plus": "Google AI Plus", "chatgpt_plus": "ChatGPT Plus",
-             "claude_pro": "Claude Pro", "gemini_pro": "Google AI Pro", "chatgpt_pro5x": "ChatGPT Pro 5x",
-             "claude_max5x": "Claude Max 5x", "chatgpt_pro20x": "ChatGPT Pro 20x", "gemini_ultra": "Google AI Ultra"}
+             "claude_pro": "Claude Pro", "gemini_pro": "Google AI Pro", "chatgpt_pro5x": f"ChatGPT Pro 5{tx}",
+             "claude_max5x": f"Claude Max 5{tx}", "chatgpt_pro20x": f"ChatGPT Pro 20{tx}", "gemini_ultra": "Google AI Ultra"}
     rows = []
     for plan in ["chatgpt_go", "gemini_plus", "chatgpt_plus", "claude_pro", "gemini_pro", "chatgpt_pro5x",
                  "claude_max5x", "chatgpt_pro20x", "gemini_ultra"]:
@@ -122,7 +135,7 @@ for lang in ["en", "ko"]:
         r = C.loc[g]
         sh = "--" if g == "HIC" else f"{100 * r.share_connect:.0f}"
         rows.append(f"{L[g]} & {int(r.n)} & {f(r.mean_ms, 1)} & {f(r.mean_internet, 1)} & {f(100 * r.mean_ai_among_online, 1)} & "
-                    f"{f(r.loggap_total)} & {f(r.loggap_connect)} & {f(r.loggap_conditional)} & {sh} \\\\")
+                    f"{tm(f(r.loggap_total))} & {tm(f(r.loggap_connect))} & {tm(f(r.loggap_conditional))} & {sh} \\\\")
     write(lang, "tab_decomp", "\n".join(rows))
     # ---------------------------------------------------------------- Table: scenarios
     E = pd.read_csv(TAB / "E1_scenarios.csv")
@@ -165,7 +178,7 @@ for lang in ["en", "ko"]:
     rows = []
     for v in ["ln_gni", "internet_pct", "tertiary_enrol", "urban_pct", "age65_pct", "fx_online_merchant_pay"]:
         nm = lab[0] if v == "ln_gni" else names_c[v]
-        vals = " & ".join(f"{C2.loc[k, v]:.4f}" if (v in C2.columns and pd.notna(C2.loc[k, v])) else "" for k in
+        vals = " & ".join(tm(f"{C2.loc[k, v]:.4f}") if (v in C2.columns and pd.notna(C2.loc[k, v])) else "" for k in
                           ["c1", "c2", "c3", "c4", "c5"])
         ses = " & ".join(se(C2.loc[k, v + "_se"]) if (v + "_se" in C2.columns and pd.notna(C2.loc[k, v + "_se"])) else ""
                          for k in ["c1", "c2", "c3", "c4", "c5"])
