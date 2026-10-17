@@ -1,4 +1,4 @@
-# Pricing source audit (2026-09-30 KST)
+# Pricing source audit (2026-09-30, UTC+9)
 
 Raw HTML, where retrievable, is retained only as internal verification evidence, not as author-created text for republication. Sources retain their copyright. The public deliverable should include the analytical memo, source links, source IDs and hash manifest; omit the raw HTML files unless needed privately for replication review.
 

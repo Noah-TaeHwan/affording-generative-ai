@@ -2,7 +2,7 @@
 
 > Record of the audit stage between package versions 1.8 and 2.0. It describes the environment and files of that stage; the scripts it names are now run by `run_revision.sh`, and the clean-room verification of the version 2.0 package is in `verification/README.md`. The Word manuscript and the `manuscript/` folder that this stage produced are not part of version 2.0.
 
-Audit date: 30 September 2026 (Korea time). Manuscript: TaeHwan Oh, *Affording Generative AI*, working-paper version dated 28 September 2026. Original replication package: v1.8, Zenodo DOI https://doi.org/10.5281/zenodo.23006366.
+Audit date: 30 September 2026 (UTC+9). Manuscript: TaeHwan Oh, *Affording Generative AI*, working-paper version dated 28 September 2026. Original replication package: v1.8, Zenodo DOI https://doi.org/10.5281/zenodo.23006366.
 
 ## What was actually verified
 

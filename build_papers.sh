@@ -11,7 +11,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 # fixed timestamps make rebuilds byte-identical (override SOURCE_DATE_EPOCH for a new version)
-export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-1790726400}" FORCE_SOURCE_DATE=1
+export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-1792108800}" FORCE_SOURCE_DATE=1
 
 # strings that must not occur in the anonymised copy: verification/identifying_strings.txt, one per line (case-insensitive);
 # turned into a grep -E alternation with the regular-expression metacharacters escaped

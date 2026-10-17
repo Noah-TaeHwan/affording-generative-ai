@@ -27,17 +27,23 @@ SOFTWARE.
 Data: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ===============================================================
 
-Data compiled by the author -- the App Store price extraction (data/raw/appstore/,
-data/processed/appstore_prices_*.csv) and the author's contributions to the other
-processed files -- are licensed under CC BY 4.0:
+Data compiled by the author -- the first-wave App Store price extraction
+(data/raw/appstore/, data/processed/appstore_prices_*.csv), the second-wave App
+Store extracts (data/raw/appstore_wave2/), the cross-channel extracts of the
+Google Play and Microsoft web-store pages (data/raw/web/), the processed files
+built from them (data/processed/wave2_*.csv) and the author's contributions to the
+other processed files -- are licensed under CC BY 4.0:
 https://creativecommons.org/licenses/by/4.0/
 
-Attribution: Oh, TaeHwan (2026), replication package for "Affording Generative AI:
-Uniform Prices, Unequal Burdens, and the Two Margins of AI Diffusion".
+Attribution: Oh, TaeHwan (2026), replication package for "Localised Entry, Global
+Frontier: How Generative-AI Subscriptions Are Priced Across Countries", version 3.1,
+https://doi.org/10.5281/zenodo.23006365.
 
 Values taken from third-party sources (World Bank, Microsoft, Anthropic, Google,
 ITU, exchange-rate providers) remain subject to the licences and terms of their
-providers, listed in README.md.
+providers, listed in README.md; the content of the pages recorded in the extracts
+remains subject to the terms of Apple and the app developers, of Google Play and of
+the Microsoft web store.
 
 
 Manuscripts: All Rights Reserved

@@ -1,6 +1,6 @@
 # Upstream source validation
 
-Completed on 30 September 2026, Korea time. `upstream_verification.json` is the authoritative record of file hashes, row counts and comparisons.
+Completed on 30 September 2026 (UTC+9). `upstream_verification.json` is the authoritative record of file hashes, row counts and comparisons.
 
 The four Anthropic release CSVs and three supporting population/GDP/ISO files were downloaded from Hugging Face commit `2ea58ff75e4247d26810c37f10c179edc2466cac`. The original `code/03_anthropic_country.py` was run in an isolated reconstruction directory. All four derived outputs, including the five-window country panel, were byte-identical to v1.8. The ITU historical workbook was downloaded from its documented URL, and the original `code/05_itu_price_baskets.py` regenerated both country outputs byte-identically. Its URL is not immutable; the SHA256 records the exact file received.
 

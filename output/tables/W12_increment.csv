@@ -1,0 +1,6 @@
+pair,label,high,low,n,slope,se,med_hic,med_umic,med_lmic,med_lic,n_usd,slope_usd,se_usd
+plus_go,ChatGPT Plus $-$ Go,chatgpt_plus,chatgpt_go,161,-0.0467621147,0.0050147897,1.0352413965,1.1676396997,1.2502085071,1.2510425354,163,-0.0104300432,0.007473581
+caiplus_lite,Character.AI+ $-$ Lite,characterai_plus,characterai_lite,143,-0.058787196,0.0115020036,1.0944170772,1.4,1.4,1.4,150,-0.0426304715,0.0114919349
+aipro_aiplus,Google AI Pro $-$ AI Plus,gemini_pro,gemini_plus,154,0.0014919937,0.0052705982,1.0,1.0,1.0,1.0,159,0.0406975903,0.0054253555
+pro200_plus,ChatGPT Pro 200 $-$ Plus,chatgpt_pro200,chatgpt_plus,161,-0.0007450759,0.0034231831,1.0,1.0,1.0,1.0,163,0.0307999909,0.0061232119
+m365prem_pers,Microsoft 365 Premium $-$ Personal,m365_premium,m365_personal,157,-0.0137039054,0.0082247758,1.05,1.15,1.15,1.15,160,0.0317351266,0.0078457622

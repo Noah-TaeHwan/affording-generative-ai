@@ -1,0 +1,6 @@
+kept_app,kept_item,kept_n,kept_slope,dropped_app,dropped_item,dropped_n,dropped_slope,reason
+snapchat,Snapchat+ Monthly Plan,162,0.32073068808084765,snapchat,Snapchat+ (Monthly Plan),158,0.2859409729448764,same firm and normalised name; smaller N
+strava,Strava Subscription,165,0.07196655821469015,strava,Subscription,165,0.07196655821469015,identical price vector within the app
+youtube,Youtube Premium Family,102,0.3597511784152664,youtube,YouTube Premium Family,99,0.3516167931635778,same firm and normalised name; smaller N
+youtube,YouTube Premium,122,0.24387481541213685,youtubemusic,YouTube Premium,105,0.38009958753345663,same firm and normalised name; smaller N
+youtube,Youtube Premium Family,102,0.3597511784152664,youtubemusic,YouTube Premium Family,101,0.3618492461829939,same firm and normalised name; smaller N

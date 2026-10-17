@@ -1,0 +1,142 @@
+====================================================================================================
+A. Proposition A.2 (lognormal valuations)
+====================================================================================================
+max |beta(finite differences of optimum) - closed form (z*+h*)/(z*+2h*-s)| = 2.50e-09
+max |xi/(xi+l) - closed form| = 2.57e-09;   max |1 - l*rho - closed form| = 1.18e-08
+Quoted values (paper: s=1: 0.63, 0.30, 0.05; s=0.7: 0.76, 0.44, 0.09 at l = 1/4, 1/2, 4/5):
+   s=1.0: 0.6340, 0.2998, 0.0460
+   s=0.7: 0.7572, 0.4436, 0.0872
+strictly decreasing in l: largest step beta(l_i) - beta(l_(i-1)) over s in [0.1, 5], 399 steps each (19950 steps) = -7.544e-07  (<0 required); max |beta(0)-1| = 2.2e-16; largest beta at l=0.9975 = 0.0006
+beta at l = 0.9975, s = 1: 0.0000 (tends to 0 as l -> 1)
+Lambda concave in ln x (xi non-increasing) on grids for s in (0.3,0.7,1,2,4): violations = 0
+on z in [-25, 25]: min h(z+h) = 1.913e-135, max h(z+h) = 0.998415 (<1), min (z+h) = 3.987e-02 (>0)
+Valuation scaling v = y^sigma v~ (A.2(iii)): max |beta_fd - sigma*xi/(xi+l)| = 2.43e-10
+cost proportional to income (c = 0.5 y): beta = 1.000000 (=1)
+
+====================================================================================================
+B. Log-concavity facts
+====================================================================================================
+s=0.5: d2 ln g/dx2 at ln x = thr-0.5: -1.2131; at thr+0.5: +0.1642 (formula +0.1642); thr = m+1-s^2 = +0.75
+       level hazard g/(1-G) peaks at ln x = +0.56 and then falls (1.853 -> 0.060); eta(x) strictly increasing on the grid: True
+s=1.0: d2 ln g/dx2 at ln x = thr-0.5: -1.3591; at thr+0.5: +0.1839 (formula +0.1839); thr = m+1-s^2 = +0.00
+       level hazard g/(1-G) peaks at ln x = -0.48 and then falls (0.840 -> 0.000); eta(x) strictly increasing on the grid: True
+s=1.5: d2 ln g/dx2 at ln x = thr-0.5: -7.3590; at thr+0.5: +0.9959 (formula +0.9959); thr = m+1-s^2 = -1.25
+       level hazard g/(1-G) peaks at ln x = -1.96 and then falls (0.889 -> 0.000); eta(x) strictly increasing on the grid: True
+=> lognormal valuations are not log-concave in levels, but ln v~ (normal) has an increasing hazard, which is what
+   Proposition A.2 needs (eta increasing).
+
+====================================================================================================
+C. Proposition A.1 (income gradients of D, P, H)
+====================================================================================================
+max |finite difference - formula| over 2000 random parameter sets = 6.94e-10; uniform-pricing ordering violations = 0
+beta* with 23% using and 10% of users paying = 0.4427
+beta* with 23% using and 25% of users paying = 0.3411
+beta* with 23% using and 1% of users paying = 0.5781
+beta* = 0.04 when the paying share of users is 0.9085 ('about nine in ten')
+
+====================================================================================================
+D. The two-tier menu: separability, pass-through, the pinned frontier price, override gains
+====================================================================================================
+-- calibration s=1.0, cost share of entry price lL=0.25, of frontier increment lH=0.5 at y=1 (dqL=3.757, dqH=2.492, dcL=2.00, dcH=6.00; convex costs: True; paid share 0.225, frontier share 0.058 of the eligible at y=1)
+   joint optimum vs separate increments: max relative gap = 1.7e-08
+   optimal p_H - p_L for exogenous p_L = 3, 5, 7 at y=0.1: 8.186677, 8.186677, 8.186677  (constant: dp_H/dp_L = 1)
+   y     | unconstrained: pL*    dH*    pH*   pH*/pL* | pinned pH=20: pLo   pLo/pL*  20/pLo  incr | gains per eligible person: gL|H=20  gH|L*   ratio
+    1.00 |              8.00  12.00  20.00   2.50  |          8.00   1.00    2.50  12.00 |                     -0.0000   0.0000    nan
+    0.50 |              5.46  10.12  15.57   2.85  |          5.62   1.03    3.56  14.38 |                      0.0423   0.0144  0.340
+    0.20 |              3.88   8.78  12.66   3.26  |          3.90   1.00    5.12  16.10 |                      0.0387   0.0032  0.081
+    0.10 |              3.31   8.19  11.49   3.48  |          3.31   1.00    6.04  16.69 |                      0.0125   0.0004  0.031
+    0.05 |              2.97   7.79  10.76   3.62  |          2.97   1.00    6.73  17.03 |                      0.0023   0.0000  0.012
+    0.02 |              2.71   7.43  10.14   3.75  |          2.71   1.00    7.39  17.29 |                      0.0001   0.0000  0.003
+   log-log slopes over the income grid: unconstrained pL* 0.272, increment 0.119, level pH* 0.169; ratio pH/pL -0.103
+                                        pinned pH:     pLo 0.276 (level pLo >= pL* everywhere), increment -0.087 (<0), ratio -0.276
+   at y=0.2: beta_L=0.2827, beta_dH=0.1193, beta_H(level)=0.1694, weighted average=0.1694; closed forms 0.2827, 0.1193
+   min over the grid of pLo/pL* = 1.000000 (>= 1: holding pH at the default never lowers the optimal entry price)
+   max over the grid of gH-only/gL|H=20 = 0.096 (< 1: overriding the entry tier alone beats overriding the frontier tier alone)
+   incomes below the reference at which a fixed override cost K can support 'entry overridden, frontier at default' (gH|L* < gL|H=20): [0.5, 0.2, 0.1, 0.05, 0.02]
+
+-- calibration s=1.0, cost share of entry price lL=0.1, of frontier increment lH=0.6 at y=1 (dqL=5.056, dqH=1.408, dcL=0.80, dcH=7.20; convex costs: True; paid share 0.323, frontier share 0.016 of the eligible at y=1)
+   joint optimum vs separate increments: max relative gap = 4.0e-07
+   optimal p_H - p_L for exogenous p_L = 3, 5, 7 at y=0.1: 9.312374, 9.312373, 9.312372  (constant: dp_H/dp_L = 1)
+   y     | unconstrained: pL*    dH*    pH*   pH*/pL* | pinned pH=20: pLo   pLo/pL*  20/pLo  incr | gains per eligible person: gL|H=20  gH|L*   ratio
+    1.00 |              8.00  12.00  20.00   2.50  |          8.00   1.00    2.50  12.00 |                      0.0000   0.0000  0.000
+    0.50 |              4.58  10.75  15.33   3.34  |          4.60   1.00    4.35  15.40 |                      0.1437   0.0031  0.021
+    0.20 |              2.54   9.78  12.31   4.86  |          2.54   1.00    7.89  17.46 |                      0.1714   0.0003  0.002
+    0.10 |              1.84   9.31  11.16   6.05  |          1.84   1.00   10.84  18.16 |                      0.0814   0.0000  0.000
+    0.05 |              1.48   8.98  10.47   7.06  |          1.48   1.00   13.48  18.52 |                      0.0243   0.0000  0.000
+    0.02 |              1.24   8.67   9.91   8.00  |          1.24   1.00   16.16  18.76 |                      0.0026   0.0000  0.000
+   log-log slopes over the income grid: unconstrained pL* 0.479, increment 0.081, level pH* 0.175; ratio pH/pL -0.304
+                                        pinned pH:     pLo 0.480 (level pLo >= pL* everywhere), increment -0.104 (<0), ratio -0.480
+   at y=0.2: beta_L=0.5402, beta_dH=0.0817, beta_H(level)=0.1762, weighted average=0.1762; closed forms 0.5402, 0.0817
+   min over the grid of pLo/pL* = 1.000000 (>= 1: holding pH at the default never lowers the optimal entry price)
+   max over the grid of gH-only/gL|H=20 = 0.003 (< 1: overriding the entry tier alone beats overriding the frontier tier alone)
+   incomes below the reference at which a fixed override cost K can support 'entry overridden, frontier at default' (gH|L* < gL|H=20): [0.5, 0.2, 0.1, 0.05, 0.02]
+
+-- calibration s=1.2, cost share of entry price lL=0.3, of frontier increment lH=0.5 at y=1 (dqL=1.823, dqH=1.050, dcL=2.40, dcH=6.00; convex costs: True; paid share 0.109, frontier share 0.021 of the eligible at y=1)
+   joint optimum vs separate increments: max relative gap = 2.3e-08
+   optimal p_H - p_L for exogenous p_L = 3, 5, 7 at y=0.1: 8.649131, 8.649131, 8.649131  (constant: dp_H/dp_L = 1)
+   y     | unconstrained: pL*    dH*    pH*   pH*/pL* | pinned pH=20: pLo   pLo/pL*  20/pLo  incr | gains per eligible person: gL|H=20  gH|L*   ratio
+    1.00 |              8.00  12.00  20.00   2.50  |          8.00   1.00    2.50  12.00 |                     -0.0000   0.0000    nan
+    0.50 |              6.00  10.45  16.46   2.74  |          6.15   1.02    3.25  13.85 |                      0.0102   0.0033  0.318
+    0.20 |              4.65   9.23  13.88   2.99  |          4.68   1.01    4.27  15.32 |                      0.0093   0.0010  0.105
+    0.10 |              4.09   8.65  12.74   3.12  |          4.10   1.00    4.88  15.90 |                      0.0034   0.0002  0.050
+    0.05 |              3.73   8.23  11.96   3.21  |          3.73   1.00    5.36  16.27 |                      0.0008   0.0000  0.025
+    0.02 |              3.42   7.84  11.26   3.29  |          3.42   1.00    5.85  16.58 |                      0.0001   0.0000  0.010
+   log-log slopes over the income grid: unconstrained pL* 0.213, increment 0.107, level pH* 0.144; ratio pH/pL -0.069
+                                        pinned pH:     pLo 0.216 (level pLo >= pL* everywhere), increment -0.078 (<0), ratio -0.216
+   at y=0.2: beta_L=0.2193, beta_dH=0.1091, beta_H(level)=0.1460, weighted average=0.1460; closed forms 0.2193, 0.1091
+   min over the grid of pLo/pL* = 1.000000 (>= 1: holding pH at the default never lowers the optimal entry price)
+   max over the grid of gH-only/gL|H=20 = 0.086 (< 1: overriding the entry tier alone beats overriding the frontier tier alone)
+   incomes below the reference at which a fixed override cost K can support 'entry overridden, frontier at default' (gH|L* < gL|H=20): [0.5, 0.2, 0.1, 0.05, 0.02]
+
+-- calibration s=0.7, cost share of entry price lL=0.3, of frontier increment lH=0.6 at y=1 (dqL=6.473, dqH=4.914, dcL=2.40, dcH=7.20; convex costs: True; paid share 0.381, frontier share 0.101 of the eligible at y=1)
+   joint optimum vs separate increments: max relative gap = 4.6e-08
+   optimal p_H - p_L for exogenous p_L = 3, 5, 7 at y=0.1: 8.596143, 8.596142, 8.596142  (constant: dp_H/dp_L = 1)
+   y     | unconstrained: pL*    dH*    pH*   pH*/pL* | pinned pH=20: pLo   pLo/pL*  20/pLo  incr | gains per eligible person: gL|H=20  gH|L*   ratio
+    1.00 |              8.00  12.00  20.00   2.50  |          8.00   1.00    2.50  12.00 |                      0.0000   0.0000    nan
+    0.50 |              5.26  10.17  15.43   2.93  |          5.34   1.01    3.74  14.66 |                      0.1320   0.0232  0.176
+    0.20 |              3.74   9.04  12.78   3.42  |          3.74   1.00    5.34  16.26 |                      0.0603   0.0011  0.019
+    0.10 |              3.26   8.60  11.86   3.64  |          3.26   1.00    6.13  16.74 |                      0.0081   0.0000  0.003
+    0.05 |              3.01   8.32  11.33   3.76  |          3.01   1.00    6.65  16.99 |                      0.0004   0.0000  0.001
+    0.02 |              2.83   8.08  10.91   3.85  |          2.83   1.00    7.07  17.17 |                      0.0000   0.0000  0.000
+   log-log slopes over the income grid: unconstrained pL* 0.258, increment 0.097, level pH* 0.148; ratio pH/pL -0.109
+                                        pinned pH:     pLo 0.259 (level pLo >= pL* everywhere), increment -0.083 (<0), ratio -0.259
+   at y=0.2: beta_L=0.2584, beta_dH=0.0901, beta_H(level)=0.1394, weighted average=0.1394; closed forms 0.2584, 0.0901
+   min over the grid of pLo/pL* = 1.000000 (>= 1: holding pH at the default never lowers the optimal entry price)
+   max over the grid of gH-only/gL|H=20 = 0.051 (< 1: overriding the entry tier alone beats overriding the frontier tier alone)
+   incomes below the reference at which a fixed override cost K can support 'entry overridden, frontier at default' (gH|L* < gL|H=20): [0.5, 0.2, 0.1, 0.05, 0.02]
+
+-- role of the frontier cost share (s=1, lL=0.25): ratio gH|L*/gL|H=20 of the extra gain from re-optimising the
+   frontier price to the gain from localising the entry tier, and the unconstrained level discount 1 - pH*/20
+   lH=0.30 (convex costs True): y=0.5: ratio 19.694, level discount 0.30, increment elasticity 0.40; y=0.2: ratio 2.607, level discount 0.48, increment elasticity 0.24; y=0.1: ratio 1.337, level discount 0.55, increment elasticity 0.16
+   lH=0.40 (convex costs True): y=0.5: ratio 1.798, level discount 0.26, increment elasticity 0.29; y=0.2: ratio 0.488, level discount 0.42, increment elasticity 0.17; y=0.1: ratio 0.239, level discount 0.49, increment elasticity 0.11
+   lH=0.50 (convex costs True): y=0.5: ratio 0.340, level discount 0.22, increment elasticity 0.20; y=0.2: ratio 0.081, level discount 0.37, increment elasticity 0.12; y=0.1: ratio 0.031, level discount 0.43, increment elasticity 0.08
+   lH=0.60 (convex costs True): y=0.5: ratio 0.046, level discount 0.19, increment elasticity 0.13; y=0.2: ratio 0.007, level discount 0.32, increment elasticity 0.08; y=0.1: ratio 0.002, level discount 0.37, increment elasticity 0.06
+   lH=0.70 (convex costs True): y=0.5: ratio 0.001, level discount 0.16, increment elasticity 0.08; y=0.2: ratio 0.000, level discount 0.27, increment elasticity 0.05; y=0.1: ratio 0.000, level discount 0.32, increment elasticity 0.04
+
+====================================================================================================
+E. Cross-border arbitrage with a friction chi common to tiers
+====================================================================================================
+max over 200,000 draws of [cross-tier gain - (P_L - p_L,c - chi)] = -5.518e-03 (<= 0: never more attractive than same-tier entry arbitrage)
+-- s=1.0, lL=0.25, lH=0.5; poor storefront y=0.04: unconstrained pL*=2.89, pH*=10.58
+   chi= 1.0: constrained optimum pL=  7.00 (floor  7.00), pH= 19.00 (floor 19.00); dollar discounts  1.00 and  1.00; percentage 12.5% and  5.0%
+   chi= 3.8: constrained optimum pL=  4.20 (floor  4.20), pH= 16.20 (floor 16.20); dollar discounts  3.80 and  3.80; percentage 47.5% and 19.0%
+   chi= 8.0: constrained optimum pL=  2.89 (floor  0.00), pH= 12.00 (floor 12.00); dollar discounts  5.11 and  8.00; percentage 63.8% and 40.0%
+-- s=1.5, lL=0.3, lH=0.6; poor storefront y=0.04: unconstrained pL*=4.05, pH*=13.83
+   chi= 1.0: constrained optimum pL=  7.00 (floor  7.00), pH= 19.00 (floor 19.00); dollar discounts  1.00 and  1.00; percentage 12.5% and  5.0%
+   chi= 3.8: constrained optimum pL=  4.20 (floor  4.20), pH= 16.20 (floor 16.20); dollar discounts  3.80 and  3.80; percentage 47.5% and 19.0%
+   chi= 8.0: constrained optimum pL=  4.05 (floor  0.00), pH= 13.83 (floor 12.00); dollar discounts  3.95 and  6.17; percentage 49.4% and 30.8%
+Implication: with a friction common to tiers, binding arbitrage floors give equal DOLLAR discounts on both tiers;
+a sustained entry-tier gap g_L reveals chi >= g_L, so the arbitrage floor of a tier priced P_k lies at least g_L/P_k
+below its reference price: for g_L = $3.8, 19% on a $20 tier, 3.8% on $100, 1.9% on $200, 1.3% on $300.
+
+====================================================================================================
+F. Replication data (read-only): within-storefront increment relative to the default increment
+====================================================================================================
+chatgpt_plus - chatgpt_go: slope of ln(increment / default increment) on ln GNI = -0.0468 (HC1 0.0050), N=161; median ratio by group: High 1.035, Upper-middle 1.168, Lower-middle 1.250, Low 1.251
+characterai_plus - characterai_lite: slope of ln(increment / default increment) on ln GNI = -0.0588 (HC1 0.0115), N=143; median ratio by group: High 1.094, Upper-middle 1.400, Lower-middle 1.400, Low 1.400
+gemini_pro - gemini_plus: slope of ln(increment / default increment) on ln GNI = +0.0015 (HC1 0.0053), N=154; median ratio by group: High 1.000, Upper-middle 1.000, Lower-middle 1.000, Low 1.000
+chatgpt_pro200 - chatgpt_plus: slope of ln(increment / default increment) on ln GNI = -0.0007 (HC1 0.0034), N=161; median ratio by group: High 1.000, Upper-middle 1.000, Lower-middle 1.000, Low 1.000
+m365_premium - m365_personal: slope of ln(increment / default increment) on ln GNI = -0.0137 (HC1 0.0082), N=157; median ratio by group: High 1.050, Upper-middle 1.150, Lower-middle 1.150, Low 1.150
+Reading: a negative slope (larger dollar increment in poorer storefronts) cannot be produced by an interior optimum
+of the nested menu, in which the optimal increment rises with income; it requires the frontier price to be held up.
+

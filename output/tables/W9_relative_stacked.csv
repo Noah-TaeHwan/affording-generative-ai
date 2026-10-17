@@ -1,0 +1,4 @@
+group,label,items,n_items,gamma,se,ri_p,ri_n_ge,gamma_usd,se_usd,gamma_lcu,se_lcu,n_obs,n_storefronts,n_obs_usd,n_storefronts_usd,n_obs_lcu,n_storefronts_lcu,n_permutations
+capped,Capped AI tier,"ChatGPT Go, Google AI Plus, SuperGrok Lite, Character.AI Lite",4,0.0364657975,0.0314560999,0.4144761905,104448,0.0322632666,0.0275950423,0.0200929102,0.0434374416,3253,169,1922,104,1331,65,252000
+noai,No AI allowance,"YouTube Premium, YouTube Premium Lite, YouTube Music, X Premium Basic",4,0.2035024351,0.043998889,0.0004761905,120,0.1029846508,0.0302524485,0.3801394283,0.0900340742,3253,169,1922,104,1331,65,252000
+smallai,Small AI allowance,"X Premium, Microsoft 365 Personal",2,0.115828425,0.0511737751,5.55556e-05,14,0.0685749986,0.0365225229,0.168650544,0.0643394561,3253,169,1922,104,1331,65,252000

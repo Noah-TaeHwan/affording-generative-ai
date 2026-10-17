@@ -1,0 +1,111 @@
+file,variable,description,source,non_missing
+wave2_items_long.csv,storefront,App Store storefront code (lower-case ISO 3166 alpha-2; tw = Taiwan),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,app,App key (apps_v3.json / apps_default_panel.json),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,app_class,"ai_core (ChatGPT, Claude, Gemini), ai, ai_bundle (Microsoft 365 with Copilot), ai_feature (AI features inside a general subscription), nonai; default_panel for the small-developer apps","apps_v3.json, apps_default_panel.json",30817
+wave2_items_long.csv,name,In-app purchase name as listed on the storefront page,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,type,"subscription, or consumable if the name matches the credit/coin/pack pattern (CONS in 09b_wave2_items.py)",derived,30817
+wave2_items_long.csv,currency,Storefront currency (schema.org priceCurrency),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,price_local,Modal monthly price in local currency (mode of the listed prices below 5x the minimum; ties to the higher price),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,price_usd,"price_local / units per US$ (open.er-api.com, 16 Oct 2026)","derived; open.er-api.com, 16 Oct 2026",30817
+wave2_items_long.csv,price_usd_alt_fx,"price_local / units per US$ (fawazahmed0 currency-api, 15 Oct 2026)","derived; fawazahmed0 currency-api, 15 Oct 2026",30817
+wave2_items_long.csv,n_variants,Number of prices listed for this name on the page,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,n_distinct_monthly,Number of distinct prices below 5x the minimum,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_items_long.csv,us_price,Price of the same app and item name in the US storefront (US$),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22510
+wave2_items_long.csv,ratio_us,price_usd / us_price,derived,22510
+wave2_items_long.csv,ratio_us_alt_fx,price_usd_alt_fx / us_price,derived,22510
+wave2_items_long.csv,gni,"GNI per capita, Atlas method, current US$ (country_panel.csv)",World Bank WDI via country_panel.csv,30276
+wave2_items_long.csv,income_group,World Bank income group FY2027 (country_panel.csv),World Bank FY2027 via country_panel.csv,30618
+wave2_items_long.csv,guard_ref,Default-schedule price of the item's US price in this storefront: storefront multiplier of the small-developer panel x us_price (empty without a multiplier or a US price),derived; default-panel schedule (wave2_common.schedule) x US price,21539
+wave2_items_long.csv,flag_annual,"True if the cell is flagged by the annual-as-monthly guard: price_local > 3 x guard_ref, or (storefront without a multiplier) n_variants = 1 and ratio_us > 3; storefronts other than the US only; flagged cells are excluded from the item slopes and plan rows",derived,30817
+wave2_items_long.csv,raw_strings,"Price strings as displayed (distinct, sorted)","Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",30817
+wave2_default_items_long.csv,storefront,App Store storefront code (lower-case ISO 3166 alpha-2; tw = Taiwan),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,app,App key (apps_v3.json / apps_default_panel.json),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,app_class,"ai_core (ChatGPT, Claude, Gemini), ai, ai_bundle (Microsoft 365 with Copilot), ai_feature (AI features inside a general subscription), nonai; default_panel for the small-developer apps","apps_v3.json, apps_default_panel.json",22744
+wave2_default_items_long.csv,name,In-app purchase name as listed on the storefront page,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,type,"subscription, or consumable if the name matches the credit/coin/pack pattern (CONS in 09b_wave2_items.py)",derived,22744
+wave2_default_items_long.csv,currency,Storefront currency (schema.org priceCurrency),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,price_local,Modal monthly price in local currency (mode of the listed prices below 5x the minimum; ties to the higher price),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,price_usd,"price_local / units per US$ (open.er-api.com, 16 Oct 2026)","derived; open.er-api.com, 16 Oct 2026",22744
+wave2_default_items_long.csv,n_variants,Number of prices listed for this name on the page,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,n_distinct_monthly,Number of distinct prices below 5x the minimum,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_default_items_long.csv,us_price,Price of the same app and item name in the US storefront (US$),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",16768
+wave2_default_items_long.csv,gni,"GNI per capita, Atlas method, current US$ (country_panel.csv)",World Bank WDI via country_panel.csv,22344
+wave2_default_items_long.csv,income_group,World Bank income group FY2027 (country_panel.csv),World Bank FY2027 via country_panel.csv,22606
+wave2_default_items_long.csv,raw_strings,"Price strings as displayed (distinct, sorted)","Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",22744
+wave2_plan_rows.csv,plan,Plan key (PLANS in 09b_wave2_items.py),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,storefront,App Store storefront code (lower-case ISO 3166 alpha-2; tw = Taiwan),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,app,App key (apps_v3.json / apps_default_panel.json),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,name,"Name of the item chosen for the plan (most price variants, then the lower price)","Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,currency,Storefront currency (schema.org priceCurrency),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,price_local,Modal monthly price in local currency (mode of the listed prices below 5x the minimum; ties to the higher price),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,price_usd,"price_local / units per US$ (open.er-api.com, 16 Oct 2026)","derived; open.er-api.com, 16 Oct 2026",5350
+wave2_plan_rows.csv,price_usd_alt_fx,"price_local / units per US$ (fawazahmed0 currency-api, 15 Oct 2026)","derived; fawazahmed0 currency-api, 15 Oct 2026",5350
+wave2_plan_rows.csv,n_variants,Number of prices listed for this name on the page,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5350
+wave2_plan_rows.csv,us_price,Price of the same app and item name in the US storefront (US$),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",5348
+wave2_plan_rows.csv,ratio_us,price_usd / us_price,derived,5348
+wave2_plan_rows.csv,ratio_us_alt_fx,price_usd_alt_fx / us_price,derived,5348
+wave2_plan_rows.csv,gni,"GNI per capita, Atlas method, current US$ (country_panel.csv)",World Bank WDI via country_panel.csv,5266
+wave2_plan_rows.csv,income_group,World Bank income group FY2027 (country_panel.csv),World Bank FY2027 via country_panel.csv,5317
+wave2_item_slopes.csv,app,App key (apps_v3.json / apps_default_panel.json),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",147
+wave2_item_slopes.csv,app_class,"ai_core (ChatGPT, Claude, Gemini), ai, ai_bundle (Microsoft 365 with Copilot), ai_feature (AI features inside a general subscription), nonai; default_panel for the small-developer apps","apps_v3.json, apps_default_panel.json",147
+wave2_item_slopes.csv,name,In-app purchase name as listed on the storefront page,"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",147
+wave2_item_slopes.csv,type,"subscription, or consumable if the name matches the credit/coin/pack pattern (CONS in 09b_wave2_items.py)",derived,147
+wave2_item_slopes.csv,us_price,Price of the same app and item name in the US storefront (US$),"Apple App Store product pages, 16 Oct 2026 (02b_scrape_wave2.py)",147
+wave2_item_slopes.csv,n,"Storefronts (other than the US) with a ratio in (0.05, 20), income data and no flagged cell",derived,147
+wave2_item_slopes.csv,slope,HC1 OLS slope of ln(ratio_us) on ln(gni): 0 = same US$ price everywhere,derived,147
+wave2_item_slopes.csv,se,HC1 standard error of slope,derived,147
+wave2_item_slopes.csv,slope_alt_fx,Same slope with the fawazahmed0 exchange rates,derived,147
+wave2_item_slopes.csv,se_alt_fx,HC1 standard error of slope_alt_fx,derived,147
+wave2_item_slopes.csv,median_ratio,Median ratio to the US price over the n storefronts,derived,147
+wave2_item_slopes.csv,n_lmic,Number of those storefronts in low- and lower-middle-income economies,derived,147
+wave2_item_slopes.csv,median_ratio_lmic,Median ratio to the US price in low- and lower-middle-income storefronts,derived,147
+wave2_stability.csv,plan,Wave-1 plan key (appstore_prices_long.csv),"Apple App Store, 27 Sep 2026 and 16 Oct 2026",1586
+wave2_stability.csv,plan_wave2,"Wave-2 plan key (chatgpt_pro5x -> chatgpt_pro100, chatgpt_pro20x -> chatgpt_pro200)",derived,1586
+wave2_stability.csv,storefront,App Store storefront code (lower-case ISO 3166 alpha-2; tw = Taiwan),"Apple App Store, 27 Sep 2026 and 16 Oct 2026",1586
+wave2_stability.csv,price_local_w1,"Local monthly price, 27 Sep 2026","Apple App Store, 27 Sep 2026 and 16 Oct 2026",1586
+wave2_stability.csv,price_local_w2,"Local monthly price, 16 Oct 2026","Apple App Store, 27 Sep 2026 and 16 Oct 2026",1586
+wave2_stability.csv,identical,True if |w1 - w2| < 0.5% of the larger of the two,derived,1586
+wave2_default_ladder.csv,storefront,App Store storefront code,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",2414
+wave2_default_ladder.csv,us_price,"US monthly price point (US$, rounded to cents) of the panel items","Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",2414
+wave2_default_ladder.csv,n_items,Panel items (app x item name) at this price point in this storefront,derived,2414
+wave2_default_ladder.csv,modal_local,"Modal local price (local currency, rounded to cents); empty if the mode is not unique or its share is below 0.5",derived,1551
+wave2_default_ladder.csv,modal_share,Share of the n_items at the most frequent local price (0.5 for a tie between two prices),derived,2414
+wave2_default_ladder.csv,tie,"True if two or more local prices were equally frequent; such an entry has no unique mode, so modal_local is empty",derived,2414
+wave2_default_multiplier.csv,storefront,App Store storefront code,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",164
+wave2_default_multiplier.csv,currency,Storefront currency,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",164
+wave2_default_multiplier.csv,multiplier,Median over price points >= US$2.99 of modal local price / US price (local currency per US$ of base price),derived,164
+wave2_default_multiplier.csv,n_points,Price points used (>= 3),derived,164
+wave2_default_multiplier.csv,spread,(max - min) / median of the ratios; clean storefront if < 0.2,derived,164
+wave2_default_multiplier.csv,fx,"Currency units per US$ (open.er-api.com, 16 Oct 2026)","open.er-api.com, 16 Oct 2026",164
+wave2_default_multiplier.csv,tax_factor,"multiplier / fx: US$ value of US$1 of base price after Apple's conversion, taxes and rounding",derived,164
+wave2_default_multiplier.csv,gni,"GNI per capita, Atlas method, current US$",World Bank WDI via country_panel.csv,161
+wave2_default_multiplier.csv,income_group,World Bank income group FY2027,World Bank FY2027 via country_panel.csv,163
+wave2_plan_vs_default.csv,plan,Plan key,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,storefront,App Store storefront code,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,app,App key,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,name,Item name,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,currency,Storefront currency,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,price_local,"Modal monthly price, local currency","Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,price_usd,price_local / units per US$ (open.er-api.com),"derived; open.er-api.com, 16 Oct 2026",5311
+wave2_plan_vs_default.csv,price_usd_alt_fx,price_local / units per US$ (fawazahmed0),"derived; fawazahmed0 currency-api, 15 Oct 2026",5311
+wave2_plan_vs_default.csv,n_variants,Prices listed for this name on the page,"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,us_price,US price of the same item (US$),"Apple App Store default-panel pages, 16 Oct 2026 (02b_scrape_wave2.py)",5311
+wave2_plan_vs_default.csv,ratio_us,price_usd / us_price,derived,5311
+wave2_plan_vs_default.csv,ratio_us_alt_fx,price_usd_alt_fx / us_price,derived,5311
+wave2_plan_vs_default.csv,gni,"GNI per capita, Atlas method, US$",World Bank WDI via country_panel.csv,5227
+wave2_plan_vs_default.csv,income_group,World Bank income group FY2027,World Bank FY2027 via country_panel.csv,5278
+wave2_plan_vs_default.csv,default_ref,"Local price the Apple default schedule gives for the plan's US price (exact ladder entry, else multiplier x US price)",derived,5144
+wave2_plan_vs_default.csv,default_exact,True if default_ref is an exact ladder entry,derived,5311
+wave2_plan_vs_default.csv,dev_log,ln(price_local / default_ref),derived,5144
+wave2_plan_vs_default.csv,clean_schedule,True if the storefront's schedule has spread < 0.2,derived,5311
+wave2_relative_long.csv,pair,Pair key (PAIRS in 13_relative_prices.py),"derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015
+wave2_relative_long.csv,firm,Vendor of the two plans,"derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015
+wave2_relative_long.csv,storefront,App Store storefront code,"Apple App Store, 16 Oct 2026",3015
+wave2_relative_long.csv,currency,Storefront currency,"Apple App Store, 16 Oct 2026",3015
+wave2_relative_long.csv,income_group,World Bank income group FY2027,World Bank FY2027 via country_panel.csv,3015
+wave2_relative_long.csv,gni,"GNI per capita, Atlas method, US$",World Bank WDI via country_panel.csv,3015
+wave2_relative_long.csv,plan_a,Plan key of plan A,"derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015
+wave2_relative_long.csv,plan_b,Plan key of plan B (the comparison plan),"derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015
+wave2_relative_long.csv,ratio_us_a,Price in US$ of plan A in this storefront / its US price,"derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015
+wave2_relative_long.csv,ratio_us_b,The same for plan B,"derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015
+wave2_relative_long.csv,ln_rel,"ln(ratio_us_a / ratio_us_b): price of A relative to B in this storefront, normalised by the same ratio in the US","derived; wave2_plan_rows.csv (Apple App Store, 16 Oct 2026)",3015

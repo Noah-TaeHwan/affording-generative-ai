@@ -1,0 +1,12 @@
+plan,label,compared,identical,share_identical
+chatgpt_go,ChatGPT Go,167,167,1.0
+chatgpt_plus,ChatGPT Plus,167,167,1.0
+chatgpt_pro5x,ChatGPT Pro 100 (was 5$\times$),167,167,1.0
+chatgpt_pro20x,ChatGPT Pro 200 (was 20$\times$),167,167,1.0
+claude_pro,Claude Pro,164,164,1.0
+claude_max5x,Claude Max 5$\times$,164,164,1.0
+claude_max20x,Claude Max 20$\times$,164,164,1.0
+gemini_plus,Google AI Plus,163,163,1.0
+gemini_pro,Google AI Pro,168,168,1.0
+gemini_ultra,Google AI Ultra,95,95,1.0
+all,All,1586,1586,1.0
